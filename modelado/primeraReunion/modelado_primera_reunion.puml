@@ -1,0 +1,30 @@
+@startuml
+top to bottom direction
+hide methods
+hide attributes
+skinparam classAttributeIconSize 0
+
+class Grupo
+class Usuario
+Grupo o-- Usuario : agrupa >
+
+class Tarea
+Grupo *-- Tarea : gestiona >
+Usuario o-- Tarea : participa en >
+Tarea *-- Tarea : subtarea de >
+
+class ConflictoHorario
+class Localizacion
+class Horario
+class Recordatorio
+class RelacionTareas
+
+Tarea <-- ConflictoHorario : afecta a <
+Usuario <-- ConflictoHorario : notifica a <
+
+Tarea --> Localizacion : se realiza en >
+Tarea --> Horario : se programa en >
+Tarea --> Recordatorio : notifica >
+Tarea --> RelacionTareas : se relaciona con >
+
+@enduml
