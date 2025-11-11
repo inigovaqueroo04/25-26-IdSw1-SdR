@@ -10,5 +10,3 @@ Dentro de la rama "reunion_1", puedes acceder a los siguientes documentos clave:
 - 🔗 [Evidencias](evidencias/primeraReunion/enlaces.md)
 
 - 📂 [Modelos UML](modelado/primeraReunion/)
-
-
