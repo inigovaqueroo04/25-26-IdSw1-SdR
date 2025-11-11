@@ -15,6 +15,6 @@ Dentro de la rama "reunion_1", puedes acceder a los siguientes documentos clave:
 - 📝 [Notas Tomadas](https://github.com/Sergiorl2/25-26-IdSw1-SdR/blob/main/documents/minutas/primeraReunion/notasTomadas.md)
 - 🔗 [Evidencias](https://github.com/Sergiorl2/25-26-IdSw1-SdR/tree/main/documents/evidencias/primeraReunion)
 
-- 📂 [Modelos UML](https://github.com/Sergiorl2/25-26-IdSw1-SdR/tree/develop/documents/modelosUML/primeraReunion/diagramaClases)
+- 📂 [Modelos UML](modelado/primeraReunion/)
 
 
