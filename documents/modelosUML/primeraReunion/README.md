@@ -3,7 +3,7 @@
 ## Diagrama de Clases 
 | Diagrama | Código Fuente |
 |----------|---------------|
-| ![Diagrama de Clases](./diagramaClases/diagramaClases.png)| [Ver código](./diagramaClases/diagramaClases.puml) |
+| ![Diagrama de Clases](./diagramaClases/diagramaClases.png)| [Ver código](./diagramaClases/diagramaClases.puml)<br>[Ver Explicación](./diagramaClases/diagramaClases.md) |
 
 ## Diagrama de Objetos 
 | Diagrama | Código Fuente |
