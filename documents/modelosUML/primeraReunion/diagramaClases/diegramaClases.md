@@ -48,3 +48,60 @@ Conjunto organizado de usuarios.
 Los grupos existen para agrupar usuarios; sin personas, no habría grupos.
 
 ---
+## Nivel 4 — Elementos de Soporte de las Tareas
+
+Este nivel contiene las clases que complementan y describen cada tarea.  
+Ninguna tiene sentido por sí sola sin existir al menos una tarea.
+
+---
+
+### `Localizacion`
+Define el lugar donde se realiza la tarea.
+
+- La tarea “se realiza en” una localización (casa, tienda, universidad…).
+- Apoya la organización espacial.
+
+### `Horario`
+Define cuándo ocurre la tarea.
+
+- Incluye fecha, hora de inicio, duración y posibles repeticiones.
+- La tarea “se programa en” un horario.
+- Permite detectar solapamientos.
+
+### `Recordatorio`
+Configura avisos previos.
+
+- La tarea “notifica” mediante un recordatorio.
+- Mejora la gestión personal del usuario.
+
+### `RelacionTareas`
+Representa vínculos lógicos entre tareas.
+
+- Permite dependencias (primero A, luego B), bloqueos o relaciones de apoyo.
+- Una tarea “se relaciona con” otra.
+
+### `ConflictoHorario`
+Indica que dos tareas se solapan o no pueden realizarse simultáneamente.
+
+- Una tarea “afecta a” un conflicto si su horario colisiona con otra.
+- El usuario correspondiente recibe la notificación de dicho conflicto.
+
+**Por qué están en nivel 4:**  
+Son elementos descriptivos y dependientes. No tienen jerarquía propia ni existen sin una tarea.
+
+---
+
+## Resumen Jerárquico
+
+1. **Usuarios**: origen de la información y quienes realizan las tareas.  
+2. **Grupos**: organizan a los usuarios y separan contextos.  
+3. **Tareas**: centro del modelo; todo se estructura alrededor de ellas.  
+4. **Localización, Horario, Recordatorio, RelacionTareas, ConflictoHorario**: completan y enriquecen la definición de cada tarea.
+
+---
+
+
+
+
+
+
