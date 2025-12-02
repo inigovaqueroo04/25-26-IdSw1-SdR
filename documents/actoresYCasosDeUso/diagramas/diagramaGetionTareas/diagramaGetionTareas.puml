@@ -1,0 +1,23 @@
+@startuml DiagramaGestionTareas
+actor "Administrador" as Admin
+actor "Miembro" as Miem
+
+    package "Gestión de Tareas" {
+        usecase "Crear Tarea" as UC1
+        usecase "Modificar Tarea" as UC2
+        usecase "Eliminar Tarea" as UC3
+        usecase "Marcar como Completada" as UC4
+        usecase "Gestionar Subtareas" as UC5
+        usecase "Añadir Subtarea" as UC5a
+        usecase "Quitar Subtarea" as UC5b
+    }
+
+    Admin --> UC1
+    Admin--> UC2
+    Admin--> UC3
+    Admin --> UC4
+    Miem --> UC4
+    Admin--> UC5
+    UC5 <.. UC5a : <<extend>>
+    UC5 <.. UC5b : <<extend>>
+@enduml
