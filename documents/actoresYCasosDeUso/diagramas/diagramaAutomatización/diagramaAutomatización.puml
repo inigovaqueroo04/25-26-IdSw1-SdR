@@ -1,3 +1,5 @@
+@startuml DiagramaAutomatización
+
 actor "Sistema" as S
 actor "Administrador" as Admin
 
@@ -15,3 +17,4 @@ actor "Administrador" as Admin
     
     UC_A2 --> Admin : "Alerta al Administrador"
     UC_A3 --> Admin : "Avisa al Administrador"
+@enduml
