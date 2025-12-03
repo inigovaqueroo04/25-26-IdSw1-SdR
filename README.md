@@ -1,10 +1,13 @@
 # 💻 Sistema de Gestión de Tareas - Ingeniería de Software I
  
  ## 📝 Descripcion Del Proyecto
- Crear una aplicación para la gestión colaborativa de tareas familiares, que permita organizar, asignar y optimizar las actividades del hogar entre los diferentes miembros de la familia (padre, madre, hijos, etc.). Este proyecto se podria escalar a un ambito fuera de la familia.
+Crear una aplicación para la gestión colaborativa de tareas familiares, diseñada para organizar, asignar y coordinar las actividades del hogar entre todos los miembros (padre, madre, hijos, etc.).
+El sistema busca facilitar la planificación diaria, mejorar la distribución de responsabilidades y evitar solapamientos u olvidos.
 
+Aunque nace como una herramienta orientada al entorno familiar, el proyecto está pensado para escalar de forma natural a otros contextos, como grupos de compañeros de piso, equipos de trabajo, comunidades pequeñas o cualquier entorno que requiera coordinación compartida de tareas.
  ## 🌐 Modelo de Dominio
-[Modelo de Dominio](https://github.com/Sergiorl2/25-26-IdSw1-SdR/tree/develop/documents/modelosUML/primeraReunion)
+ A continuación se presenta el Modelo de Dominio, base conceptual sobre la cual se construye toda la lógica del proyecto.
+[Modelo de Dominio](https://github.com/Sergiorl2/25-26-IdSw1-SdR/tree/develop/documents/modelosUML/modeloDeDominio)
 
 ## ⏰ Reuniones
 En este apartado se puede encontrar los diferentes avances que hemos tenido durante las reuniones con nuestro cliente.
