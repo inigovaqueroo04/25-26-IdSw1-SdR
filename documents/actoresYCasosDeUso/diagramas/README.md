@@ -8,13 +8,13 @@
 ## Diagrama de Organizacion y Grupos 
 | Diagrama | Código Fuente |
 |----------|---------------|
-| ![Diagrama de Organización y Grupos](./DiagramaOrganizaciónYGrupos/DiagramaOrganizaciónYGrupos.png)| [Ver código](./DiagramaOrganizaciónYGrupos/DiagramaOrganizaciónYGrupos.puml) |
+| ![Diagrama de Organización y Grupos](./diagramaOrganizaciónYGrupos/diagramaOrganizaciónYGrupos.png)| [Ver código](./diagramaOrganizaciónYGrupos/diagramaOrganizaciónYGrupos.puml) |
 
 ## Diagrama de Planificación Y Detalles 
 
 | Diagrama | Código Fuente |
 |----------|---------------|
-| ![Diagrama de Planificación Y Detalles](./DiagramaPlanificaciónYDetalles/DiagramaPlanificaciónYDetalles.png)| [Ver código](./DiagramaPlanificaciónYDetalles/DiagramaPlanificaciónYDetalles.puml) |
+| ![Diagrama de Planificación Y Detalles](./diagramaPlanificaciónYDetalles/diagramaPlanificaciónYDetalles.png)| [Ver código](./diagramaPlanificaciónYDetalles/diagramaPlanificaciónYDetalles.puml) |
 
 ## Diagrama de Automatización 
 
