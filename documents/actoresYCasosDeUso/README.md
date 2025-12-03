@@ -2,6 +2,8 @@
 
 Este documento recoge los actores principales del sistema y los casos de uso organizados de forma jerárquica. La idea es mostrar de manera sencilla cómo interactúan las personas con la aplicación y qué funcionalidades se ofrecen.
 
+[Diagramas](./diagramas)
+
 ## Actores
 
 ### Administrador del grupo
