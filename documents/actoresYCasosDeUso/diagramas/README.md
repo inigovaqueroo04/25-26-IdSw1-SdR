@@ -1,4 +1,4 @@
-# Digramas Actores y Casos de Uso
+# Diagramas Actores y Casos de Uso
 
 ## Diagrama de Gestion de Tareas 
 | Diagrama | Código Fuente |
