@@ -27,11 +27,11 @@ Nuevo enfoque:
 ### 🏷️ 3. Estados de las tareas
 Las tareas deben incluir un sistema de estados claro. Ejemplos:
 
-- Pendiente  
-- Aprobada  
-- Rechazada  
-- En progreso  
-- Finalizada  
+- Creada 
+- Programada
+- En ejecución
+- Finalizada
+- Cancelada
 
 
 ---
