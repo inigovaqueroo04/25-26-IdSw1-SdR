@@ -1,0 +1,10 @@
+@startuml DiagramaAutomatización
+left to right direction
+actor "Tiempo" as T
+
+    package "Automatización" {
+        usecase "Detectar Conflicto de Horario" as UC_A1
+    }
+
+    T --> UC_A1
+@enduml
