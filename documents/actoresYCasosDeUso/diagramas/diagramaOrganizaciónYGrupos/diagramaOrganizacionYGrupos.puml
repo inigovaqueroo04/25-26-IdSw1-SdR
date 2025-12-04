@@ -1,4 +1,5 @@
 @startuml DiagramaOrganizaciónYGrupos
+left to right direction
 actor "Administrador" as Admin
 actor "Miembro" as Miem
 

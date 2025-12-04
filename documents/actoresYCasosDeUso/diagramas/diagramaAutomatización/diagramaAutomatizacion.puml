@@ -1,5 +1,5 @@
 @startuml DiagramaAutomatización
-
+left to right direction
 actor "Tiempo" as T
 
     package "Automatización" {
