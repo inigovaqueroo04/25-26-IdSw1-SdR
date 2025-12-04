@@ -40,10 +40,10 @@ Responsable de validar información y aplicar acciones internas como controles, 
 7. Crear subtarea  
 
 ### Gestión de permisos
-1. Añadir permisos  
-2. Modificar permisos  
-3. Eliminar permisos  
-4. Consultar permisos  
+1. Añadir permiso  
+2. Modificar permiso  
+3. Eliminar permiso  
+4. Consultar permiso  
 
 ### Visualización e informes
 1. Ver calendario de tareas  
