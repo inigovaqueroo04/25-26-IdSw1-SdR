@@ -39,11 +39,11 @@ Responsable de validar información y aplicar acciones internas como controles, 
 6. Marcar tarea como completada  
 7. Crear subtarea  
 
-### Gestión de reglas
-1. Añadir regla  
-2. Modificar regla  
-3. Eliminar regla  
-4. Consultar reglas  
+### Gestión de permisos
+1. Añadir permiso  
+2. Modificar permiso  
+3. Eliminar permiso  
+4. Consultar permiso  
 
 ### Visualización e informes
 1. Ver calendario de tareas  
