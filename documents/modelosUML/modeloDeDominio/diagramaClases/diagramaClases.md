@@ -24,7 +24,7 @@ Es el núcleo operativo del dominio: todo el sistema se organiza para gestionar 
 ### `Usuario`
 Representa a la persona que interactúa con el sistema.
 
-- Puede pertenecer a uno o varios grupos.  
+- Puede pertenecer a uno o varios grupos independientemente el uno del otro.  
 - Es quien crea, modifica o recibe información sobre tareas.
 - Recibe notificaciones cuando sus tareas presentan conflictos de horario.
 - Funciona como la “entidad principal” que da sentido a los datos del sistema.
@@ -39,7 +39,7 @@ La planificación del sistema nace en los usuarios. Todo lo demás se organiza a
 ### `Grupo`
 Conjunto organizado de usuarios.
 
-- Un usuario “participa en” uno o varios grupos.
+- Un usuario “participa en” uno o varios grupos independientes entre ellos.
 - Un grupo “es gestionado” por uno o varios usuarios.
 - Sirve para separar conjuntos de tareas: un usuario puede tener tareas distintas según el grupo.
 - Facilita la coordinación (familia, piso compartido, equipo de estudio, proyecto, etc.).
@@ -66,7 +66,7 @@ Define cuándo ocurre la tarea.
 
 - Incluye fecha, hora de inicio, duración y posibles repeticiones.
 - La tarea “se programa en” un horario.
-- Permite detectar solapamientos.
+- Permite detectar solapamientos, por pequeños que sean.
 
 ### `Recordatorio`
 Configura avisos previos.
