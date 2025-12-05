@@ -71,7 +71,7 @@ tarea1 *-- recordatorioA : notifica sobre <
 tarea1 *-- recordatorioB : notifica sobre <  
 
 ' Relaciones para la tarea con conflicto
-tarea2 <-- conflictoHorario1 : provoca conflicto <
+tarea2 <-- conflictoHorario1 : provoca un conflicto <
 conflictoHorario1 --> usuario1 : notifica a >
 tarea2 --> usuario1 : se devuelve para reprogramar >
 
