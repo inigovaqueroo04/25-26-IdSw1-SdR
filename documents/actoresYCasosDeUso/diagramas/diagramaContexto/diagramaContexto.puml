@@ -1,0 +1,79 @@
+@startuml DiagramaDeContexto
+left to right direction
+skinparam linetype polyline
+skinparam state {
+  BackgroundColor White
+  BorderColor Black
+  FontName Arial
+  FontSize 12
+}
+
+state "SESION_CERRADA" as NoAuth
+state "SISTEMA_DISPONIBLE" as Menu
+
+state "GESTION_TAREAS_ABIERTO" as ListTareas
+state "CREACION_TAREA_ABIERTO" as NewTarea
+state "SUBTAREAS_ABIERTO" as EditSubtareas
+
+state "PLANIFICACION_ABIERTO" as EditDetalles
+
+state "ORGANIZACION_GRUPOS_ABIERTO" as ListGrupos
+state "GRUPO_ABIERTO" as EditGrupo
+
+state "AUTOMATIZACION_ACTIVA" as Auto
+state "CONFLICTO_ABIERTO" as Conflict
+
+state "CONSULTA_TAREAS_ABIERTO" as Consulta
+
+[*] --> NoAuth
+
+NoAuth -right-> Menu : iniciarSesion()
+
+Menu -down-> NoAuth : cerrarSesion()
+
+Menu --> ListTareas: abrirGestionTareas()
+Menu --> EditDetalles: abrirPlanificacion()
+Menu --> ListGrupos: abrirGrupos()
+Menu --> Auto: iniciarAutomatizacion()
+Menu --> Consulta: consultarTareas()
+
+ListTareas --> Menu: volverAInicio()
+EditDetalles --> Menu: volverAInicio()
+ListGrupos --> Menu: volverAInicio()
+Auto --> Menu: volverAInicio()
+Consulta --> Menu: completarConsulta()
+
+ListTareas --> NewTarea: crearTarea()
+ListTareas --> ListTareas: modificarTarea()
+ListTareas --> ListTareas: eliminarTarea()
+ListTareas --> ListTareas: marcarCompletada()
+
+NewTarea --> ListTareas: guardarTarea()
+
+ListTareas --> EditSubtareas: gestionarSubtareas()
+EditSubtareas --> ListTareas: anadirSubtarea()
+EditSubtareas --> ListTareas: quitarSubtarea()
+EditSubtareas --> ListTareas: volver()
+
+EditDetalles --> EditDetalles: establecerHorario()
+EditDetalles --> EditDetalles: definirLocalizacion()
+EditDetalles --> EditDetalles: configurarRecordatorio()
+EditDetalles --> EditDetalles: vincularTareas()
+
+ListGrupos --> ListGrupos: crearGrupo()
+ListGrupos --> ListGrupos: unirseAGrupo()
+
+ListGrupos --> EditGrupo: abrirGrupo()
+EditGrupo --> ListGrupos: volver()
+
+EditGrupo --> EditGrupo: invitarUsuario()
+EditGrupo --> EditGrupo: asignarTareaAUsuario()
+EditGrupo --> Consulta: visualizarTareasGrupo()
+
+Auto --> Auto: enviarRecordatorio()
+Auto -right-> Conflict: detectarConflicto()
+
+Conflict -down-> Auto: resolverConflicto()
+Conflict -up-> Auto: ignorarConflicto()
+
+@enduml
