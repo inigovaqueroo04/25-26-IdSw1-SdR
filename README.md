@@ -8,11 +8,11 @@ Aunque nace como una herramienta orientada al entorno familiar, el proyecto est�
  
  ## 🌐 Modelo de Dominio
  A continuación se presenta el Modelo de Dominio, base conceptual sobre la cual se construye toda la lógica del proyecto.<br>
-### [Modelo de Dominio](https://github.com/Sergiorl2/25-26-IdSw1-SdR/tree/develop/documents/modelosUML/modeloDeDominio)
+### [Modelo de Dominio](https://github.com/Sergiorl2/25-26-IdSw1-SdR/tree/develop/documents/modelosUML/modeloDeDominio/README.md)
 
  ## 🎭 Actores Y Casos De Uso
  A continuación se presentan los actores y casos de uso.<br>
-### [Actores y CasosDeUso](https://github.com/Sergiorl2/25-26-IdSw1-SdR/tree/develop/documents/actoresYCasosDeUso)
+### [Actores y CasosDeUso](https://github.com/Sergiorl2/25-26-IdSw1-SdR/tree/develop/documents/actoresYCasosDeUso/README.md)
 
 ### [Diagramas](https://github.com/Sergiorl2/25-26-IdSw1-SdR/tree/develop/documents/actoresYCasosDeUso/diagramas)
 

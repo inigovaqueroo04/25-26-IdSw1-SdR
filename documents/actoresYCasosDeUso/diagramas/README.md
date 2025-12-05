@@ -23,7 +23,7 @@
 | ![Diagrama de Automatización](./diagramaAutomatización/diagramaAutomatizacion.png)| [Ver código](./diagramaAutomatización/diagramaAutomatizacion.puml) |
 
 # Diagramas de Contexto por Actor
-[Documentación](./diagramaContexto)
+[Documentación](./diagramaContexto/README.md)
 
 ## Diagrama de Contexto - Administrador
 
