@@ -22,5 +22,23 @@
 |----------|---------------|
 | ![Diagrama de Automatización](./diagramaAutomatización/diagramaAutomatizacion.png)| [Ver código](./diagramaAutomatización/diagramaAutomatizacion.puml) |
 
-## Diagrama de Contexto 
+# Diagramas de Contexto por Actor
 [Documentación](./diagramaContexto)
+
+## Diagrama de Contexto - Administrador
+
+| Diagrama | Código Fuente |
+|----------|---------------|
+| ![Diagrama de Automatización](./diagramaContexto/diagramaContextoAdmin.png)| [Ver código](./diagramaContexto/diagramaContextoAdmin.puml) |
+
+## Diagrama de Contexto - Miembro
+
+| Diagrama | Código Fuente |
+|----------|---------------|
+| ![Diagrama de Automatización](./diagramaContexto/diagramaContextoMiembro.png)| [Ver código](./diagramaContexto/diagramaContextoMiembro.puml) |
+
+## Diagrama de Contexto - Tiempo
+
+| Diagrama | Código Fuente |
+|----------|---------------|
+| ![Diagrama de Automatización](./diagramaContexto/diagramaContextoTiempo.png)| [Ver código](./diagramaContexto/diagramaContextoTiempo.puml) |

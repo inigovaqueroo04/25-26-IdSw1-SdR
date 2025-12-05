@@ -2,17 +2,17 @@
 
 Este documento recoge los actores principales del sistema y los casos de uso organizados de forma jerárquica. La idea es mostrar de manera sencilla cómo interactúan las personas con la aplicación y qué funcionalidades se ofrecen.
 
-[Diagramas](./diagramas)
+[Diagramas](./diagramas/README.md)
 
 ## Actores
 
 ### Administrador del grupo
 Persona que gestiona el grupo familiar y controla toda la configuración. Puede crear y modificar miembros, tareas y reglas.
 
-### Integrante/Miembro
-Miembro del grupo que consulta y realiza las tareas asignadas, marca actividades completadas y visualiza la información general.
+### Miembro
+Personas del grupo que consultan y realizan las tareas asignadas, marcan actividades completadas y visualizan la información general.
 
-### Sistema
+### Tiempo
 Responsable de validar información y aplicar acciones internas como controles, recordatorios o actualizaciones automáticas.
 
 ## Casos de uso
@@ -39,18 +39,13 @@ Responsable de validar información y aplicar acciones internas como controles, 
 6. Marcar tarea como completada  
 7. Crear subtarea  
 
-### Gestión de reglas
-1. Añadir regla  
-2. Modificar regla  
-3. Eliminar regla  
-4. Consultar reglas  
+### Gestión de permisos
+1. Añadir permiso  
+2. Modificar permiso  
+3. Eliminar permiso  
+4. Consultar permiso  
 
 ### Visualización e informes
 1. Ver calendario de tareas  
 2. Ver carga de trabajo por miembro  
-3. Ver historial de tareas  
-
-### Autenticación (si se amplía el sistema)
-1. Iniciar sesión  
-2. Cerrar sesión  
-3. Recuperar credenciales  
+3. Ver historial de tareas

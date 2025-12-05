@@ -1,111 +1,194 @@
-# [Sistema de Gestión de Tareas] > Diagrama de Contexto
+# Sistema de Gestión de Tareas > Diagramas de Contexto por Actor
 
 
 ## Introducción
 
-Este documento presenta el diagrama de contexto para el flujo principal del sistema, mostrando su perspectiva completa como una máquina de estados. El diagrama especifica la secuencialidad de navegación y las transiciones clave para la gestión central de tareas, organización de grupos, planificación detallada y automatización.
+Este documento presenta los diagramas de contexto del sistema descompuestos por los actores principales. Esta aproximación modular mejora la comprensión de los flujos de trabajo específicos: la complejidad de la gestión y configuración (Administrador), la sencillez de la operación diaria (Miembro) y los procesos automáticos (Tiempo).
+
+---
 
 ## Propósito
 
-- Mostrar la perspectiva completa del sistema desde el punto de vista del usuario principal.
+- Mostrar la perspectiva específica de cada actor dentro del sistema.
 - Especificar la secuencialidad de navegación mediante estados y transiciones.
-- Validar que todos los flujos de gestión de tareas y grupos tienen lugar en el sistema.
-- Aplicar un patrón radial centrado en el estado `SISTEMA_DISPONIBLE`.
+- Definir las precondiciones de navegación de forma visual para cada contexto.
+- Facilitar la comprensión de la separación de responsabilidades entre los actores.
 
-## Diagrama
+---
 
-<div align=center>
+# Diagramas por Actor
 
-|![Diagrama de Contexto - Gestor de Tareas](diagramaContexto.png)
+## 1. Administrador (Gestión y Configuración)
+
+Este diagrama modela el flujo de trabajo del usuario con privilegios de gestión. Incluye la creación, edición, eliminación y configuración de tareas, grupos y planificación.
+
+<div align="center">
+
+|![Diagrama de Contexto - Gestor de Tareas](diagramaContextoAdmin.png)
 |-
-|Código fuente: [diagramaContexto.puml](diagramaContexto.puml)
+|**Código fuente:** [diagramaContextoAdmin](diagramaContextoAdmin.puml)
 
 </div>
 
-## Estados del sistema
+---
 
-|Estado|Descripción|Función principal|
-|-|-|-|
-|**SESION_CERRADA**|Estado inicial del sistema|Punto de entrada, requiere autenticación|
-|**SISTEMA_DISPONIBLE**|Hub central de navegación|Punto de acceso a todos los módulos principales|
-|**GESTION_TAREAS_ABIERTO**|Módulo de gestión principal|Visualización, modificación y gestión general de tareas|
-|**CREACION_TAREA_ABIERTO**|Creación inicial de una tarea|Recolección de datos mínimos para la creación|
-|**SUBTAREAS_ABIERTO**|Gestión de dependencias y subtareas|Adición o eliminación de subtareas específicas|
-|**PLANIFICACION_ABIERTO**|Módulo de detalles y horarios|Configuración de horarios, localización y recordatorios|
-|**ORGANIZACION_GRUPOS_ABIERTO**|Módulo de listado y gestión de grupos|Creación, unión y visualización de grupos|
-|**GRUPO_ABIERTO**|Gestión de grupo específico|Invitación de usuarios y asignación de tareas a miembros|
-|**AUTOMATIZACION_ACTIVA**|Módulo de monitoreo|Ejecución de procesos automáticos (recordatorios, detección de conflictos)|
-|**CONFLICTO_ABIERTO**|Resolución de conflictos|Presentación de conflictos detectados y opciones de resolución|
-|**CONSULTA_TAREAS_ABIERTO**|Módulo de visualización|Visualización de tareas propias o de grupos|
+## 2. Miembro (Usuario Operacional)
 
-## Transiciones principales
+Este diagrama representa el flujo de trabajo esencial para un usuario estándar, centrándose en el acceso a la gestión de tareas y la consulta global.
 
-### Autenticación y navegación al menú
-- `iniciarSesion()`: SESION_CERRADA → SISTEMA_DISPONIBLE (proceso de autenticación exitoso)
-- `cerrarSesion()`: SISTEMA_DISPONIBLE → SESION_CERRADA
+<div align="center">
 
-### Navegación a módulos principales (desde SISTEMA_DISPONIBLE)
-- `abrirGestionTareas()`: SISTEMA_DISPONIBLE → GESTION_TAREAS_ABIERTO
-- `abrirPlanificacion()`: SISTEMA_DISPONIBLE → PLANIFICACION_ABIERTO
-- `abrirGrupos()`: SISTEMA_DISPONIBLE → ORGANIZACION_GRUPOS_ABIERTO
-- `iniciarAutomatizacion()`: SISTEMA_DISPONIBLE → AUTOMATIZACION_ACTIVA
-- `consultarTareas()`: SISTEMA_DISPONIBLE → CONSULTA_TAREAS_ABIERTO
+|![Diagrama de Contexto - Gestor de Tareas](diagramaContextoMiembro.png)
+|-
+|**Código fuente:** [diagramaContextoMiembro](diagramaContextoMiembro.puml)
 
-### Patrón de Edición y Creación (Módulo GESTIÓN DE TAREAS)
-- **GESTION_TAREAS_ABIERTO → crearTarea() → CREACION_TAREA_ABIERTO**: Inicia la creación.
-- **CREACION_TAREA_ABIERTO → guardarTarea() → GESTION_TAREAS_ABIERTO**: Finaliza y vuelve.
-- **GESTION_TAREAS_ABIERTO → gestionarSubtareas() → SUBTAREAS_ABIERTO**: Inicia la edición de dependencias.
-- **SUBTAREAS_ABIERTO → volver() → GESTION_TAREAS_ABIERTO**: Retorno simple.
-- **GESTION_TAREAS_ABIERTO → modificarTarea() / eliminarTarea() / marcarCompletada() → GESTION_TAREAS_ABIERTO**: Operaciones in situ (autorreflexivas).
+</div>
 
-### Patrón de Planificación (Módulo PLANIFICACION)
-- **PLANIFICACION_ABIERTO → establecerHorario() / definirLocalizacion() / configurarRecordatorio() / vincularTareas() → PLANIFICACION_ABIERTO**: Todas son operaciones autorreflexivas de edición de detalles.
+---
 
-### Patrón de Grupos (Módulo ORGANIZACIÓN)
-- **ORGANIZACION_GRUPOS_ABIERTO → abrirGrupo() → GRUPO_ABIERTO**: Acceso a la gestión de un grupo específico.
-- **GRUPO_ABIERTO → visualizarTareasGrupo() → CONSULTA_TAREAS_ABIERTO**: Enlace a la consulta de tareas.
+## 3. Tiempo (Automatización)
 
-### Patrón de Automatización
-- **AUTOMATIZACION_ACTIVA → detectarConflicto() → CONFLICTO_ABIERTO**: Flujo de detección.
-- **CONFLICTO_ABIERTO → resolverConflicto() / ignorarConflicto() → AUTOMATIZACION_ACTIVA**: Flujo de resolución.
+Este diagrama ilustra los flujos que se activan automáticamente por el sistema, como la detección y resolución de conflictos de horario.
 
-### Retorno al Menú Principal (Hub Central)
-- `volverAInicio()`: Usada por ListTareas, EditDetalles, ListGrupos, Auto.
-- `completarConsulta()`: Usada por Consulta.
+<div align="center">
 
-## Precondiciones visuales
+|![Diagrama de Contexto - Gestor de Tareas](diagramaContextoTiempo.png)
+|-
+|**Código fuente:** [diagramaContextoTiempo](diagramaContextoTiempo.puml)
 
-### Autenticación requerida
-El diagrama hace explícito que para acceder a `SISTEMA_DISPONIBLE`, el usuario debe completar `iniciarSesion()` desde el estado `SESION_CERRADA`.
+</div>
 
-### Navegación centralizada desde menú
-El acceso a los módulos principales requiere pasar por `SISTEMA_DISPONIBLE`.
+---
 
-### Flujos de trabajo
-- **Gestión**: `GESTION_TAREAS_ABIERTO` es el punto de inicio para todas las operaciones CRUD.
-- **Subtareas**: La gestión de subtareas (`SUBTAREAS_ABIERTO`) es un sub-flujo que regresa a la gestión principal.
+# Estados Consolidados del Sistema
 
-## Validación de flujos
+| Estado | Descripción | Actores Relevantes | Función principal |
+|--------|-------------|---------------------|--------------------|
+| **SESION_CERRADA** | Estado inicial del sistema | Administrador, Miembro, Tiempo | Punto de entrada, requiere autenticación |
+| **SISTEMA_DISPONIBLE** | Hub central de navegación | Administrador, Miembro, Tiempo | Punto de acceso a los módulos |
+| **GESTION_TAREAS_ABIERTO** | Módulo principal de gestión | Administrador, Miembro | Gestión general de tareas |
+| **CREACION_TAREA_ABIERTO** | Creación de una tarea | Administrador | Recolección de datos mínimos |
+| **PLANIFICACION_ABIERTO** | Módulo de detalles y horarios | Administrador | Configuración de horarios y recordatorios |
+| **ORGANIZACION_GRUPOS_ABIERTO** | Gestión de grupos | Administrador | Creación, unión y visualización |
+| **GRUPO_ABIERTO** | Grupo específico | Administrador | Gestión de miembros y tareas |
+| **AUTOMATIZACION_ACTIVA** | Monitoreo automático | Tiempo, Administrador | Ejecución automática |
+| **CONFLICTO_ABIERTO** | Resolución de conflictos | Tiempo | Manejo de conflictos |
+| **CONSULTA_TAREAS_ABIERTO** | Consulta específica | Administrador | Visualización de tareas |
+| **CONSULTA_TAREAS_CONCEPTUAL_ABIERTO** | Consulta global | Administrador, Miembro | Visualización general |
 
-### Cobertura de casos de uso
-- **Gestión de Tareas**: Cubre creación, modificación, eliminación, completado y gestión de subtareas.
-- **Grupos**: Cubre creación, unión, acceso a detalles del grupo, asignación de tareas a miembros y consulta de tareas del grupo.
-- **Planificación**: Cubre la definición de todos los detalles espaciales y temporales de la tarea.
-- **Automatización**: Cubre la detección, resolución e ignorancia de conflictos de horario.
+---
 
-### Optimización del flujo
-- **Patrón radial**: Mantiene el `SISTEMA_DISPONIBLE` como el hub central para una navegación intuitiva y clara.
-- **Operaciones in situ**: Las operaciones de edición y eliminación que no cambian el contexto (ej., `eliminarTarea()`) son autorreflexivas, minimizando el cambio de estado.
+# Transiciones por Actor
 
-## Características del diseño
+## 1. Administrador (Gestión)
 
-### Patrón Hub Central
-El `SISTEMA_DISPONIBLE` actúa como punto central, concentrando el inicio de todos los flujos principales.
+| Transición | Origen → Destino | Descripción |
+|-----------|------------------|-------------|
+| `iniciarSesion()` | SESION_CERRADA → SISTEMA_DISPONIBLE | Acceso al sistema |
+| `cerrarSesion()` | SISTEMA_DISPONIBLE → SESION_CERRADA | Cierre de sesión |
+| `abrirTareas()` | SISTEMA_DISPONIBLE → GESTION_TAREAS_ABIERTO | Acceso a la lista |
+| `abrirPlanificacion()` | SISTEMA_DISPONIBLE → PLANIFICACION_ABIERTO | Configuración de horarios |
+| `abrirGrupos()` | SISTEMA_DISPONIBLE → ORGANIZACION_GRUPOS_ABIERTO | Gestión de grupos |
+| `visualizarTareasGlobal()` | SISTEMA_DISPONIBLE → CONSULTA_TAREAS_CONCEPTUAL_ABIERTO | Consulta general de tareas |
+| `crearTarea()` | GESTION_TAREAS_ABIERTO → CREACION_TAREA_ABIERTO | Inicia creación |
+| `editarTarea()` | GESTION_TAREAS_ABIERTO / GRUPO_ABIERTO → CREACION_TAREA_ABIERTO | Edita tarea |
+| `guardarTarea()` | CREACION_TAREA_ABIERTO → GESTION_TAREAS_ABIERTO | Guarda tarea |
+| `establecerHorario()` / `vincularTareas()` | PLANIFICACION_ABIERTO → PLANIFICACION_ABIERTO | Acción autorreflexiva |
+| `crearGrupo()` / `editarGrupo()` | ORGANIZACION_GRUPOS_ABIERTO / GRUPO_ABIERTO → GRUPO_ABIERTO | Gestión de grupos |
+| `asignarTareaAUsuario()` / `invitarUsuario()` | GRUPO_ABIERTO → GRUPO_ABIERTO | Gestión de miembros |
+| `visualizarTareasGrupo()` | GRUPO_ABIERTO → CONSULTA_TAREAS_ABIERTO | Consulta de tareas dentro de cada grupo |
+| `completarGestion()` / `volverAInicio()` | Cualquier Estado Secundario → SISTEMA_DISPONIBLE | Retorno al menú |
 
-### Granularidad Descriptiva
-Los estados son lo suficientemente específicos (ej., `CREACION_TAREA_ABIERTO` vs. `GESTION_TAREAS_ABIERTO`) para distinguir las fases de la interacción del usuario.
+---
 
-### Separación de Responsabilidades
-- **Flujo de Tareas**: Claramente separado del flujo de **Grupos** y del flujo de **Automatización**.
-- **`iniciarSesion()`**: Proceso de autenticación.
-- **`volverAInicio()`**: Navegación de regreso al menú principal desde cualquier módulo.
+## 2. Miembro (Operacional)
+
+| Transición | Origen → Destino | Descripción |
+|-----------|------------------|-------------|
+| `iniciarSesion()` | SESION_CERRADA → SISTEMA_DISPONIBLE | Acceso |
+| `cerrarSesion()` | SISTEMA_DISPONIBLE → SESION_CERRADA | Cierre |
+| `abrirTareas()` | SISTEMA_DISPONIBLE → GESTION_TAREAS_ABIERTO | Acceso a tareas |
+| `visualizarTareasGlobal()` | SISTEMA_DISPONIBLE → CONSULTA_TAREAS_CONCEPTUAL_ABIERTO | Vista general de tareas |
+| `marcarCompletada()` | GESTION_TAREAS_ABIERTO → GESTION_TAREAS_ABIERTO | Marca la tarea completada |
+| `completarGestion()` | GESTION_TAREAS_ABIERTO / CONSULTA_TAREAS_CONCEPTUAL_ABIERTO → SISTEMA_DISPONIBLE | Regreso |
+
+---
+
+## 3. Actor Tiempo (Automatización)
+
+| Transición | Origen → Destino | Descripción |
+|-----------|------------------|-------------|
+| `iniciarAutomatizacion()` | SISTEMA_DISPONIBLE → AUTOMATIZACION_ACTIVA | Comienza monitoreo |
+| `detectarConflicto()` | AUTOMATIZACION_ACTIVA → CONFLICTO_ABIERTO | Detecta conflicto |
+| `resolverConflicto()` | CONFLICTO_ABIERTO → AUTOMATIZACION_ACTIVA | Resuelve conflicto |
+| `ignorarConflicto()` | CONFLICTO_ABIERTO → AUTOMATIZACION_ACTIVA | Ignora conflicto |
+| `volverAInicio()` | AUTOMATIZACION_ACTIVA → SISTEMA_DISPONIBLE | Detiene automatización |
+
+---
+
+# Precondiciones visuales
+
+## Autenticación requerida
+El diagrama hace explícito que para acceder a **SISTEMA_DISPONIBLE**, el usuario debe completar `iniciarSesion()` desde el estado **SESION_CERRADA**.
+
+## Navegación centralizada desde menú
+El acceso a los módulos principales requiere pasar por **SISTEMA_DISPONIBLE**.
+
+---
+
+# Flujos de trabajo
+
+## Flujo de Administrador
+Requiere transitar por estados específicos como **CREACION_TAREA_ABIERTO** u **ORGANIZACION_GRUPOS_ABIERTO** para cualquier operación de configuración o modificación de estructura.
+
+## Flujo de Miembro
+Las operaciones están restringidas a:
+- La lectura (**CONSULTA_TAREAS_CONCEPTUAL_ABIERTO**)
+- Acciones autorreflexivas sobre tareas asignadas (`marcarCompletada()`)
+
+## Flujo de Tiempo
+- La activación (`iniciarAutomatizacion()`) debe ocurrir en **SISTEMA_DISPONIBLE**
+- La gestión de excepciones solo es posible en **CONFLICTO_ABIERTO**
+
+---
+
+# Validación de Flujos
+
+## Separación de Contexto
+
+- El flujo de **Administrador** es expansivo e incluye todas las transiciones de configuración, creación y gestión de infraestructura.
+- El flujo de **Miembro** es minimalista, enfocado solo en consumir y modificar el estado de sus tareas.    
+- El flujo de **Tiempo** está aislado a las transiciones de monitoreo y manejo de excepciones (conflictos de planificación).
+
+## Cobertura de casos de uso
+
+- **Gestión de Tareas (Administrador):** creación, modificación, eliminación y asignación a miembros y grupos.    
+- **Grupos (Administrador):** creación, unión, gestión de miembros y consulta de tareas por grupo.  
+- **Planificación (Administrador):** definición de detalles espaciales y temporales de la tarea.
+- **Operación de Tareas (Administrador/Miembro):** visualización y marcado de completado de sus tareas asignadas.  
+- **Automatización (Tiempo):** detección, resolución e ignorancia de conflictos de horario.
+
+---
+
+# Optimización del flujo
+
+## Patrón radial
+Mantiene **SISTEMA_DISPONIBLE** como el hub central, facilitando una navegación intuitiva para todos los actores.
+
+## Operaciones in situ
+Las operaciones de modificación simple (ej. `marcarCompletada()`) son autorreflexivas, minimizando cambios de estado y mejorando la eficiencia.
+
+---
+
+# Características del diseño
+
+## Patrón Hub Central
+**SISTEMA_DISPONIBLE** actúa como punto central, concentrando el inicio de todos los flujos principales para los tres actores.
+
+## Granularidad Descriptiva
+Los estados son lo suficientemente específicos (ej. **CREACION_TAREA_ABIERTO** vs. **GESTION_TAREAS_ABIERTO**) para distinguir las fases de interacción de cada actor.
+
+## Separación de Responsabilidades
+- **Flujo de Tareas:** segmentado entre funciones de Administrador (creación/configuración) y Miembro (ejecución/consumo).  
+- **Control de Acceso:** la dependencia estricta de `iniciarSesion()` asegura el control de acceso en la transición **SESION_CERRADA → SISTEMA_DISPONIBLE**.  
+- **Retorno Consistente:** el uso de `completarGestion()` o `volverAInicio()` garantiza una navegación predecible hacia el menú principal.
