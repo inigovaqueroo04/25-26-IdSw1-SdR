@@ -1,5 +1,5 @@
 # 💻 Sistema de Gestión de Tareas - Ingeniería de Software I
- 
+
  ## 📝 Descripcion Del Proyecto
 Crear una aplicación para la gestión colaborativa de tareas familiares, diseñada para organizar, asignar y coordinar las actividades del hogar entre todos los miembros (padre, madre, hijos, etc.).
 El sistema busca facilitar la planificación diaria, mejorar la distribución de responsabilidades y evitar solapamientos u olvidos.
