@@ -29,6 +29,13 @@ Representa a la persona que interactúa con el sistema.
 - Recibe notificaciones cuando sus tareas presentan conflictos de horario.
 - Funciona como la “entidad principal” que da sentido a los datos del sistema.
 
+### `Rol`
+Define la función, permisos o responsabilidades que tiene un usuario dentro del sistema.
+
+- Un usuario “tiene” un rol específico (por ejemplo: Administrador, Miembro).
+- Determina qué acciones puede realizar sobre los grupos y las tareas.
+- Establece el nivel de acceso y seguridad para cada persona.
+
 **Por qué está arriba:**  
 La planificación del sistema nace en los usuarios. Todo lo demás se organiza alrededor de ellos.
 
