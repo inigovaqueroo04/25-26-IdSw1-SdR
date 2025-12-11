@@ -7,18 +7,14 @@ state "SISTEMA_DISPONIBLE" as Menu
 
 state "GESTION_TAREAS_ABIERTO" as ListProgramas
 
-state "CONSULTA_TAREAS_CONCEPTUAL_ABIERTO" as ReadConsultaTareas
-
 [*] --> NoAuth
 
 NoAuth --> Menu : iniciarSesion()
 
 Menu --> NoAuth : cerrarSesion()
 Menu --> ListProgramas: abrirTareas()
-Menu --> ReadConsultaTareas: visualizarTareasGlobal()
 
 ListProgramas --> ListProgramas: marcarCompletada()
 
 ListProgramas --> Menu: completarGestion()
-ReadConsultaTareas --> Menu: completarGestion()
 @enduml
