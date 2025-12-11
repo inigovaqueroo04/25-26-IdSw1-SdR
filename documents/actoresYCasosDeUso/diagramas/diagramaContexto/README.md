@@ -34,7 +34,7 @@ Este diagrama modela el flujo de trabajo del usuario con privilegios de gestión
 
 ## 2. Miembro (Usuario Operacional)
 
-Este diagrama representa el flujo de trabajo esencial para un usuario estándar, centrándose en el acceso a la gestión de tareas y la consulta global.
+Este diagrama representa el flujo de trabajo esencial para un usuario estándar, centrándose en el acceso a la gestión y consulta de tareas.
 
 <div align="center">
 
@@ -74,7 +74,6 @@ Este diagrama ilustra los flujos que se activan automáticamente por el sistema,
 | **AUTOMATIZACION_ACTIVA** | Monitoreo automático | Tiempo, Administrador | Ejecución automática |
 | **CONFLICTO_ABIERTO** | Resolución de conflictos | Tiempo | Manejo de conflictos |
 | **CONSULTA_TAREAS_ABIERTO** | Consulta específica | Administrador | Visualización de tareas |
-| **CONSULTA_TAREAS_CONCEPTUAL_ABIERTO** | Consulta global | Administrador, Miembro | Visualización general |
 
 ---
 
@@ -89,7 +88,6 @@ Este diagrama ilustra los flujos que se activan automáticamente por el sistema,
 | `abrirTareas()` | SISTEMA_DISPONIBLE → GESTION_TAREAS_ABIERTO | Acceso a la lista |
 | `abrirPlanificacion()` | SISTEMA_DISPONIBLE → PLANIFICACION_ABIERTO | Configuración de horarios |
 | `abrirGrupos()` | SISTEMA_DISPONIBLE → ORGANIZACION_GRUPOS_ABIERTO | Gestión de grupos |
-| `visualizarTareasGlobal()` | SISTEMA_DISPONIBLE → CONSULTA_TAREAS_CONCEPTUAL_ABIERTO | Consulta general de tareas |
 | `crearTarea()` | GESTION_TAREAS_ABIERTO → CREACION_TAREA_ABIERTO | Inicia creación |
 | `editarTarea()` | GESTION_TAREAS_ABIERTO / GRUPO_ABIERTO → CREACION_TAREA_ABIERTO | Edita tarea |
 | `guardarTarea()` | CREACION_TAREA_ABIERTO → GESTION_TAREAS_ABIERTO | Guarda tarea |
@@ -108,7 +106,6 @@ Este diagrama ilustra los flujos que se activan automáticamente por el sistema,
 | `iniciarSesion()` | SESION_CERRADA → SISTEMA_DISPONIBLE | Acceso |
 | `cerrarSesion()` | SISTEMA_DISPONIBLE → SESION_CERRADA | Cierre |
 | `abrirTareas()` | SISTEMA_DISPONIBLE → GESTION_TAREAS_ABIERTO | Acceso a tareas |
-| `visualizarTareasGlobal()` | SISTEMA_DISPONIBLE → CONSULTA_TAREAS_CONCEPTUAL_ABIERTO | Vista general de tareas |
 | `marcarCompletada()` | GESTION_TAREAS_ABIERTO → GESTION_TAREAS_ABIERTO | Marca la tarea completada |
 | `completarGestion()` | GESTION_TAREAS_ABIERTO / CONSULTA_TAREAS_CONCEPTUAL_ABIERTO → SISTEMA_DISPONIBLE | Regreso |
 
@@ -143,7 +140,7 @@ Requiere transitar por estados específicos como **CREACION_TAREA_ABIERTO** u **
 
 ## Flujo de Miembro
 Las operaciones están restringidas a:
-- La lectura (**CONSULTA_TAREAS_CONCEPTUAL_ABIERTO**)
+- La lectura (**GESTION_TAREAS_ABIERTO**)
 - Acciones autorreflexivas sobre tareas asignadas (`marcarCompletada()`)
 
 ## Flujo de Tiempo
