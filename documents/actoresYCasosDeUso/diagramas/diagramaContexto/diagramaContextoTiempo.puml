@@ -2,17 +2,11 @@
 left to right direction
 skinparam linetype polyline
 
-state "SESION_CERRADA" as NoAuth
 state "SISTEMA_DISPONIBLE" as Menu
 
 state "AUTOMATIZACION_ACTIVA" as Auto
 state "CONFLICTO_ABIERTO" as Conflict
 
-[*] --> NoAuth
-
-NoAuth --> Menu : iniciarSesion()
-
-Menu --> NoAuth : cerrarSesion()
 Menu --> Auto: iniciarAutomatizacion()
 
 Auto --> Conflict: detectarConflicto()
