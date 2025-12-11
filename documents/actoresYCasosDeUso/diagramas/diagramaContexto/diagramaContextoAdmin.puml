@@ -14,7 +14,6 @@ state "ORGANIZACION_GRUPOS_ABIERTO" as ListGrupos
 state "GRUPO_ABIERTO" as EditGrupo
 state "CONSULTA_TAREAS_ABIERTO" as EditConsultaTareas
 
-state "CONSULTA_TAREAS_CONCEPTUAL_ABIERTO" as ReadConsultaTareas
 
 [*] --> NoAuth
 
@@ -24,7 +23,6 @@ Menu --> NoAuth : cerrarSesion()
 Menu --> ListProgramas: abrirTareas()
 Menu --> ListGrupos: abrirGrupos()
 Menu --> Planificacion: abrirPlanificacion()
-Menu --> ReadConsultaTareas: visualizarTareasGlobal()
 
 Planificacion --> Planificacion: establecerHorario()
 Planificacion --> Planificacion: definirLocalizacion()
@@ -55,5 +53,4 @@ EditConsultaTareas --> EditGrupo: abrirEdicionGrupo()
 ListProgramas --> Menu: completarGestion()
 ListGrupos --> Menu: completarGestion()
 Planificacion --> Menu: completarGestion()
-ReadConsultaTareas --> Menu: completarGestion()
 @enduml
