@@ -7,6 +7,8 @@ state "SISTEMA_DISPONIBLE" as Menu
 state "AUTOMATIZACION_ACTIVA" as Auto
 state "CONFLICTO_ABIERTO" as Conflict
 
+[*] --> Menu
+
 Menu --> Auto: iniciarAutomatizacion()
 
 Auto --> Conflict: detectarConflicto()
