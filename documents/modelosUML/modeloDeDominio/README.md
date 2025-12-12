@@ -22,12 +22,12 @@
 |----------|---------------|
 | ![Diagrama de Estados Tarea](./diagramaEstados/diagramaEstadosTarea.png)| [Ver código](./diagramaEstados/diagramaEstadosTarea.puml) |
 
-### Recordatorio
+### Ciclo de Vida Recordatorio
 | Diagrama | Código Fuente |
 |----------|---------------|
 | ![Diagrama de Estados Recordatorio](./diagramaEstados/diagramaEstadosRecordatorio.png)| [Ver código](./diagramaEstados/diagramaEstadosRecordatorio.puml) |
 
-### Conflicto Horario
+### Ciclo de Vida Conflicto Horario
 | Diagrama | Código Fuente |
 |----------|---------------|
 | ![Diagrama de Estados Conflicto Horario](./diagramaEstados/diagramaEstadosConflictoHorario.png)| [Ver código](./diagramaEstados/diagramaEstadosConflictoHorario.puml) |
