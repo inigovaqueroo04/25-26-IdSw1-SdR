@@ -10,6 +10,11 @@
 |----------|---------------|
 | ![Diagrama de Objetos](./diagramaObjetos/diagramaObjetos.png)| [Ver código](./diagramaObjetos/diagramaObjetos.puml) |
 
+## Diagrama de Objetos Rol
+| Diagrama | Código Fuente |
+|----------|---------------|
+| ![Diagrama de Objetos](./diagramaObjetos/diagramaObjetosRol.png)| [Ver código](./diagramaObjetos/diagramaObjetosRol.puml) |
+
 ## Diagramas de Estados 
 
 ### Ciclo de Vida de Tarea
