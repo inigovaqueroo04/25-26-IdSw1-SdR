@@ -1,5 +1,12 @@
 # 💻 Sistema de Gestión de Tareas - Ingeniería de Software I
 
+[![Inicio](https://img.shields.io/badge/Inicio-FFFFFF?style=for-the-badge&logo=homeassistant&logoColor=black)](./README.md)
+[![Modelo de Dominio](https://img.shields.io/badge/Modelo%20de%20Dominio-FFFFFF?style=for-the-badge&logo=bookstack&logoColor=black)](./documents/modelosUML/README.md)
+[![Actores Y CasosDeUso](https://img.shields.io/badge/Actores%20&%20Casos%20De%20Uso-FFFFFF?style=for-the-badge&logo=people&logoColor=black)](./documents/actoresYCasosDeUso/README.md)
+[![Detallar & Prototipar](https://img.shields.io/badge/Detallar%20&%20Prototipar-FFFFFF?style=for-the-badge&logo=figma&logoColor=black)]()
+
+---
+
 ## 📝 Descripción Del Proyecto
 Crear una aplicación para la gestión colaborativa de tareas familiares, diseñada para organizar, asignar y coordinar las actividades del hogar entre todos los miembros (padre, madre, hijos, etc.).
 El sistema busca facilitar la planificación diaria, mejorar la distribución de responsabilidades y evitar solapamientos u olvidos.
