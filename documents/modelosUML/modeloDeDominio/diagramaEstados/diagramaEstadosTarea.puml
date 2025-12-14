@@ -8,8 +8,12 @@ state "Finalizada" as Finalizada
 state "Cancelada" as Cancelada
 
 [*] --> Creada
+<<<<<<< HEAD:documents/modelosUML/modeloDeDominio/diagramaEstados/diagramaEstadosTarea.puml
 
 Creada --> Programada : Asignar horario/localización
+=======
+Creada --> Programada : Asignar horarios/localizaciónes
+>>>>>>> vaqueroIñigo:documents/modelosUML/modeloDeDominio/diagramaEstados/diagramaEstados.puml
 
 Programada --> EnEjecucion : Iniciar tarea
 Programada --> Cancelada : Cancelar tarea (con o sin conflicto)

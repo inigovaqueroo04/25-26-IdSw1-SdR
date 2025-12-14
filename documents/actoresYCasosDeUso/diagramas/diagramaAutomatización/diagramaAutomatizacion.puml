@@ -3,7 +3,14 @@ left to right direction
 actor "Tiempo" as T
 
     package "Automatización" {
+<<<<<<< HEAD
         usecase "Detectar Conflicto de Horario" as UC_A1
+=======
+        usecase "Detectar Conflictos de Horario" as UC_A1
+        usecase "Notificar Conflicto" as UC_A2
+        usecase "Enviar Recordatorio" as UC_A3
+        usecase "Verificar Hora Actual" as UC_A4
+>>>>>>> vaqueroIñigo
     }
 
     T --> UC_A1
