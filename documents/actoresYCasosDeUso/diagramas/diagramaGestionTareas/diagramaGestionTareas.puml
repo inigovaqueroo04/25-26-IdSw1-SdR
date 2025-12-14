@@ -4,13 +4,14 @@ actor "Administrador" as Admin
 actor "Miembro" as Miem
 
     package "Gestión de Tareas" {
+        usecase "Relacionar tareas" as UC5
         usecase "Crear Tarea" as UC1
         usecase "Modificar Tarea" as UC2
         usecase "Eliminar Tarea" as UC3
         usecase "Marcar como Completada" as UC4
-        usecase "Gestionar Subtareas" as UC5
         usecase "Añadir Subtarea" as UC5a
         usecase "Quitar Subtarea" as UC5b
+        
     }
 
     Admin --> UC1
@@ -21,4 +22,5 @@ actor "Miembro" as Miem
     Admin--> UC5
     UC5 <.. UC5a : <<extend>>
     UC5 <.. UC5b : <<extend>>
+    UC2 <.. UC4 : <<extend>>
 @enduml
