@@ -6,7 +6,7 @@
 
 Este documento recoge los actores principales del sistema y los casos de uso organizados de forma jerárquica. La idea es mostrar de manera sencilla cómo interactúan las personas con la aplicación y qué funcionalidades se ofrecen.
 
-[Diagramas](./diagramas/README.md)
+# [Diagramas](./diagramas/README.md)
 
 ## Actores
 
@@ -21,35 +21,39 @@ Responsable de validar información y aplicar acciones internas como controles, 
 
 ## Casos de uso
 
-### Gestión de miembros
-1. Alta de miembro  
-2. Modificar datos de miembro  
-3. Eliminar miembro  
-4. Consultar listado de miembros  
+### Gestión de sesión y navegación
+1. `iniciarSesion()`
+2. `cerrarSesion()`
+3. `completarGestion()`
+4. `volverAInicio()`
 
-### Gestión de grupos
-1. Crear grupo  
-2. Modificar grupo  
-3. Eliminar grupo  
-4. Añadir miembro a grupo  
-5. Quitar miembro de grupo  
+### Gestión de grupos y usuarios
+1. `abrirGrupos()`
+2. `crearGrupo()`
+3. `editarGrupo()`
+4. `eliminarGrupo()`
+5. `unirseAGrupo()`
+6. `invitarUsuario()`
+7. `asignarTareaAUsuario()`
+8. `visualizarTareasGrupo()`
+9. `abrirEdicionGrupo()`
 
 ### Gestión de tareas
-1. Crear tarea  
-2. Modificar tarea  
-3. Eliminar tarea  
-4. Consultar tareas  
-5. Asignar tarea a miembro  
-6. Marcar tarea como completada  
-7. Crear subtarea  
+1. `abrirTareas()`
+2. `crearTarea()`
+3. `editarTarea()`
+4. `eliminarTarea()`
+5. `marcarCompletada()`
 
-### Gestión de permisos
-1. Añadir permiso  
-2. Modificar permiso  
-3. Eliminar permiso  
-4. Consultar permiso  
+### Planificación y configuración
+1. `abrirPlanificacion()`
+2. `establecerHorario()`
+3. `vincularTareas()`
+4. `configurarRecordatorio()`
+5. `definirLocalizacion()`
 
-### Visualización e informes
-1. Ver calendario de tareas  
-2. Ver carga de trabajo por miembro  
-3. Ver historial de tareas
+### Automatización (Actor Tiempo)
+1. `iniciarAutomatizacion()`
+2. `detectarConflicto()`
+3. `resolverConflicto()`
+4. `ignorarConflicto()`

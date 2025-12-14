@@ -2,16 +2,13 @@
 hide empty description
 
 state "Creado" as Creado
-state "Activo (Enviado/Mostrado)" as Activo
 state "Finalizado" as Finalizado
 
 [*] --> Creado
 
-Creado --> Activo : Tarea Programada \n y Alcanza hora de envío
+Creado --> Finalizado : Hora de envío alcanzada / \nNotificación enviada
 
 Creado --> Finalizado : Tarea Cancelada
-
-Activo --> Finalizado : Tiempo de espera transcurrido
 
 Finalizado --> [*]
 
