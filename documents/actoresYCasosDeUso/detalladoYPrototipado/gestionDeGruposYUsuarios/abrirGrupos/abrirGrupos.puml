@@ -1,0 +1,64 @@
+@startuml
+hide empty description
+
+' Estilos visuales
+skinparam state {
+    BackgroundColor White
+    BorderColor Black
+    ArrowColor Green
+}
+skinparam note {
+    BackgroundColor LightYellow
+    BorderColor Gray
+}
+
+' 1. Entradas
+state SISTEMA_DISPONIBLE
+state GRUPO_ABIERTO
+
+' 2. Estado compuesto principal: abrirGrupos()
+state "abrirGrupos()" as MainBlock {
+    
+    [*] --> Paso1
+    note on link
+        **Administrador** solicita abrir grupos
+    end note
+
+    state Paso1 as " "
+    
+    Paso1 --> [*]
+    note on link
+        **Sistema** presenta lista de grupos
+        * ID y nombre de cada grupo
+        * Permite solicitar crear grupo nuevo
+        * Permite solicitar editar grupo
+        * Permite solicitar unirse a un grupo
+        * Permite solicitar eliminar grupo
+    end note
+    
+    ' Nota: Se elimina el bucle de "filtrar" ya que no está en el diagrama de contexto
+}
+
+' Conexiones de entrada
+SISTEMA_DISPONIBLE -down-> MainBlock
+GRUPO_ABIERTO -down-> MainBlock
+
+' 3. Salidas 
+
+' Salidas hacia GRUPO_ABIERTO (crear y editar)
+state accionesGrupo as "crearGrupo()\neditarGrupo()"
+MainBlock -down-> accionesGrupo
+accionesGrupo -down-> GRUPO_ABIERTO
+
+' Salidas que se quedan en ORGANIZACION_GRUPOS_ABIERTO (bucles en el diagrama)
+state accionesPropias as "eliminarGrupo()\nunirseAGrupo()"
+state ORGANIZACION_GRUPOS_ABIERTO
+MainBlock -down-> accionesPropias
+accionesPropias -down-> ORGANIZACION_GRUPOS_ABIERTO
+
+' Salida de retorno (completarGestion)
+state finGestion as "completarGestion()"
+MainBlock -down-> finGestion
+finGestion -down-> SISTEMA_DISPONIBLE
+
+@enduml

@@ -1,0 +1,67 @@
+@startuml
+hide empty description
+
+' Estilos visuales
+skinparam state {
+    BackgroundColor White
+    BorderColor Black
+    ArrowColor Green
+}
+skinparam note {
+    BackgroundColor LightYellow
+    BorderColor Gray
+}
+
+' 1. Entrada (Estado origen)
+state ORGANIZACION_GRUPOS_ABIERTO
+
+' 2. Estado compuesto principal: eliminarGrupo()
+state "eliminarGrupo()" as MainBlock {
+    
+    [*] --> Paso1
+    note on link
+        **Administrador** selecciona un grupo y solicita eliminarlo
+    end note
+
+    state Paso1 as " "
+    
+    Paso1 --> Paso2
+    note on link
+        **Sistema** solicita confirmación de eliminación
+    end note
+
+    state Paso2 as " "
+
+    Paso2 --> [*]
+    note on link
+        **Administrador** confirma la acción
+        **Sistema** elimina el grupo y actualiza la lista
+    end note
+}
+
+' Conexión de entrada
+ORGANIZACION_GRUPOS_ABIERTO -down-> MainBlock
+
+' 3. Salida (Vuelve al estado de lista según el bucle del diagrama)
+MainBlock -down-> ORGANIZACION_GRUPOS_ABIERTO
+
+' 4. Otras operaciones disponibles desde ORGANIZACION_GRUPOS_ABIERTO
+
+' Ir al detalle de un grupo (Crear/Editar)
+state irDetalle as "crearGrupo()\neditarGrupo()"
+ORGANIZACION_GRUPOS_ABIERTO -down-> irDetalle
+state GRUPO_ABIERTO
+irDetalle -down-> GRUPO_ABIERTO
+
+' Otro bucle disponible (Unirse)
+state otroBucle as "unirseAGrupo()"
+ORGANIZACION_GRUPOS_ABIERTO -left-> otroBucle
+otroBucle -right-> ORGANIZACION_GRUPOS_ABIERTO
+
+' Salir del sistema
+state salir as "completarGestion()"
+state SISTEMA_DISPONIBLE
+ORGANIZACION_GRUPOS_ABIERTO -right-> salir
+salir -down-> SISTEMA_DISPONIBLE
+
+@enduml
