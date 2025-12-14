@@ -27,12 +27,12 @@ Responsable de validar información y aplicar acciones internas como controles, 
 3. `completarGestion()`
 4. `volverAInicio()`
 
-### Gestión de grupos y usuarios
-1. `abrirGrupos()`
-2. `crearGrupo()`
-3. `editarGrupo()`
-4. `eliminarGrupo()`
-5. `unirseAGrupo()`
+### [Gestión de grupos y usuarios](./detalladoYPrototipado/gestionDeGruposYUsuarios/README.md)
+1. [abrirGrupos()](./detalladoYPrototipado/gestionDeGruposYUsuarios/abrirGrupos/abrirGrupos.md)
+2. [crearGrupo()](./detalladoYPrototipado/gestionDeGruposYUsuarios/crearGrupo/crearGrupo.md)
+3. [editarGrupo()](./detalladoYPrototipado/gestionDeGruposYUsuarios/editarGrupo/editarGrupo.md)
+4. [eliminarGrupo()](./detalladoYPrototipado/gestionDeGruposYUsuarios/eliminarGrupo/eliminarGrupo.md)
+5. [unirseAGrupo()](./detalladoYPrototipado/gestionDeGruposYUsuarios/unirseAGrupo/)
 6. `invitarUsuario()`
 7. `asignarTareaAUsuario()`
 8. `visualizarTareasGrupo()`
