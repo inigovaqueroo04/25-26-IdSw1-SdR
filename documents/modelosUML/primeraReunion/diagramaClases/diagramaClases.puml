@@ -38,7 +38,7 @@ Tarea *-- Tarea : subtarea de >
 Tarea <-- ConflictoHorario : afecta a <
 Usuario <-- ConflictoHorario : notifica a <
 Tarea --> Localizacion : se realiza en >
-Tarea --> Horario : se programa en >
+Tarea --> Horario : se programara en >
 Tarea --> Recordatorio : notifica >
 Tarea --> RelacionTareas : se relaciona con >
 

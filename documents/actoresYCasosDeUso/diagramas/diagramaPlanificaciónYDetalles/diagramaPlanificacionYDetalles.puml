@@ -3,6 +3,7 @@ left to right direction
 actor "Administrador" as Admin
 actor "Miembro" as Miem
 
+<<<<<<< HEAD
 package "Planificación y Detalles" {
     usecase "Establecer Horario" as UC_D1
     usecase "Definir Localización" as UC_D2
@@ -21,5 +22,13 @@ Miem --> UC_D3
 Admin --> UC_D4
 Admin --> UC_D5
 Miem --> UC_D5
+=======
+    package "Planificación y Detalles" {
+        usecase "Establecer Horarios" as UC_D1
+        usecase "Definir Localización" as UC_D2
+        usecase "Configurar Recordatorio" as UC_D3
+        usecase "Vincular Tareas (Dependencias)" as UC_D4
+    }
+>>>>>>> vaqueroIñigo
 
 @enduml
