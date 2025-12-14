@@ -1,0 +1,34 @@
+@startuml configurarRecordatorio
+
+skinparam linetype polyline
+
+state in1 as "PLANIFICACION_ABIERTO"
+in1 -[#green]-> configurarRecordatorio
+
+state configurarRecordatorio as "configurarRecordatorio()" {
+
+    state " " as DefiniendoRecordatorio
+    state " " as ConfirmandoRecordatorio
+
+    [*] -[#green]-> DefiniendoRecordatorio
+    note on link
+    <b>Usuario</b> define tipo y tiempo de recordatorio
+    end note
+
+    DefiniendoRecordatorio -[#green]-> ConfirmandoRecordatorio
+    note on link
+    <b>Sistema</b> muestra resumen del recordatorio
+    end note
+
+    ConfirmandoRecordatorio -[#green]-> [*]
+    note on link
+    <b>Sistema</b> guarda recordatorio
+    end note
+}
+
+configurarRecordatorio -[#green]-> PLANIFICACION_ABIERTO
+note on link
+Recordatorio configurado
+end note
+
+@enduml

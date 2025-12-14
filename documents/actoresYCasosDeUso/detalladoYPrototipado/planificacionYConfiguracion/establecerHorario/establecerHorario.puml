@@ -1,0 +1,34 @@
+@startuml establecerHorario
+
+skinparam linetype polyline
+
+state in1 as "PLANIFICACION_ABIERTO"
+in1 -[#green]-> establecerHorario
+
+state establecerHorario as "establecerHorario()" {
+
+    state " " as IngresandoHorario
+    state " " as ValidandoHorario
+
+    [*] -[#green]-> IngresandoHorario
+    note on link
+    <b>Usuario</b> define fecha y hora
+    end note
+
+    IngresandoHorario -[#green]-> ValidandoHorario
+    note on link
+    <b>Sistema</b> valida disponibilidad
+    end note
+
+    ValidandoHorario -[#green]-> [*]
+    note on link
+    <b>Sistema</b> guarda horario
+    end note
+}
+
+establecerHorario -[#green]-> PLANIFICACION_ABIERTO
+note on link
+Horario establecido
+end note
+
+@enduml

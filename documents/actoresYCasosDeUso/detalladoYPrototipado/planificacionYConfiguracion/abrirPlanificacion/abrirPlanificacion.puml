@@ -1,0 +1,32 @@
+@startuml abrirPlanificacion
+
+skinparam linetype polyline
+
+state in1 as "SISTEMA_DISPONIBLE"
+in1 -[#green]-> abrirPlanificacion
+
+state abrirPlanificacion as "abrirPlanificacion()" {
+
+    state " " as MostrandoPlanificacion
+
+    [*] -[#green]-> MostrandoPlanificacion
+    note on link
+    <b>Usuario</b> solicita abrir planificación
+    end note
+
+    MostrandoPlanificacion -[#green]-> [*]
+    note on link
+    <b>Sistema</b> muestra planificación actual
+    • Lista de tareas vinculables
+    • Horario configurado
+    • Recordatorios
+    • Localización
+    end note
+}
+
+abrirPlanificacion -[#green]-> PLANIFICACION_ABIERTO
+note on link
+Planificación disponible para edición
+end note
+
+@enduml
