@@ -4,7 +4,7 @@ actor "Sistema" as S
 actor "Administrador" as Admin
 
     package "Automatización" {
-        usecase "Detectar Conflicto de Horario" as UC_A1
+        usecase "Detectar Conflictos de Horario" as UC_A1
         usecase "Notificar Conflicto" as UC_A2
         usecase "Enviar Recordatorio" as UC_A3
         usecase "Verificar Hora Actual" as UC_A4

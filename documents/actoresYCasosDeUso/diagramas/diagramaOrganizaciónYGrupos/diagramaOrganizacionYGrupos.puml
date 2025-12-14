@@ -5,7 +5,7 @@ actor "Miembro" as Miem
     package "Organización y Grupos" {
         usecase "Crear Grupo" as UC_G1
         usecase "Unirse a Grupo" as UC_G2
-        usecase "Invitar Usuario" as UC_G3
+        usecase "Invitar Usuarios" as UC_G3
         usecase "Visualizar Tareas de Grupo" as UC_G4
         usecase "Asignar Tarea a Usuario" as UC_G5
     }

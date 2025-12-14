@@ -3,7 +3,7 @@ actor "Administrador" as Admin
 actor "Miembro" as Miem
 
     package "Planificación y Detalles" {
-        usecase "Establecer Horario" as UC_D1
+        usecase "Establecer Horarios" as UC_D1
         usecase "Definir Localización" as UC_D2
         usecase "Configurar Recordatorio" as UC_D3
         usecase "Vincular Tareas (Dependencias)" as UC_D4

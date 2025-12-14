@@ -12,7 +12,7 @@ state "SESION_CERRADA" as NoAuth
 state "SISTEMA_DISPONIBLE" as Menu
 
 state "GESTION_TAREAS_ABIERTO" as ListTareas
-state "CREACION_TAREA_ABIERTO" as NewTarea
+state "CREACION_TAREAs_ABIERTO" as NewTarea
 state "SUBTAREAS_ABIERTO" as EditSubtareas
 
 state "PLANIFICACION_ABIERTO" as EditDetalles
