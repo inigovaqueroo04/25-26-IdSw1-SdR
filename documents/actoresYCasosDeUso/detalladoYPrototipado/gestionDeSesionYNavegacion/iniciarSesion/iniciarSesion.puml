@@ -1,0 +1,35 @@
+@startuml iniciarSesion
+start
+:Usuario solicita iniciarSesion;
+:Sistema muestra formulario (usuario y contrasena);
+:Usuario introduce credenciales;
+
+if (Credenciales validas?) then (SI)
+  :Sistema crea sesion;
+  :Sistema muestra pantalla principal;
+  :Estado = SISTEMA_DISPONIBLE;
+  stop
+else (NO)
+  :Sistema muestra error; 
+
+  if (Reintentar?) then (SI)
+    :Usuario vuelve a introducir credenciales;
+    :Sistema valida credenciales;
+
+    if (Credenciales validas?) then (SI)
+      :Sistema crea sesion;
+      :Sistema muestra pantalla principal;
+      :Estado = SISTEMA_DISPONIBLE;
+      stop
+    else (NO)
+      :Sistema muestra error;
+      :Estado = SESION_CERRADA;
+      stop
+    endif
+
+  else (NO)
+    :Estado = SESION_CERRADA;
+    stop
+  endif
+endif
+@enduml
