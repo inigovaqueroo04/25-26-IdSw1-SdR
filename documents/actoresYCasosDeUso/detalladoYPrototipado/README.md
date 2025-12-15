@@ -134,7 +134,7 @@
 ### Diagrama de Iniciar Automatización
 | Diagrama | Código Fuente |
 |----------|---------------|
-| ![Diagrama de Iniciar Automatización](/documents/actoresYCasosDeUso/detalladoYPrototipado/automatizacionActorTiempo/iniciarAutomatizacion/iniciarAutomatizacion.png)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/automatizacionActorTiempo/iniciarAutomatizacion/iniciarAutomatizacion.png) |
+| ![Diagrama de Iniciar Automatización](/documents/actoresYCasosDeUso/detalladoYPrototipado/automatizacionActorTiempo/iniciarAutomatizacion/iniciarAutomatizacion.png)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/automatizacionActorTiempo/iniciarAutomatizacion/iniciarAutomatizacion.uml) |
 
 ### Diagrama de Detectar Conflicto
 | Diagrama | Código Fuente |
@@ -144,9 +144,9 @@
 ### Diagrama de Resolver Conflicto
 | Diagrama | Código Fuente |
 |----------|---------------|
-| ![Diagrama de Resolver Conflicto](/documents/actoresYCasosDeUso/detalladoYPrototipado/automatizacionActorTiempo/resolverConflicto/resolverConflicto.png)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/automatizacionActorTiempo/resolverConflicto/resolverConflicto.png) |
+| ![Diagrama de Resolver Conflicto](/documents/actoresYCasosDeUso/detalladoYPrototipado/automatizacionActorTiempo/resolverConflicto/resolverConflicto.png)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/automatizacionActorTiempo/resolverConflicto/resolverConflicto.puml) |
 
 ### Diagrama de Detectar Conflicto
 | Diagrama | Código Fuente |
 |----------|---------------|
-| ![Diagrama de Detectar Conflicto]()| [Ver código]() |
+| ![Diagrama de Detectar Conflicto](/documents/actoresYCasosDeUso/detalladoYPrototipado/automatizacionActorTiempo/ignorarConflicto/ignorarConflicto.png)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/automatizacionActorTiempo/ignorarConflicto/ignorarConflicto.puml) |

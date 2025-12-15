@@ -6,6 +6,6 @@
 
 |![Diagrama de Actividad: resolverConflicto()](/documents/actoresYCasosDeUso/detalladoYPrototipado/automatizacionActorTiempo/resolverConflicto/resolverConflicto.png)|
 |-|
-|Código fuente: [resolverConflicto.puml](/documents/actoresYCasosDeUso/detalladoYPrototipado/automatizacionActorTiempo/resolverConflicto/resolverConflicto.png)|
+|Código fuente: [resolverConflicto.puml](/documents/actoresYCasosDeUso/detalladoYPrototipado/automatizacionActorTiempo/resolverConflicto/resolverConflicto.puml)|
 
 </div>
