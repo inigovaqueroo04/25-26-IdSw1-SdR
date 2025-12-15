@@ -27,10 +27,10 @@ Responsable de validar información y aplicar acciones internas como controles, 
 
 ### Gestión de sesión y navegación
 
-1. `iniciarSesion()`
-2. `cerrarSesion()`
-3. `completarGestion()`
-4. `volverAInicio()`
+1. [iniciarSesion()](./detalladoYPrototipado/gestionDeSesionYNavegacion/iniciarSesion/iniciarSesion.md)
+2. [cerrarSesion()](./detalladoYPrototipado/gestionDeSesionYNavegacion/cerrarSesion/cerrarSesion.md)
+3. [completarGestion()](./detalladoYPrototipado/gestionDeSesionYNavegacion/completarGestion/completarGestion.md)
+4. [volverAInicio()](./detalladoYPrototipado/gestionDeSesionYNavegacion/volverAInicio/volverAInicio.md)
 
 ### [Gestión de grupos y usuarios](./detalladoYPrototipado/gestionDeGruposYUsuarios/README.md)
 
