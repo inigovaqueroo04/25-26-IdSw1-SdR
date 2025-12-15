@@ -38,9 +38,9 @@ Responsable de validar información y aplicar acciones internas como controles, 
 2. [crearGrupo()](./detalladoYPrototipado/gestionDeGruposYUsuarios/crearGrupo/crearGrupo.md)
 3. [editarGrupo()](./detalladoYPrototipado/gestionDeGruposYUsuarios/editarGrupo/editarGrupo.md)
 4. [eliminarGrupo()](./detalladoYPrototipado/gestionDeGruposYUsuarios/eliminarGrupo/eliminarGrupo.md)
-5. [unirseAGrupo()](./detalladoYPrototipado/gestionDeGruposYUsuarios/unirseAGrupo/)
-6. `invitarUsuario()`
-7. `asignarTareaAUsuario()`
+5. [unirseAGrupo()](./detalladoYPrototipado/gestionDeGruposYUsuarios/unirseAGrupo/unirseAGrupo.md)
+6. [invitarUsuario()](./detalladoYPrototipado/gestionDeGruposYUsuarios/invitarUsuario/invitarUsuario.md)
+7. [asignarTareaAUsuario()](./detalladoYPrototipado/gestionDeGruposYUsuarios/asignarTareaAUsuario/asignarTareaAUsuario.md)
 8. `visualizarTareasGrupo()`
 9. `abrirEdicionGrupo()`
 
@@ -52,13 +52,13 @@ Responsable de validar información y aplicar acciones internas como controles, 
 4. [eliminarTarea()](./detalladoYPrototipado/gestionDeTareas/eliminarTarea/eliminarTarea.md)
 5. [marcarCompletada()](./detalladoYPrototipado/gestionDeTareas/marcarCompletada/marcarCompletada.md)
 
-### Planificación y configuración
+### [Planificación y configuración](./detalladoYPrototipado/planificacionYConfiguracion/README.md)
 
-1. `abrirPlanificacion()`
-2. `establecerHorario()`
-3. `vincularTareas()`
-4. `configurarRecordatorio()`
-5. `definirLocalizacion()`
+1. [abrirPlanificacion()](./detalladoYPrototipado/planificacionYConfiguracion/abrirPlanificacion/abrirPlanificacion.md)
+2. [establecerHorario()](./detalladoYPrototipado/planificacionYConfiguracion/establecerHorario/establecerHorario.md)
+3. [vincularTareas()](./detalladoYPrototipado/planificacionYConfiguracion/vincularTareas/vincularTareas.md)
+4. [configurarRecordatorio()](./detalladoYPrototipado/planificacionYConfiguracion/configurarRecordatorio/configurarRecordatorio.md)
+5. [definirLocalizacion()](./detalladoYPrototipado/planificacionYConfiguracion/definirLocalizacion/definirLocalizacion.md)
 
 ### Automatización (Actor Tiempo)
 
