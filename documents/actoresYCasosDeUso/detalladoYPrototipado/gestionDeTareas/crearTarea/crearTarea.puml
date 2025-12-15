@@ -1,0 +1,23 @@
+@startuml CrearTarea
+hide empty description
+
+state "crearTarea()" as MainBlock {
+    [*] --> Formulario
+    note on link
+        **Administrador** inicia creación
+    end note
+
+    state Formulario as " "
+    Formulario --> [*]
+    note on link
+        **Sistema** solicita:
+        * Nombre y Descripción (Req)
+        * **«extend»** Definir Localización
+        * **«extend»** Establecer Horario
+    end note
+}
+
+state TAREA_GUARDADA
+MainBlock -down-> TAREA_GUARDADA : guardar()
+MainBlock -right-> [*] : cancelar()
+@enduml

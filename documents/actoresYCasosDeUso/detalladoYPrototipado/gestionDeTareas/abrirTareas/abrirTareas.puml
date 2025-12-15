@@ -1,0 +1,48 @@
+@startuml AbrirTareas
+hide empty description
+
+skinparam state {
+    BackgroundColor White
+    BorderColor Black
+    ArrowColor Green
+}
+skinparam note {
+    BackgroundColor LightYellow
+    BorderColor Gray
+}
+
+state SISTEMA_DISPONIBLE
+state TAREAS_LISTADAS
+
+state "abrirTareas()" as MainBlock {
+    [*] --> Paso1
+    note on link
+        **Administrador** solicita gestionar tareas
+    end note
+
+    state Paso1 as " "
+    Paso1 --> [*]
+    note on link
+        **Sistema** presenta tablero de tareas:
+        * Lista ID, Título y Estado
+        * Opción: Crear Tarea
+        * Opción: Editar/Eliminar Tarea
+        * Opción: Marcar Completada
+    end note
+}
+
+SISTEMA_DISPONIBLE -down-> MainBlock
+
+state accionesCreacion as "crearTarea()\neditarTarea()"
+MainBlock -down-> accionesCreacion
+accionesCreacion -down-> TAREAS_LISTADAS
+
+state accionesEstado as "eliminarTarea()\nmarcarCompletada()"
+state GESTION_ACTUALIZADA
+MainBlock -down-> accionesEstado
+accionesEstado -down-> GESTION_ACTUALIZADA
+
+state fin as "completarGestion()"
+MainBlock -down-> fin
+fin -down-> SISTEMA_DISPONIBLE
+@enduml
