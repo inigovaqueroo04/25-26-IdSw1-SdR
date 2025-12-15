@@ -23,7 +23,7 @@
 ### Diagrama de Cerrar Sesión
 | Diagrama | Código Fuente |
 |----------|---------------|
-| ![Diagrama Cerrar Sesión](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/cerrarSesion/cerrarSesion.png)| [Ver código]/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/cerrarSesion/cerrarSesion.puml() |
+| ![Diagrama Cerrar Sesión](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/cerrarSesion/cerrarSesion.png)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/cerrarSesion/cerrarSesion.puml) |
 
 
 ## Gestion de Grupos y Usuarios
