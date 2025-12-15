@@ -1,0 +1,15 @@
+@startuml cerrarSesion
+start
+:Usuario solicita cerrarSesion;
+:Sistema pide confirmacion;
+
+if (Confirmar cierre?) then (SI)
+  :Sistema cierra sesion;
+  :Sistema limpia contexto; 
+  :Estado = SESION_CERRADA;
+  stop
+else (NO)
+  :Estado = SISTEMA_DISPONIBLE;
+  stop
+endif
+@enduml
