@@ -1,35 +1,33 @@
 @startuml iniciarSesion
-start
-:Usuario solicita iniciarSesion;
-:Sistema muestra formulario (usuario y contrasena);
-:Usuario introduce credenciales;
+top to bottom direction
+skinparam classAttributeIconSize 0
+skinparam ArrowColor Green
 
-if (Credenciales validas?) then (SI)
-  :Sistema crea sesion;
-  :Sistema muestra pantalla principal;
-  :Estado = SISTEMA_DISPONIBLE;
-  stop
-else (NO)
-  :Sistema muestra error; 
+state "SESION_CERRADA" as SESION_CERRADA
+state "SISTEMA_DISPONIBLE" as SISTEMA_DISPONIBLE
 
-  if (Reintentar?) then (SI)
-    :Usuario vuelve a introducir credenciales;
-    :Sistema valida credenciales;
+state "iniciarSesion()" as iniciarSesion {
+  [*] --> paso
 
-    if (Credenciales validas?) then (SI)
-      :Sistema crea sesion;
-      :Sistema muestra pantalla principal;
-      :Estado = SISTEMA_DISPONIBLE;
-      stop
-    else (NO)
-      :Sistema muestra error;
-      :Estado = SESION_CERRADA;
-      stop
-    endif
+  note right #FFF2CC
+  Usuario solicita iniciar sesion
+  end note 
 
-  else (NO)
-    :Estado = SESION_CERRADA;
-    stop
-  endif
-endif
+  paso --> fin
+
+  note right #FFF2CC
+  Sistema presenta formulario de inicio de sesion
+  • Usuario / email y contrasena
+  • Permite confirmar inicio
+  • Permite cancelar
+  • Si credenciales invalidas, permite reintentar
+  end note
+
+  fin --> [*]
+}
+
+SESION_CERRADA --> iniciarSesion : iniciarSesion()
+iniciarSesion --> SISTEMA_DISPONIBLE : (sesion iniciada)
+iniciarSesion --> SESION_CERRADA : (cancelar / error)
+
 @enduml
