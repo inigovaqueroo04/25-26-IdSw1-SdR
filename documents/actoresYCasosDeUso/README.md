@@ -60,9 +60,9 @@ Responsable de validar información y aplicar acciones internas como controles, 
 4. [configurarRecordatorio()](./detalladoYPrototipado/planificacionYConfiguracion/configurarRecordatorio/configurarRecordatorio.md)
 5. [definirLocalizacion()](./detalladoYPrototipado/planificacionYConfiguracion/definirLocalizacion/definirLocalizacion.md)
 
-### Automatización (Actor Tiempo)
+### [Automatización (Actor Tiempo)](./detalladoYPrototipado/automatizacionActorTiempo/README.md)
 
-1. `iniciarAutomatizacion()`
-2. `detectarConflicto()`
-3. `resolverConflicto()`
+1. [iniciarAutomatizacion()](./detalladoYPrototipado/automatizacionActorTiempo/iniciarAutomatizacion/iniciarAutomatizacion.md)
+2. [detectarConflicto()](./detalladoYPrototipado/automatizacionActorTiempo/detectarConflictoHorario/detectarConflicto.md)
+3. [resolverConflicto()](./detalladoYPrototipado/automatizacionActorTiempo/resolverConflicto/resolverConflicto.md)
 4. `ignorarConflicto()`
