@@ -11,23 +11,28 @@ Este documento recoge los actores principales del sistema y los casos de uso org
 ## Actores
 
 ### Administrador del grupo
+
 Persona que gestiona el grupo familiar y controla toda la configuración. Puede crear y modificar miembros, tareas y reglas.
 
 ### Miembro
+
 Personas del grupo que consultan y realizan las tareas asignadas, marcan actividades completadas y visualizan la información general.
 
 ### Tiempo
+
 Responsable de validar información y aplicar acciones internas como controles, recordatorios o actualizaciones automáticas.
 
 ## Casos de uso
 
 ### Gestión de sesión y navegación
+
 1. `iniciarSesion()`
 2. `cerrarSesion()`
 3. `completarGestion()`
 4. `volverAInicio()`
 
 ### [Gestión de grupos y usuarios](./detalladoYPrototipado/gestionDeGruposYUsuarios/README.md)
+
 1. [abrirGrupos()](./detalladoYPrototipado/gestionDeGruposYUsuarios/abrirGrupos/abrirGrupos.md)
 2. [crearGrupo()](./detalladoYPrototipado/gestionDeGruposYUsuarios/crearGrupo/crearGrupo.md)
 3. [editarGrupo()](./detalladoYPrototipado/gestionDeGruposYUsuarios/editarGrupo/editarGrupo.md)
@@ -38,14 +43,16 @@ Responsable de validar información y aplicar acciones internas como controles, 
 8. `visualizarTareasGrupo()`
 9. `abrirEdicionGrupo()`
 
-### Gestión de tareas
-1. `abrirTareas()`
-2. `crearTarea()`
-3. `editarTarea()`
-4. `eliminarTarea()`
-5. `marcarCompletada()`
+### [Gestión de tareas](./detalladoYPrototipado/gestionDeGruposYUsuarios/README.md)
+
+1. [abrirTareas()](./detalladoYPrototipado/gestionDeTareas/abrirTareas/abrirTareas.md)
+2. [crearTarea()](./detalladoYPrototipado/gestionDeTareas/crearTarea/crearTarea.md)
+3. [editarTarea()](./detalladoYPrototipado/gestionDeTareas/editarTarea/editarTarea.md)
+4. [eliminarTarea()](./detalladoYPrototipado/gestionDeTareas/eliminarTarea/eliminarTarea.md)
+5. [marcarCompletada()](./detalladoYPrototipado/gestionDeTareas/marcarCompletada/marcarCompletada.md)
 
 ### Planificación y configuración
+
 1. `abrirPlanificacion()`
 2. `establecerHorario()`
 3. `vincularTareas()`
@@ -53,6 +60,7 @@ Responsable de validar información y aplicar acciones internas como controles, 
 5. `definirLocalizacion()`
 
 ### Automatización (Actor Tiempo)
+
 1. `iniciarAutomatizacion()`
 2. `detectarConflicto()`
 3. `resolverConflicto()`
