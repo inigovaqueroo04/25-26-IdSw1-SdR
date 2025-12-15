@@ -41,8 +41,8 @@ Responsable de validar información y aplicar acciones internas como controles, 
 5. [unirseAGrupo()](./detalladoYPrototipado/gestionDeGruposYUsuarios/unirseAGrupo/unirseAGrupo.md)
 6. [invitarUsuario()](./detalladoYPrototipado/gestionDeGruposYUsuarios/invitarUsuario/invitarUsuario.md)
 7. [asignarTareaAUsuario()](./detalladoYPrototipado/gestionDeGruposYUsuarios/asignarTareaAUsuario/asignarTareaAUsuario.md)
-8. `visualizarTareasGrupo()`
-9. `abrirEdicionGrupo()`
+8. [visualizarTareasGrupo()](./detalladoYPrototipado/gestionDeGruposYUsuarios/visualizarTareasGrupo/visualizarTareasGrupo.md)
+9. [abrirEdicionGrupo()](./detalladoYPrototipado/gestionDeGruposYUsuarios/abrirEdicionGrupo/abrirEdicionGrupo.md)
 
 ### [Gestión de tareas](./detalladoYPrototipado/gestionDeTareas/README.md)
 
