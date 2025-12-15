@@ -1,0 +1,73 @@
+@startuml invitarUsuario
+hide empty description
+
+skinparam state {
+    BackgroundColor White
+    BorderColor Black
+    ArrowColor Green
+}
+skinparam note {
+    BackgroundColor LightYellow
+    BorderColor Gray
+}
+
+state GRUPO_ABIERTO
+
+state "invitarUsuario()" as MainBlock {
+
+    [*] --> Paso1
+    note on link
+        **Administrador del Grupo** selecciona 'Invitar Usuario'
+        y proporciona el identificador
+    end note
+
+    state Paso1 as " "
+
+    Paso1 --> Paso2
+    note on link
+        **Sistema** valida si el usuario existe y si ya es miembro
+    end note
+
+    state Paso2 as "Validación de Usuario"
+
+    Paso2 --> Exito
+    note on link
+        [Usuario válido y no miembro]
+    end note
+
+    Paso2 --> Fracaso
+    note on link
+        [Usuario no encontrado O ya es miembro]
+    end note
+
+    state Exito as " "
+    note right
+        **Sistema** envía la invitación
+    end note
+
+    state Fracaso as " "
+    note right
+        **Sistema** muestra mensaje de error
+    end note
+
+    Exito --> [*]
+    Fracaso --> [*]
+    note on link
+        **Sistema** actualiza la vista
+    end note
+}
+
+GRUPO_ABIERTO -down-> MainBlock
+
+MainBlock -down-> GRUPO_ABIERTO
+
+state otras as "editarGrupo()\nasignarTareaUsuario()"
+GRUPO_ABIERTO -left-> otras
+otras -right-> GRUPO_ABIERTO
+
+state cerrar as "abrirEdicionGrupo()"
+state ORGANIZACION_GRUPOS_ABIERTO
+GRUPO_ABIERTO -right-> cerrar
+cerrar -down-> ORGANIZACION_GRUPOS_ABIERTO
+
+@enduml
