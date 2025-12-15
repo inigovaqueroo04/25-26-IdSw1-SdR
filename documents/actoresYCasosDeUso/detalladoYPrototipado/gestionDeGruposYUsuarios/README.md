@@ -32,3 +32,17 @@
 | Diagrama | Código Fuente |
 | :---: | :---: |
 | ![Diagrama unirseAGrupo](./unirseAGrupo/unirseAGrupo.png)| [Ver código](./unirseAGrupo/unirseAGrupo.puml) |
+
+---
+
+## invitarUsuario()
+| Diagrama | Código Fuente |
+| :---: | :---: |
+| ![Diagrama invitarUsuario](./invitarUsuario/invitarUsuario.png)| [Ver código](./invitarUsuario/invitarUsuario.puml) |
+
+---
+
+## asignarTareaAUsuario()
+| Diagrama | Código Fuente |
+| :---: | :---: |
+| ![Diagrama asignarTareaAUsuario](./asignarTareaAUsuario/asignarTareaAUsuario.png)| [Ver código](./asignarTareaAUsuario/asignarTareaAUsuario.puml) |
