@@ -25,7 +25,7 @@ Responsable de validar información y aplicar acciones internas como controles, 
 
 ## Casos de uso
 
-### Gestión de sesión y navegación
+### [Gestión de sesión y navegación](./detalladoYPrototipado/gestionDeSesionYNavegacion/README.md)
 
 1. [iniciarSesion()](./detalladoYPrototipado/gestionDeSesionYNavegacion/iniciarSesion/iniciarSesion.md)
 2. [cerrarSesion()](./detalladoYPrototipado/gestionDeSesionYNavegacion/cerrarSesion/cerrarSesion.md)
