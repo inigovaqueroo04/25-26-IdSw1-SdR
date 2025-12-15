@@ -65,4 +65,4 @@ Responsable de validar información y aplicar acciones internas como controles, 
 1. [iniciarAutomatizacion()](./detalladoYPrototipado/automatizacionActorTiempo/iniciarAutomatizacion/iniciarAutomatizacion.md)
 2. [detectarConflicto()](./detalladoYPrototipado/automatizacionActorTiempo/detectarConflictoHorario/detectarConflicto.md)
 3. [resolverConflicto()](./detalladoYPrototipado/automatizacionActorTiempo/resolverConflicto/resolverConflicto.md)
-4. `ignorarConflicto()`
+4. [ignorarConflicto()](./detalladoYPrototipado/automatizacionActorTiempo/ignorarConflicto/ignorarConflicto.md)
