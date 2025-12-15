@@ -43,7 +43,7 @@ Responsable de validar información y aplicar acciones internas como controles, 
 8. `visualizarTareasGrupo()`
 9. `abrirEdicionGrupo()`
 
-### [Gestión de tareas](./detalladoYPrototipado/gestionDeGruposYUsuarios/README.md)
+### [Gestión de tareas](./detalladoYPrototipado/gestionDeTareas/README.md)
 
 1. [abrirTareas()](./detalladoYPrototipado/gestionDeTareas/abrirTareas/abrirTareas.md)
 2. [crearTarea()](./detalladoYPrototipado/gestionDeTareas/crearTarea/crearTarea.md)
