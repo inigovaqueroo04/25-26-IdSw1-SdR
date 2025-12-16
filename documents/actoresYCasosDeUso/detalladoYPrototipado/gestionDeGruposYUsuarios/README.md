@@ -3,66 +3,66 @@
 [![Inicio](https://img.shields.io/badge/Inicio-FFFFFF?style=for-the-badge&logo=homeassistant&logoColor=black)](../../../../README.md)
 [![Modelo de Dominio](https://img.shields.io/badge/Modelo%20de%20Dominio-FFFFFF?style=for-the-badge&logo=bookstack&logoColor=black)](../../../modelosUML/modeloDeDominio/README.md)
 [![Actores Y CasosDeUso](https://img.shields.io/badge/Actores%20&%20Casos%20De%20Uso-FFFFFF?style=for-the-badge&logo=openstreetmap&logoColor=black)](../../README.md)
-[![Diagramas de Contexto](https://img.shields.io/badge/Diagramas%20de%20Contexto-FFFFFF?style=for-the-badge&logo=bookstack&logoColor=black)](../../diagramaContexto/README.md)
+[![Diagramas de Contexto](https://img.shields.io/badge/Diagramas%20de%20Contexto-FFFFFF?style=for-the-badge&logo=bookstack&logoColor=black)](../diagramaContexto/README.md)
 [![Detallar & Prototipar](https://img.shields.io/badge/Detallar%20&%20Prototipar-FFFFFF?style=for-the-badge&logo=figma&logoColor=black)](../README.md)
 
 ## abrirGrupos()
 | Diagrama | Código Fuente |
 | :---: | :---: |
-| ![Diagrama abrirGrupos](./abrirGrupos/abrirGrupos.png)| [Ver código](./abrirGrupos/abrirGrupos.puml) |
+| ![Diagrama abrirGrupos](./abrirGrupos/abrirGrupos.svg)| [Ver código](./abrirGrupos/abrirGrupos.puml) |
 
 ---
 
 ## crearGrupo()
 | Diagrama | Código Fuente |
 | :---: | :---: |
-| ![Diagrama crearGrupo](./crearGrupo/crearGrupo.png)| [Ver código](./crearGrupo/crearGrupo.puml) |
+| ![Diagrama crearGrupo](./crearGrupo/crearGrupo.svg)| [Ver código](./crearGrupo/crearGrupo.puml) |
 
 ---
 
 ## editarGrupo()
 | Diagrama | Código Fuente |
 | :---: | :---: |
-| ![Diagrama editarGrupo](./editarGrupo/editarGrupo.png)| [Ver código](./editarGrupo/editarGrupo.puml) |
+| ![Diagrama editarGrupo](./editarGrupo/editarGrupo.svg)| [Ver código](./editarGrupo/editarGrupo.puml) |
 
 ---
 
 ## eliminarGrupo()
 | Diagrama | Código Fuente |
 | :---: | :---: |
-| ![Diagrama eliminarGrupo](./eliminarGrupo/eliminarGrupo.png)| [Ver código](./eliminarGrupo/eliminarGrupo.puml) |
+| ![Diagrama eliminarGrupo](./eliminarGrupo/eliminarGrupo.svg)| [Ver código](./eliminarGrupo/eliminarGrupo.puml) |
 
 ---
 
 ## unirseAGrupo()
 | Diagrama | Código Fuente |
 | :---: | :---: |
-| ![Diagrama unirseAGrupo](./unirseAGrupo/unirseAGrupo.png)| [Ver código](./unirseAGrupo/unirseAGrupo.puml) |
+| ![Diagrama unirseAGrupo](./unirseAGrupo/unirseAGrupo.svg)| [Ver código](./unirseAGrupo/unirseAGrupo.puml) |
 
 ---
 
 ## invitarUsuario()
 | Diagrama | Código Fuente |
 | :---: | :---: |
-| ![Diagrama invitarUsuario](./invitarUsuario/invitarUsuario.png)| [Ver código](./invitarUsuario/invitarUsuario.puml) |
+| ![Diagrama invitarUsuario](./invitarUsuario/invitarUsuario.svg)| [Ver código](./invitarUsuario/invitarUsuario.puml) |
 
 ---
 
 ## asignarTareaAUsuario()
 | Diagrama | Código Fuente |
 | :---: | :---: |
-| ![Diagrama asignarTareaAUsuario](./asignarTareaAUsuario/asignarTareaAUsuario.png)| [Ver código](./asignarTareaAUsuario/asignarTareaAUsuario.puml) |
+| ![Diagrama asignarTareaAUsuario](./asignarTareaAUsuario/asignarTareaAUsuario.svg)| [Ver código](./asignarTareaAUsuario/asignarTareaAUsuario.puml) |
 
 ---
 
 ## visualizarTareasGrupo()
 | Diagrama | Código Fuente |
 | :---: | :---: |
-| ![Diagrama visualizarTareasGrupo](./visualizarTareasGrupo/visualizarTareasGrupo.png)| [Ver código](./visualizarTareasGrupo/visualizarTareasGrupo.puml) |
+| ![Diagrama visualizarTareasGrupo](./visualizarTareasGrupo/visualizarTareasGrupo.svg)| [Ver código](./visualizarTareasGrupo/visualizarTareasGrupo.puml) |
 
 ---
 
 ## abrirEdicionGrupo()
 | Diagrama | Código Fuente |
 | :---: | :---: |
-| ![Diagrama abrirEdicionGrupo](./abrirEdicionGrupo/abrirEdicionGrupo.png)| [Ver código](./abrirEdicionGrupo/abrirEdicionGrupo.puml) |
+| ![Diagrama abrirEdicionGrupo](./abrirEdicionGrupo/abrirEdicionGrupo.svg)| [Ver código](./abrirEdicionGrupo/abrirEdicionGrupo.puml) |
