@@ -42,3 +42,11 @@
 | Diagrama | Código Fuente |
 | :---: | :---: |
 | ![Diagrama marcarCompletada](./marcarCompletada/marcarCompletada.png)| [Ver código](./marcarCompletada/marcarCompletada.puml) |
+
+---
+
+## relacionarTareas()
+
+| Diagrama | Código Fuente |
+| :---: | :---: |
+| ![Diagrama relacionarTareas](./relacionarTareas/relacionarTareas.png)| [Ver código](./marcarCompletada/marcarCompletada.puml) |
