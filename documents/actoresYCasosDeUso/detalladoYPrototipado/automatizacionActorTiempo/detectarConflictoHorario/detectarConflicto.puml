@@ -15,36 +15,34 @@ state AUTOMATIZACION_ACTIVA
 
 state "detectarConflicto()" as MainBlock {
     
+    ' Definición explicita de estados para evitar errores de compilación
+    state " " as Paso1
+    state " " as Paso2
+    
     [*] --> Paso1
     note on link
-        **Actor Tiempo** dispara el evento programado
-        (Trigger temporal)
+        ' Verbo tabla: El actor SOLICITA
+        **Actor solicita** comprobación de horarios
     end note
 
-    state Paso1 as " "
-    
     Paso1 --> Paso2
     note on link
-        **Sistema** escanea los horarios registrados
-        Busca solapamientos
+        ' Verbo tabla: El sistema PERMITE SOLICITAR 
+        ' (Es la forma de decir que el sistema procesa la solicitud)
+        **Sistema permite solicitar** la verificación
     end note
-
-    state Paso2 as " "
 
     Paso2 --> [*]
     note on link
-        **Sistema** identifica una incompatibilidad
-        Genera alerta de conflicto
+        ' Verbo tabla: El sistema PRESENTA / MUESTRA
+        **Sistema presenta** el conflicto encontrado
     end note
 }
 
-AUTOMATIZACION_ACTIVA -down-> MainBlock
-
 state CONFLICTO_ABIERTO
-MainBlock -down-> CONFLICTO_ABIERTO
 
-state resolucion as "ignorarConflicto()\nresolverConflicto()"
-CONFLICTO_ABIERTO -down-> resolucion
-resolucion -up-> AUTOMATIZACION_ACTIVA
+' Conexiones externas
+AUTOMATIZACION_ACTIVA -down-> MainBlock
+MainBlock -down-> CONFLICTO_ABIERTO
 
 @enduml
