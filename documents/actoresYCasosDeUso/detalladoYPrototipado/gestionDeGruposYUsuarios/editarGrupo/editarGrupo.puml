@@ -12,11 +12,16 @@ skinparam note {
     BorderColor Gray
 }
 
-' 1. Estados de Entrada
+' 1. Estados de Entrada (Arriba)
+' Usamos alias para duplicar visualmente el estado GRUPO_ABIERTO arriba sin romper la lógica
 state GRUPOS_ABIERTO
-state GRUPO_ABIERTO
+state "GRUPO_ABIERTO" as GRUPO_ABIERTO_IN
+state TAREAS_ABIERTO
 
-' 2. Estado compuesto principal: editarGrupo()
+' 2. Estado de Salida (Abajo)
+state "GRUPO_ABIERTO" as GRUPO_ABIERTO_OUT
+
+' 3. Estado compuesto principal: editarGrupo()
 state "editarGrupo()" as MainBlock {
     
     ' Inicio
@@ -27,7 +32,7 @@ state "editarGrupo()" as MainBlock {
 
     state Paso1 as " "
 
-    ' Acción del Sistema 1: Mostrar lo que hay
+    ' Sistema muestra datos actuales
     Paso1 --> Paso2
     note on link
         **Sistema visualiza** datos actuales del grupo
@@ -35,7 +40,7 @@ state "editarGrupo()" as MainBlock {
 
     state Paso2 as " "
 
-    ' Acción del Sistema 2: Habilitar edición (Separado)
+    ' Sistema habilita edición (Separado)
     Paso2 --> Paso3
     note on link
         **Sistema permite introducir** cambios
@@ -43,7 +48,7 @@ state "editarGrupo()" as MainBlock {
 
     state Paso3 as " "
 
-    ' Acción del Actor: Escribir
+    ' Actor introduce cambios
     Paso3 --> Paso4
     note on link
         **Administrador introduce** cambios
@@ -51,18 +56,20 @@ state "editarGrupo()" as MainBlock {
 
     state Paso4 as " "
 
-    ' Acción del Sistema 3: Confirmación final
+    ' Sistema confirma y termina
     Paso4 --> [*]
     note on link
-        **Sistema presenta** grupo modificado
+        **Sistema visualiza** grupo modificado
     end note
 }
 
-' 3. Conexiones de Entrada
+' 4. Conexiones
+' Todas las entradas bajan al bloque principal
 GRUPOS_ABIERTO -down-> MainBlock
-GRUPO_ABIERTO -down-> MainBlock
+GRUPO_ABIERTO_IN -down-> MainBlock
+TAREAS_ABIERTO -down-> MainBlock
 
-' 4. Salida
-MainBlock -down-> GRUPO_ABIERTO
+' Salida final
+MainBlock -down-> GRUPO_ABIERTO_OUT
 
 @enduml

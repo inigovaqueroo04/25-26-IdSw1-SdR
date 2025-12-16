@@ -4,7 +4,7 @@
 
 <div align=center>
 
-|![Diagrama de Actividad: abrirTareas()](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/abrirTareas/abrirTareas.png)|
+|![Diagrama de Actividad: abrirTareas()](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/abrirTareas/abrirTareas.svg)|
 |-|
 |Código fuente: [abrirTareas.puml](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/abrirTareas/abrirTareas.puml)|
 

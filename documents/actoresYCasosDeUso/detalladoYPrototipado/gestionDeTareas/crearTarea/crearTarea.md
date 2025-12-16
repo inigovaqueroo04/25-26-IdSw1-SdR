@@ -4,7 +4,7 @@
 
 <div align=center>
 
-|![Diagrama de Actividad: crearTarea()](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/crearTarea/crearTarea.png)|
+|![Diagrama de Actividad: crearTarea()](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/crearTarea/crearTarea.svg)|
 |-|
 |Código fuente: [crearTarea.puml](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/crearTarea/crearTarea.puml)|
 

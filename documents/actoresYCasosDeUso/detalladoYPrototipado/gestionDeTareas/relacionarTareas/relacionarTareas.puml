@@ -1,0 +1,51 @@
+@startuml relacionarTareas
+skinparam state {
+    BackgroundColor White
+    BorderColor Black
+    ArrowColor #008000
+}
+skinparam note {
+    BackgroundColor #FEFECE
+    BorderColor #D7B75F
+}
+
+state TAREA_ABIERTO
+state "TAREA_ABIERTO" as TAREA_ABIERTO_FINAL
+
+state "relacionarTareas()" as relacionarTareas {
+    state " " as Inicio <<start>>
+    state " " as Estado1
+    state " " as Estado2
+    state " " as Estado3
+    state " " as Fin <<end>>
+    
+    ' Paso 1
+    Inicio --> Estado1
+    note on link
+        <b>Usuario</b> solicita introducir relación
+    end note
+    
+    ' Paso 2
+    Estado1 --> Estado2
+    note on link
+        <b>Sistema</b> permite introducir tarea a vincular
+    end note
+
+    ' Paso 3 (Parte A: Usuario introduce)
+    Estado2 --> Estado3
+    note on link
+        <b>Usuario</b> introduce selección
+    end note
+
+    ' Paso 3 (Parte B: Sistema muestra - Separado por estado intermedio)
+    Estado3 --> Fin
+    note on link
+        <b>Sistema</b> muestra relación establecida
+    end note
+}
+
+' El flujo vuelve al estado inicial (bucle)
+TAREA_ABIERTO --> relacionarTareas
+relacionarTareas --> TAREA_ABIERTO_FINAL
+
+@enduml
