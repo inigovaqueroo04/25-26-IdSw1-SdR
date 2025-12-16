@@ -70,16 +70,15 @@ Este diagrama ilustra los flujos que se activan automáticamente por el sistema,
 
 | Estado | Descripción | Actores Relevantes | Función principal |
 |--------|-------------|---------------------|--------------------|
-| **SESION_CERRADA** | Estado inicial del sistema | Administrador, Miembro, Tiempo | Punto de entrada, requiere autenticación |
+| **SESION_CERRADA** | Estado inicial del sistema | Administrador, Miembro | Punto de entrada, requiere autenticación |
 | **SISTEMA_DISPONIBLE** | Hub central de navegación | Administrador, Miembro, Tiempo | Punto de acceso a los módulos |
-| **GESTION_TAREAS_ABIERTO** | Módulo principal de gestión | Administrador, Miembro | Gestión general de tareas |
-| **CREACION_TAREA_ABIERTO** | Creación de una tarea | Administrador | Recolección de datos mínimos |
+| **TAREAS_ABIERTO** | Módulo principal de gestión | Administrador, Miembro | Gestión general de tareas |
+| **TAREA_ABIERTO** | Creación de una tarea | Administrador | Recolección de datos mínimos |
 | **PLANIFICACION_ABIERTO** | Módulo de detalles y horarios | Administrador | Configuración de horarios y recordatorios |
-| **ORGANIZACION_GRUPOS_ABIERTO** | Gestión de grupos | Administrador | Creación, unión y visualización |
+| **GRUPOS_ABIERTO** | Gestión de grupos | Administrador | Creación, unión y visualización |
 | **GRUPO_ABIERTO** | Grupo específico | Administrador | Gestión de miembros y tareas |
-| **AUTOMATIZACION_ACTIVA** | Monitoreo automático | Tiempo, Administrador | Ejecución automática |
+| **AUTOMATIZACION_ACTIVA** | Monitoreo automático | Tiempo | Ejecución automática |
 | **CONFLICTO_ABIERTO** | Resolución de conflictos | Tiempo | Manejo de conflictos |
-| **CONSULTA_TAREAS_ABIERTO** | Consulta específica | Administrador | Visualización de tareas |
 
 ---
 
@@ -91,17 +90,18 @@ Este diagrama ilustra los flujos que se activan automáticamente por el sistema,
 |-----------|------------------|-------------|
 | `iniciarSesion()` | SESION_CERRADA → SISTEMA_DISPONIBLE | Acceso al sistema |
 | `cerrarSesion()` | SISTEMA_DISPONIBLE → SESION_CERRADA | Cierre de sesión |
-| `abrirTareas()` | SISTEMA_DISPONIBLE → GESTION_TAREAS_ABIERTO | Acceso a la lista |
-| `abrirPlanificacion()` | SISTEMA_DISPONIBLE → PLANIFICACION_ABIERTO | Configuración de horarios |
-| `abrirGrupos()` | SISTEMA_DISPONIBLE → ORGANIZACION_GRUPOS_ABIERTO | Gestión de grupos |
-| `crearTarea()` | GESTION_TAREAS_ABIERTO → CREACION_TAREA_ABIERTO | Inicia creación |
-| `editarTarea()` | GESTION_TAREAS_ABIERTO / GRUPO_ABIERTO → CREACION_TAREA_ABIERTO | Edita tarea |
-| `guardarTarea()` | CREACION_TAREA_ABIERTO → GESTION_TAREAS_ABIERTO | Guarda tarea |
-| `establecerHorario()` / `vincularTareas()` | PLANIFICACION_ABIERTO → PLANIFICACION_ABIERTO | Acción autorreflexiva |
-| `crearGrupo()` / `editarGrupo()` | ORGANIZACION_GRUPOS_ABIERTO / GRUPO_ABIERTO → GRUPO_ABIERTO | Gestión de grupos |
-| `asignarTareaAUsuario()` / `invitarUsuario()` | GRUPO_ABIERTO → GRUPO_ABIERTO | Gestión de miembros |
-| `visualizarTareasGrupo()` | GRUPO_ABIERTO → CONSULTA_TAREAS_ABIERTO | Consulta de tareas dentro de cada grupo |
-| `completarGestion()` / `volverAInicio()` | Cualquier Estado Secundario → SISTEMA_DISPONIBLE | Retorno al menú |
+| `abrirTareas()` | SISTEMA_DISPONIBLE / GRUPO_ABIERTO → TAREAS_ABIERTO | Acceso a la lista |
+| `abrirPlanificacion()` | SISTEMA_DISPONIBLE → PLANIFICACION_ABIERTO | Configuración de planificación |
+| `abrirGrupos()` | SISTEMA_DISPONIBLE → GRUPOS_ABIERTO | Gestión de grupos |
+| `crearTarea()` | TAREAS_ABIERTO → TAREA_ABIERTO | Inicia creación |
+| `editarTarea()` | TAREAS_ABIERTO → TAREA_ABIERTO / TAREA_ABIERTO → TAREA_ABIERTO | Edita tarea |
+| `relacionarTareas()` | TAREA_ABIERTO → TAREA_ABIERTO | Relaciona una tarea con otra para crear subtarea |
+| `asignarTareaAUsuario()` | PLANIFICACION_ABIERTO → PLANIFICACION_ABIERTO | Gestión de tareas |
+| `establecerHorario()` | PLANIFICACION_ABIERTO → PLANIFICACION_ABIERTO | Acción autorreflexiva |
+| `crearGrupo()` | GRUPO_ABIERTO → GRUPO_ABIERTO | Creación de grupos |
+| `editarGrupo()` | GRUPOS_ABIERTO / GRUPO_ABIERTO / TAREAS_ABIERTO → GRUPO_ABIERTO | Gestión de grupos |
+| `invitarUsuario()` | GRUPO_ABIERTO → GRUPO_ABIERTO | Gestión de miembros |
+| `completarGestion()` | Cualquier Estado Secundario → SISTEMA_DISPONIBLE | Retorno al menú |
 
 ---
 
@@ -111,9 +111,9 @@ Este diagrama ilustra los flujos que se activan automáticamente por el sistema,
 |-----------|------------------|-------------|
 | `iniciarSesion()` | SESION_CERRADA → SISTEMA_DISPONIBLE | Acceso |
 | `cerrarSesion()` | SISTEMA_DISPONIBLE → SESION_CERRADA | Cierre |
-| `abrirTareas()` | SISTEMA_DISPONIBLE → GESTION_TAREAS_ABIERTO | Acceso a tareas |
-| `marcarCompletada()` | GESTION_TAREAS_ABIERTO → GESTION_TAREAS_ABIERTO | Marca la tarea completada |
-| `completarGestion()` | GESTION_TAREAS_ABIERTO / CONSULTA_TAREAS_CONCEPTUAL_ABIERTO → SISTEMA_DISPONIBLE | Regreso |
+| `abrirTareas()` | SISTEMA_DISPONIBLE → TAREAS_ABIERTO | Acceso a tareas |
+| `marcarCompletada()` | TAREAS_ABIERTO → TAREAS_ABIERTO | Marca la tarea completada |
+| `completarGestion()` | TAREAS_ABIERTO → SISTEMA_DISPONIBLE | Regreso |
 
 ---
 
@@ -142,11 +142,11 @@ El acceso a los módulos principales requiere pasar por **SISTEMA_DISPONIBLE**.
 # Flujos de trabajo
 
 ## Flujo de Administrador
-Requiere transitar por estados específicos como **CREACION_TAREA_ABIERTO** u **ORGANIZACION_GRUPOS_ABIERTO** para cualquier operación de configuración o modificación de estructura.
+Requiere transitar por estados específicos como **TAREA_ABIERTO** u **GRUPOS_ABIERTO** para cualquier operación de configuración o modificación de estructura.
 
 ## Flujo de Miembro
 Las operaciones están restringidas a:
-- La lectura (**GESTION_TAREAS_ABIERTO**)
+- La lectura (**TAREAS_ABIERTO**)
 - Acciones autorreflexivas sobre tareas asignadas (`marcarCompletada()`)
 
 ## Flujo de Tiempo
@@ -189,7 +189,7 @@ Las operaciones de modificación simple (ej. `marcarCompletada()`) son autorrefl
 **SISTEMA_DISPONIBLE** actúa como punto central, concentrando el inicio de todos los flujos principales para los tres actores.
 
 ## Granularidad Descriptiva
-Los estados son lo suficientemente específicos (ej. **CREACION_TAREA_ABIERTO** vs. **GESTION_TAREAS_ABIERTO**) para distinguir las fases de interacción de cada actor.
+Los estados son lo suficientemente específicos (ej. **TAREA_ABIERTO** vs. **TAREAS_ABIERTO**) para distinguir las fases de interacción de cada actor.
 
 ## Separación de Responsabilidades
 - **Flujo de Tareas:** segmentado entre funciones de Administrador (creación/configuración) y Miembro (ejecución/consumo).  
