@@ -10,6 +10,8 @@ skinparam note {
 }
 
 state GRUPO_ABIERTO
+state SISTEMA_DISPONIBLE
+state TAREA_ABIERTO
 
 state "abrirTareas()" as abrirTareas {
     state " " as Inicio <<start>>
@@ -32,6 +34,8 @@ state "abrirTareas()" as abrirTareas {
 state TAREAS_ABIERTO
 
 GRUPO_ABIERTO --> abrirTareas
+SISTEMA_DISPONIBLE--> abrirTareas
+TAREA_ABIERTO --> abrirTareas
 abrirTareas --> TAREAS_ABIERTO
 note on link
     Lista de tareas disponible para edición

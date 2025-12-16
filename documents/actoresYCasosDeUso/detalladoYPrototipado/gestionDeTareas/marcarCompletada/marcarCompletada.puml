@@ -1,21 +1,34 @@
-@startuml MarcarCompletada
-hide empty description
+@startuml marcarCompletada
+skinparam state {
+    BackgroundColor White
+    BorderColor Black
+    ArrowColor #008000
+}
+skinparam note {
+    BackgroundColor #FEFECE
+    BorderColor #D7B75F
+}
 
-state "marcarCompletada()" as MainBlock {
-    [*] --> ValidarEstado
+state TAREAS_ABIERTO
+state "TAREAS_ABIERTO" as TAREAS_ABIERTO_FINAL
+
+state "marcarCompletada()" as marcarCompletada {
+    state " " as Inicio <<start>>
+    state " " as Intermedio
+    state " " as Fin <<end>>
+    
+    Inicio --> Intermedio
     note on link
-        **Admin/Miembro** marca checkbox
+        <b>Usuario</b> solicita marcar completada
     end note
-
-    state ValidarEstado as " "
-    ValidarEstado --> [*]
+    
+    Intermedio --> Fin
     note on link
-        **Sistema** verifica estado:
-        * Si está pendiente -> Pasa a Completada
-        * Registra fecha/hora de cierre
+        <b>Sistema</b> visualiza estado completado
+        * Fecha finalización
     end note
 }
 
-state ESTADO_ACTUALIZADO
-MainBlock -down-> ESTADO_ACTUALIZADO
+TAREAS_ABIERTO --> marcarCompletada
+marcarCompletada --> TAREAS_ABIERTO_FINAL
 @enduml

@@ -9,32 +9,38 @@ skinparam note {
     BorderColor #D7B75F
 }
 
-state TAREAS_ABIERTO
+state "TAREAS_ABIERTO" as TAREAS_ABIERTO_IN
 
 state "crearTarea()" as crearTarea {
     state " " as Inicio <<start>>
-    state " " as Formulario
-    state " " as Procesando
+    state " " as Estado1
+    state " " as Estado2
+    state " " as Estado3
     state " " as Fin <<end>>
     
-    Inicio --> Formulario
+    Inicio --> Estado1
     note on link
         <b>Usuario</b> solicita introducir tarea
     end note
     
-    Formulario --> Procesando
+    Estado1 --> Estado2
     note on link
         <b>Sistema</b> permite introducir datos
-        * Título, Fecha, Asignado
     end note
 
-    Procesando --> Fin
+    Estado2 --> Estado3
     note on link
         <b>Usuario</b> introduce datos
+    end note
+
+    Estado3 --> Fin
+    note on link
         <b>Sistema</b> visualiza nueva tarea
     end note
 }
 
-TAREAS_ABIERTO --> crearTarea
-crearTarea --> TAREAS_ABIERTO
+state "TAREA_ABIERTO" as TAREAS_ABIERTO_OUT
+
+TAREAS_ABIERTO_IN --> crearTarea
+crearTarea --> TAREAS_ABIERTO_OUT
 @enduml

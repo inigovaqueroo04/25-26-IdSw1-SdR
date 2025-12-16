@@ -1,4 +1,4 @@
-@startuml
+@startuml editarTarea
 skinparam state {
     BackgroundColor White
     BorderColor Black
@@ -9,31 +9,40 @@ skinparam note {
     BorderColor #D7B75F
 }
 
-state TAREA_ABIERTO
+state TAREAS_ABIERTO
+state "TAREA_ABIERTO" as TAREA_ABIERTO_IN
 
 state "editarTarea()" as editarTarea {
     state " " as Inicio <<start>>
-    state " " as Edicion
-    state " " as Guardado
+    state " " as Estado1
+    state " " as Estado2
+    state " " as Estado3
     state " " as Fin <<end>>
     
-    Inicio --> Edicion
+    Inicio --> Estado1
     note on link
         <b>Usuario</b> solicita introducir modificaciones
     end note
     
-    Edicion --> Guardado
+    Estado1 --> Estado2
     note on link
         <b>Sistema</b> permite introducir datos
     end note
 
-    Guardado --> Fin
+    Estado2 --> Estado3
     note on link
         <b>Usuario</b> introduce datos
+    end note
+
+    Estado3 --> Fin
+    note on link
         <b>Sistema</b> muestra tarea actualizada
     end note
 }
 
-TAREA_ABIERTO --> editarTarea
-editarTarea --> TAREA_ABIERTO
+state "TAREA_ABIERTO" as TAREA_ABIERTO_OUT
+
+TAREAS_ABIERTO --> editarTarea
+TAREA_ABIERTO_IN --> editarTarea
+editarTarea --> TAREA_ABIERTO_OUT
 @enduml
