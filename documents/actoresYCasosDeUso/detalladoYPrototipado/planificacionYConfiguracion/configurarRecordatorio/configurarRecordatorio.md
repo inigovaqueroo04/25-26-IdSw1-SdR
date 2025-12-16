@@ -4,7 +4,7 @@
 
 <div align=center>
 
-|![Diagrama de Actividad: configurarRecordatorio()](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/configurarRecordatorio/configurarRecordatorio.png)|
+|![Diagrama de Actividad: configurarRecordatorio()](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/configurarRecordatorio/configurarRecordatorio.svg)|
 |-|
 |Código fuente: [configurarRecordatorio.puml](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/configurarRecordatorio/configurarRecordatorio.puml)|
 

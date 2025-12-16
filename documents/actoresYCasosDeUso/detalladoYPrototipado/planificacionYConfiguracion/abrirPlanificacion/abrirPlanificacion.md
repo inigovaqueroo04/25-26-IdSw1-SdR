@@ -4,7 +4,7 @@
 
 <div align=center>
 
-|![Diagrama de Actividad: abrirPlanificacion()](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/abrirPlanificacion/abrirPlanificacion.png)|
+|![Diagrama de Actividad: abrirPlanificacion()](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/abrirPlanificacion/abrirPlanificacion.svg)|
 |-|
 |Código fuente: [abrirPlanificacion.puml](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/abrirPlanificacion/abrirPlanificacion.puml)|
 
