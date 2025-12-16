@@ -45,24 +45,3 @@
 | Diagrama | Código Fuente |
 | :---: | :---: |
 | ![Diagrama invitarUsuario](./invitarUsuario/invitarUsuario.svg)| [Ver código](./invitarUsuario/invitarUsuario.puml) |
-
----
-
-## asignarTareaAUsuario()
-| Diagrama | Código Fuente |
-| :---: | :---: |
-| ![Diagrama asignarTareaAUsuario](./asignarTareaAUsuario/asignarTareaAUsuario.svg)| [Ver código](./asignarTareaAUsuario/asignarTareaAUsuario.puml) |
-
----
-
-## visualizarTareasGrupo()
-| Diagrama | Código Fuente |
-| :---: | :---: |
-| ![Diagrama visualizarTareasGrupo](./visualizarTareasGrupo/visualizarTareasGrupo.svg)| [Ver código](./visualizarTareasGrupo/visualizarTareasGrupo.puml) |
-
----
-
-## abrirEdicionGrupo()
-| Diagrama | Código Fuente |
-| :---: | :---: |
-| ![Diagrama abrirEdicionGrupo](./abrirEdicionGrupo/abrirEdicionGrupo.svg)| [Ver código](./abrirEdicionGrupo/abrirEdicionGrupo.puml) |
