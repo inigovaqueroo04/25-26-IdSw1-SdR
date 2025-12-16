@@ -1,6 +1,5 @@
 # Sistema de Gestión de Tareas > Diagramas de Contexto por Actor
 
-
 ## Introducción
 
 Este documento presenta los diagramas de contexto del sistema descompuestos por los actores principales. Esta aproximación modular mejora la comprensión de los flujos de trabajo específicos: la complejidad de la gestión y configuración (Administrador), la sencillez de la operación diaria (Miembro) y los procesos automáticos (Tiempo).
