@@ -4,7 +4,7 @@
 
 <div align="center">
 
-![Diagrama de Actividad: cerrarSesion()](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/cerrarSesion/cerrarSesion.png)
+![Diagrama de Actividad: cerrarSesion()](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/cerrarSesion/cerrarSesion.svg)
 
 [Código fuente: cerrarSesion.puml](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/cerrarSesion/cerrarSesion.puml)
 
