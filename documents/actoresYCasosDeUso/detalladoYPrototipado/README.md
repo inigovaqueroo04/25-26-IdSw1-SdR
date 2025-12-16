@@ -17,8 +17,6 @@
 |----------|---------------|
 | ![Diagrama Completar Gestión](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/completarGestion/completarGestion.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/completarGestion/completarGestion.puml) |
 
-
-
 ### Diagrama de Cerrar Sesión
 | Diagrama | Código Fuente |
 |----------|---------------|
@@ -56,21 +54,6 @@
 |----------|---------------|
 | ![Diagrama Invitar Usuario](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/invitarUsuario/invitarUsuario.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/invitarUsuario/invitarUsuario.puml) |
 
-### Diagrama de Asignar Tarea Usuario
-| Diagrama | Código Fuente |
-|----------|---------------|
-| ![Diagrama Asignar Tarea Usuario](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/asignarTareaAUsuario/asignarTareaAUsuario.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/asignarTareaAUsuario/asignarTareaAUsuario.puml) |
-
-### Diagrama de Visualizar Tareas Grupo
-| Diagrama | Código Fuente |
-|----------|---------------|
-| ![Diagrama Visualizar Tareas Grupo](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/visualizarTareasGrupo/visualizarTareasGrupo.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/visualizarTareasGrupo/visualizarTareasGrupo.puml) |
-
-### Diagrama de Abrir Edición Grupo
-| Diagrama | Código Fuente |
-|----------|---------------|
-| ![Diagrama Abrir Edición Grupo](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/abrirEdicionGrupo/abrirEdicionGrupo.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/abrirEdicionGrupo/abrirEdicionGrupo.puml) |
-
 
 ## [Gestión de tareas](./gestionDeTareas/README.md)
 ### Diagrama de Abrir Tarea
@@ -91,7 +74,7 @@
 ### Diagrama de Relacionar Tarea
 | Diagrama | Código Fuente |
 |----------|---------------|
-| ![Diagrama de Relacionar Tarea](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/relacionarTareas/relacionarTareas.png)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/relacionarTareas/relacionarTareas.puml) |
+| ![Diagrama de Relacionar Tarea](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/relacionarTareas/relacionarTareas.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/relacionarTareas/relacionarTareas.puml) |
 
 ### Diagrama de Eliminar Tarea
 | Diagrama | Código Fuente |
@@ -103,26 +86,22 @@
 |----------|---------------|
 | ![Diagrama de Marcar Completada](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/marcarCompletada/marcarCompletada.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/marcarCompletada/marcarCompletada.puml) |
 
+
 ## [Planificación y configuración](./planificacionYConfiguracion/README.md)
 ### Diagrama de Abrir Planificación
 | Diagrama | Código Fuente |
 |----------|---------------|
 | ![Diagrama de Abrir Planificación](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/abrirPlanificacion/abrirPlanificacion.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/abrirPlanificacion/abrirPlanificacion.puml) |
 
-### Diagrama de Establecer Horario
+### Diagrama de Asignar Tarea Usuario
 | Diagrama | Código Fuente |
 |----------|---------------|
-| ![Diagrama de Establecer Horario](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/establecerHorario/establecerHorario.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/establecerHorario/establecerHorario.puml) |
+| ![Diagrama Asignar Tarea Usuario](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/asignarTareaAUsuario/asignarTareaAUsuario.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/asignarTareaAUsuario/asignarTareaAUsuario.puml) |
 
 ### Diagrama de Establecer Horario
 | Diagrama | Código Fuente |
 |----------|---------------|
 | ![Diagrama de Establecer Horario](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/establecerHorario/establecerHorario.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/establecerHorario/establecerHorario.puml) |
-
-### Diagrama de Vincular Tareas
-| Diagrama | Código Fuente |
-|----------|---------------|
-| ![Diagrama de Vincular Tareas](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/vincularTareas/vincularTareas.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/vincularTareas/vincularTareas.puml) |
 
 ### Diagrama de Configurar Recordatorio
 | Diagrama | Código Fuente |
@@ -133,6 +112,7 @@
 | Diagrama | Código Fuente |
 |----------|---------------|
 | ![Diagrama de Definir Localización](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/definirLocalizacion/definirLocalizacion.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/definirLocalizacion/definirLocalizacion.puml) |
+
 
 ## [Automatización (Actor Tiempo)](./automatizacionActorTiempo/README.md)
 ### Diagrama de Iniciar Automatización
