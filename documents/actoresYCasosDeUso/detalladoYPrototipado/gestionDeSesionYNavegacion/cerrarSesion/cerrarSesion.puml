@@ -7,23 +7,33 @@ state "SISTEMA_DISPONIBLE" as SISTEMA_DISPONIBLE
 state "SESION_CERRADA" as SESION_CERRADA
 
 state "cerrarSesion()" as UC {
- 
+
   [*] --> N1
 
   state " " as N1
   state " " as N2
+  state " " as END_OK
+  state " " as END_NO 
+
+  state D1 <<choice>>
 
   N1 --> N2
   note on link
   Usuario solicita cerrar sesion
   end note
 
-  N2 --> [*]
+  N2 --> D1
   note on link
   Sistema permite solicitar:
   • confirmar cierre
   • cancelar cierre
   end note
+
+  D1 --> END_OK : confirmar
+  D1 --> END_NO : cancelar
+
+  END_OK --> [*]
+  END_NO --> [*]
 }
 
 SISTEMA_DISPONIBLE --> UC : cerrarSesion()
