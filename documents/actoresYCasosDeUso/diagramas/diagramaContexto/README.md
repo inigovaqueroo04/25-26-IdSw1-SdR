@@ -24,7 +24,7 @@ Este diagrama modela el flujo de trabajo del usuario con privilegios de gestión
 
 <div align="center">
 
-|![Diagrama de Contexto - Gestor de Tareas](diagramaContextoAdmin.png)
+|![Diagrama de Contexto - Gestor de Tareas](diagramaContextoAdmin.svg)
 |-
 |**Código fuente:** [diagramaContextoAdmin](diagramaContextoAdmin.puml)
 
@@ -38,7 +38,7 @@ Este diagrama representa el flujo de trabajo esencial para un usuario estándar,
 
 <div align="center">
 
-|![Diagrama de Contexto - Gestor de Tareas](diagramaContextoMiembro.png)
+|![Diagrama de Contexto - Gestor de Tareas](diagramaContextoMiembro.svg)
 |-
 |**Código fuente:** [diagramaContextoMiembro](diagramaContextoMiembro.puml)
 
@@ -52,7 +52,7 @@ Este diagrama ilustra los flujos que se activan automáticamente por el sistema,
 
 <div align="center">
 
-|![Diagrama de Contexto - Gestor de Tareas](diagramaContextoTiempo.png)
+|![Diagrama de Contexto - Gestor de Tareas](diagramaContextoTiempo.svg)
 |-
 |**Código fuente:** [diagramaContextoTiempo](diagramaContextoTiempo.puml)
 
