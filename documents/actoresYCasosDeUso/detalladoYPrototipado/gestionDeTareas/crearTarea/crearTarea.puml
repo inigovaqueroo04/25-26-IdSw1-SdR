@@ -1,23 +1,40 @@
-@startuml CrearTarea
-hide empty description
+@startuml crearTarea
+skinparam state {
+    BackgroundColor White
+    BorderColor Black
+    ArrowColor #008000
+}
+skinparam note {
+    BackgroundColor #FEFECE
+    BorderColor #D7B75F
+}
 
-state "crearTarea()" as MainBlock {
-    [*] --> Formulario
+state TAREAS_ABIERTO
+
+state "crearTarea()" as crearTarea {
+    state " " as Inicio <<start>>
+    state " " as Formulario
+    state " " as Procesando
+    state " " as Fin <<end>>
+    
+    Inicio --> Formulario
     note on link
-        **Administrador** inicia creación
+        <b>Usuario</b> solicita introducir tarea
+    end note
+    
+    Formulario --> Procesando
+    note on link
+        <b>Sistema</b> permite introducir datos
+        * Título, Fecha, Asignado
     end note
 
-    state Formulario as " "
-    Formulario --> [*]
+    Procesando --> Fin
     note on link
-        **Sistema** solicita:
-        * Nombre y Descripción (Req)
-        * **«extend»** Definir Localización
-        * **«extend»** Establecer Horario
+        <b>Usuario</b> introduce datos
+        <b>Sistema</b> visualiza nueva tarea
     end note
 }
 
-state TAREA_GUARDADA
-MainBlock -down-> TAREA_GUARDADA : guardar()
-MainBlock -right-> [*] : cancelar()
+TAREAS_ABIERTO --> crearTarea
+crearTarea --> TAREAS_ABIERTO
 @enduml

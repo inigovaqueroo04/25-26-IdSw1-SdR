@@ -1,22 +1,39 @@
-@startuml EditarTarea
-hide empty description
+@startuml
+skinparam state {
+    BackgroundColor White
+    BorderColor Black
+    ArrowColor #008000
+}
+skinparam note {
+    BackgroundColor #FEFECE
+    BorderColor #D7B75F
+}
 
-state "editarTarea()" as MainBlock {
-    [*] --> CargaDatos
+state TAREA_ABIERTO
+
+state "editarTarea()" as editarTarea {
+    state " " as Inicio <<start>>
+    state " " as Edicion
+    state " " as Guardado
+    state " " as Fin <<end>>
+    
+    Inicio --> Edicion
     note on link
-        **Administrador** selecciona tarea
+        <b>Usuario</b> solicita introducir modificaciones
+    end note
+    
+    Edicion --> Guardado
+    note on link
+        <b>Sistema</b> permite introducir datos
     end note
 
-    state CargaDatos as " "
-    CargaDatos --> [*]
+    Guardado --> Fin
     note on link
-        **Sistema** carga datos actuales:
-        * Permite modificar descripción
-        * Permite reasignar localización/horario
+        <b>Usuario</b> introduce datos
+        <b>Sistema</b> muestra tarea actualizada
     end note
 }
 
-state TAREA_ACTUALIZADA
-MainBlock -down-> TAREA_ACTUALIZADA : actualizar()
-MainBlock -right-> [*] : cancelar()
+TAREA_ABIERTO --> editarTarea
+editarTarea --> TAREA_ABIERTO
 @enduml
