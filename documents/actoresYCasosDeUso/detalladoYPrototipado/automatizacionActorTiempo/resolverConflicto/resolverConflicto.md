@@ -4,7 +4,7 @@
 
 <div align=center>
 
-|![Diagrama de Actividad: resolverConflicto()](/documents/actoresYCasosDeUso/detalladoYPrototipado/automatizacionActorTiempo/resolverConflicto/resolverConflicto.png)|
+|![Diagrama de Actividad: resolverConflicto()](/documents/actoresYCasosDeUso/detalladoYPrototipado/automatizacionActorTiempo/resolverConflicto/resolverConflicto.svg)|
 |-|
 |Código fuente: [resolverConflicto.puml](/documents/actoresYCasosDeUso/detalladoYPrototipado/automatizacionActorTiempo/resolverConflicto/resolverConflicto.puml)|
 

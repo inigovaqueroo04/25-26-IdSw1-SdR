@@ -42,13 +42,6 @@ CONFLICTO_ABIERTO -down-> MainBlock
 state AUTOMATIZACION_ACTIVA
 MainBlock -down-> AUTOMATIZACION_ACTIVA
 
-state eventoTiempo as "detectarConflicto()"
-AUTOMATIZACION_ACTIVA -down-> eventoTiempo
-eventoTiempo -up-> CONFLICTO_ABIERTO
 
-state salir as "volverAInicio()"
-state SISTEMA_DISPONIBLE
-AUTOMATIZACION_ACTIVA -right-> salir
-salir -up-> SISTEMA_DISPONIBLE
 
 @enduml
