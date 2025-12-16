@@ -5,7 +5,7 @@ skinparam linetype polyline
 state "SESION_CERRADA" as NoAuth
 state "SISTEMA_DISPONIBLE" as Menu
 
-state "GESTION_TAREAS_ABIERTO" as ListProgramas
+state "TAREAS_ABIERTO" as ListProgramas
 
 [*] --> NoAuth
 
