@@ -6,7 +6,6 @@
 [![Detallar & Prototipar](https://img.shields.io/badge/Detallar%20&%20Prototipar-FFFFFF?style=for-the-badge&logo=figma&logoColor=black)](../detalladoYPrototipado/README.md)
 
 
-
 ## Introducción
 
 Este documento presenta los diagramas de contexto del sistema descompuestos por los actores principales. Esta aproximación modular mejora la comprensión de los flujos de trabajo específicos: la complejidad de la gestión y configuración (Administrador), la sencillez de la operación diaria (Miembro) y los procesos automáticos (Tiempo).

@@ -1,21 +1,49 @@
-@startuml EliminarTarea
-hide empty description
+@startuml eliminarTarea
+skinparam state {
+    BackgroundColor White
+    BorderColor Black
+    ArrowColor #008000
+}
+skinparam note {
+    BackgroundColor #FEFECE
+    BorderColor #D7B75F
+}
 
-state "eliminarTarea()" as MainBlock {
-    [*] --> Confirmar
+state TAREA_ABIERTO
+
+state "eliminarTarea()" as eliminarTarea {
+    state " " as Inicio <<start>>
+    state " " as Confirmacion
+    state " " as Confirmacion2
+    state " " as Estado2
+    state " " as Fin <<end>>
+    
+    Inicio --> Confirmacion
     note on link
-        **Administrador** solicita borrar
+        <b>Usuario</b> solicita eliminar tarea
     end note
 
-    state Confirmar as " "
-    Confirmar --> [*]
+        Confirmacion --> Confirmacion2
     note on link
-        **Sistema** solicita confirmación
-        * Muestra advertencia de borrado
+                <b>Sistema</b> solicita confirmación
+    end note
+    
+    Confirmacion2 --> Estado2
+    note on link
+                <b>Usuario</b> introduce confirmación
+    end note
+
+    Estado2 --> Fin
+    note on link
+        <b>Sistema</b> presenta listado actualizado
     end note
 }
 
-state RECURSO_ELIMINADO
-MainBlock -down-> RECURSO_ELIMINADO : confirmar()
-MainBlock -right-> [*] : abortar()
+state TAREAS_ABIERTO
+
+TAREA_ABIERTO --> eliminarTarea
+eliminarTarea --> TAREAS_ABIERTO
+note on link
+    Tarea eliminada
+end note
 @enduml
