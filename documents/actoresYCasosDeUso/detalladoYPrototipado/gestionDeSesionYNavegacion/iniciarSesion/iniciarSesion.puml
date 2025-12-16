@@ -1,0 +1,33 @@
+@startuml iniciarSesion
+top to bottom direction
+skinparam classAttributeIconSize 0
+skinparam ArrowColor Green
+
+state "SESION_CERRADA" as SESION_CERRADA
+state "SISTEMA_DISPONIBLE" as SISTEMA_DISPONIBLE
+
+state "iniciarSesion()" as iniciarSesion {
+  [*] --> paso
+
+  note right #FFF2CC
+  Usuario solicita iniciar sesion
+  end note 
+
+  paso --> fin
+
+  note right #FFF2CC
+  Sistema presenta formulario de inicio de sesion
+  • Usuario / email y contrasena
+  • Permite confirmar inicio
+  • Permite cancelar
+  • Si credenciales invalidas, permite reintentar
+  end note
+
+  fin --> [*]
+}
+
+SESION_CERRADA --> iniciarSesion : iniciarSesion()
+iniciarSesion --> SISTEMA_DISPONIBLE : (sesion iniciada)
+iniciarSesion --> SESION_CERRADA : (cancelar / error)
+
+@enduml

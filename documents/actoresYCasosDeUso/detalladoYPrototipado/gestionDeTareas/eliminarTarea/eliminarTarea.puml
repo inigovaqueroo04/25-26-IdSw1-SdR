@@ -1,0 +1,21 @@
+@startuml EliminarTarea
+hide empty description
+
+state "eliminarTarea()" as MainBlock {
+    [*] --> Confirmar
+    note on link
+        **Administrador** solicita borrar
+    end note
+
+    state Confirmar as " "
+    Confirmar --> [*]
+    note on link
+        **Sistema** solicita confirmación
+        * Muestra advertencia de borrado
+    end note
+}
+
+state RECURSO_ELIMINADO
+MainBlock -down-> RECURSO_ELIMINADO : confirmar()
+MainBlock -right-> [*] : abortar()
+@enduml

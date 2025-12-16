@@ -1,0 +1,70 @@
+@startuml
+hide empty description
+
+' Estilos visuales
+skinparam state {
+    BackgroundColor White
+    BorderColor Black
+    ArrowColor Green
+}
+skinparam note {
+    BackgroundColor LightYellow
+    BorderColor Gray
+}
+
+' 1. Entradas (Estados desde los que se puede llamar a editarGrupo)
+' Según el diagrama: desde la lista (ORGANIZACION) o desde el propio detalle (GRUPO self-loop)
+state ORGANIZACION_GRUPOS_ABIERTO
+state GRUPO_ABIERTO
+
+' 2. Estado compuesto principal: editarGrupo()
+state "editarGrupo()" as MainBlock {
+    
+    [*] --> Paso1
+    note on link
+        **Administrador** solicita editar grupo
+    end note
+
+    state Paso1 as " "
+    
+    Paso1 --> Paso2
+    note on link
+        **Sistema** presenta datos actuales del grupo
+        Permite modificar los campos editables
+    end note
+
+    state Paso2 as " "
+
+    Paso2 --> [*]
+    note on link
+        **Administrador** modifica la información y confirma
+        **Sistema** valida y guarda los cambios
+    end note
+}
+
+' Conexiones de entrada
+ORGANIZACION_GRUPOS_ABIERTO -down-> MainBlock
+GRUPO_ABIERTO -down-> MainBlock
+
+' 3. Salida (El resultado final es estar en la vista del grupo)
+MainBlock -down-> GRUPO_ABIERTO
+
+' 4. Operaciones disponibles tras editar (Salidas desde GRUPO_ABIERTO según Contexto)
+
+' Bucles de gestión dentro del grupo
+state operacionesInternas as "invitarUsuario()\nasignarTareaAUsuario()"
+GRUPO_ABIERTO -down-> operacionesInternas
+operacionesInternas -up-> GRUPO_ABIERTO
+
+' Navegación hacia tareas
+state CONSULTA_TAREAS_ABIERTO
+state irTareas as "visualizarTareasGrupo()"
+GRUPO_ABIERTO -down-> irTareas
+irTareas -down-> CONSULTA_TAREAS_ABIERTO
+
+' Volver a la lista general
+state volverLista as "abrirGrupos()"
+GRUPO_ABIERTO -right-> volverLista
+volverLista -up-> ORGANIZACION_GRUPOS_ABIERTO
+
+@enduml

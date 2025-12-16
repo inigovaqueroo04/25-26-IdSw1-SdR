@@ -1,0 +1,50 @@
+@startuml
+hide empty description
+
+skinparam state {
+    BackgroundColor White
+    BorderColor Black
+    ArrowColor Green
+}
+skinparam note {
+    BackgroundColor LightYellow
+    BorderColor Gray
+}
+
+state AUTOMATIZACION_ACTIVA
+
+state "detectarConflicto()" as MainBlock {
+    
+    [*] --> Paso1
+    note on link
+        **Actor Tiempo** dispara el evento programado
+        (Trigger temporal)
+    end note
+
+    state Paso1 as " "
+    
+    Paso1 --> Paso2
+    note on link
+        **Sistema** escanea los horarios registrados
+        Busca solapamientos
+    end note
+
+    state Paso2 as " "
+
+    Paso2 --> [*]
+    note on link
+        **Sistema** identifica una incompatibilidad
+        Genera alerta de conflicto
+    end note
+}
+
+AUTOMATIZACION_ACTIVA -down-> MainBlock
+
+state CONFLICTO_ABIERTO
+MainBlock -down-> CONFLICTO_ABIERTO
+
+state resolucion as "ignorarConflicto()\nresolverConflicto()"
+CONFLICTO_ABIERTO -down-> resolucion
+resolucion -up-> AUTOMATIZACION_ACTIVA
+
+@enduml

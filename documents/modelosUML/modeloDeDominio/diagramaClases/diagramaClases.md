@@ -1,4 +1,9 @@
 # Modelo de Dominio – Organización de Usuarios, Grupos y Tareas
+[![Inicio](https://img.shields.io/badge/Inicio-FFFFFF?style=for-the-badge&logo=homeassistant&logoColor=black)](./README.md)
+[![Modelo de Dominio](https://img.shields.io/badge/Modelo%20de%20Dominio-FFFFFF?style=for-the-badge&logo=bookstack&logoColor=black)](./documents/modelosUML/modeloDeDominio/README.md)
+[![Actores Y CasosDeUso](https://img.shields.io/badge/Actores%20&%20Casos%20De%20Uso-FFFFFF?style=for-the-badge&logo=openstreetmap&logoColor=black)](./documents/actoresYCasosDeUso/README.md)
+[![Diagramas de Contexto](https://img.shields.io/badge/Diagramas%20de%20Contexto-FFFFFF?style=for-the-badge&logo=bookstack&logoColor=black)](./documents/actoresYCasosDeUso/diagramaContexto/README.md)
+[![Detallar & Prototipar](https://img.shields.io/badge/Detallar%20&%20Prototipar-FFFFFF?style=for-the-badge&logo=figma&logoColor=black)](./documents/actoresYCasosDeUso/detalladoYPrototipado/README.md)
 
 Este documento explica de forma clara y ordenada cada clase del modelo, su papel dentro del sistema y el motivo de su colocación jerárquica. El objetivo del dominio es representar cómo **usuarios organizados en grupos gestionan tareas**, y cómo estas tareas se complementan con información de ubicación, horario, recordatorios, relaciones y posibles conflictos.
 

@@ -1,0 +1,21 @@
+@startuml MarcarCompletada
+hide empty description
+
+state "marcarCompletada()" as MainBlock {
+    [*] --> ValidarEstado
+    note on link
+        **Admin/Miembro** marca checkbox
+    end note
+
+    state ValidarEstado as " "
+    ValidarEstado --> [*]
+    note on link
+        **Sistema** verifica estado:
+        * Si está pendiente -> Pasa a Completada
+        * Registra fecha/hora de cierre
+    end note
+}
+
+state ESTADO_ACTUALIZADO
+MainBlock -down-> ESTADO_ACTUALIZADO
+@enduml

@@ -1,0 +1,22 @@
+@startuml EditarTarea
+hide empty description
+
+state "editarTarea()" as MainBlock {
+    [*] --> CargaDatos
+    note on link
+        **Administrador** selecciona tarea
+    end note
+
+    state CargaDatos as " "
+    CargaDatos --> [*]
+    note on link
+        **Sistema** carga datos actuales:
+        * Permite modificar descripción
+        * Permite reasignar localización/horario
+    end note
+}
+
+state TAREA_ACTUALIZADA
+MainBlock -down-> TAREA_ACTUALIZADA : actualizar()
+MainBlock -right-> [*] : cancelar()
+@enduml

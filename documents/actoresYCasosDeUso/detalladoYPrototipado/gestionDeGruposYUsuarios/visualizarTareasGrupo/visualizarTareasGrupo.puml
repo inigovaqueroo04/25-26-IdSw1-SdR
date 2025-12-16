@@ -1,0 +1,48 @@
+@startuml visualizarTareasGrupo
+hide empty description
+
+skinparam state {
+    BackgroundColor White
+    BorderColor Black
+    ArrowColor Green
+}
+skinparam note {
+    BackgroundColor LightYellow
+    BorderColor Gray
+}
+
+state GRUPO_ABIERTO
+
+state "visualizarTareasGrupo()" as MainBlock {
+
+    [*] --> Paso1
+    note on link
+        **Administrador** selecciona 'Ver Tareas del Grupo'
+    end note
+
+    state Paso1 as " "
+
+    Paso1 --> Paso2
+    note on link
+        **Sistema** recupera la lista de tareas del grupo
+    end note
+
+    state Paso2 as "Recuperación de Datos"
+
+    Paso2 --> [*]
+    note on link
+        **Sistema** muestra el listado de tareas
+    end note
+}
+
+GRUPO_ABIERTO -down-> MainBlock
+MainBlock -down-> CONSULTA_TAREAS_ABIERTO
+note on link
+    Modo Consulta de Tareas
+end note
+
+state Volver as "abrirEdicionGrupo()"
+CONSULTA_TAREAS_ABIERTO -up-> Volver
+Volver -up-> GRUPO_ABIERTO
+
+@enduml

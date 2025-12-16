@@ -2,7 +2,9 @@
 [![Inicio](https://img.shields.io/badge/Inicio-FFFFFF?style=for-the-badge&logo=homeassistant&logoColor=black)](../../../README.md)
 [![Modelo de Dominio](https://img.shields.io/badge/Modelo%20de%20Dominio-FFFFFF?style=for-the-badge&logo=bookstack&logoColor=black)](../../modelosUML/modeloDeDominio/README.md)
 [![Actores Y CasosDeUso](https://img.shields.io/badge/Actores%20&%20Casos%20De%20Uso-FFFFFF?style=for-the-badge&logo=people&logoColor=black)](../README.md)
-[![Detallar & Prototipar](https://img.shields.io/badge/Detallar%20&%20Prototipar-FFFFFF?style=for-the-badge&logo=figma&logoColor=black)]()
+[![Diagramas de Contexto](https://img.shields.io/badge/Diagramas%20de%20Contexto-FFFFFF?style=for-the-badge&logo=bookstack&logoColor=black)](../diagramaContexto/README.md)
+[![Detallar & Prototipar](https://img.shields.io/badge/Detallar%20&%20Prototipar-FFFFFF?style=for-the-badge&logo=figma&logoColor=black)](../detalladoYPrototipado/README.md)
+
 
 ## Diagrama de Gestion de Tareas 
 | Diagrama | Código Fuente |
@@ -27,22 +29,22 @@
 | ![Diagrama de Automatización](./diagramaAutomatización/diagramaAutomatizacion.png)| [Ver código](./diagramaAutomatización/diagramaAutomatizacion.puml) |
 
 # Diagramas de Contexto por Actor
-### [Documentación](./diagramaContexto/README.md)
+### [Documentación](../diagramaContexto/README.md)
 
 ## Diagrama de Contexto - Administrador
 
 | Diagrama | Código Fuente |
 |----------|---------------|
-| ![Diagrama de Automatización](./diagramaContexto/diagramaContextoAdmin.png)| [Ver código](./diagramaContexto/diagramaContextoAdmin.puml) |
+| ![Diagrama de Automatización](../diagramaContexto/diagramaContextoAdmin.png)| [Ver código](../diagramaContexto/diagramaContextoAdmin.puml) |
 
 ## Diagrama de Contexto - Miembro
 
 | Diagrama | Código Fuente |
 |----------|---------------|
-| ![Diagrama de Automatización](./diagramaContexto/diagramaContextoMiembro.png)| [Ver código](./diagramaContexto/diagramaContextoMiembro.puml) |
+| ![Diagrama de Automatización](../diagramaContexto/diagramaContextoMiembro.png)| [Ver código](../diagramaContexto/diagramaContextoMiembro.puml) |
 
 ## Diagrama de Contexto - Tiempo
 
 | Diagrama | Código Fuente |
 |----------|---------------|
-| ![Diagrama de Automatización](./diagramaContexto/diagramaContextoTiempo.png)| [Ver código](./diagramaContexto/diagramaContextoTiempo.puml) |
+| ![Diagrama de Automatización](../diagramaContexto/diagramaContextoTiempo.png)| [Ver código](../diagramaContexto/diagramaContextoTiempo.puml) |
