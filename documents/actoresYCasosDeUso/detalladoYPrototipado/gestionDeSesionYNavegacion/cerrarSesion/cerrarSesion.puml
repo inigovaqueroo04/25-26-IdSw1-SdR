@@ -3,30 +3,34 @@ top to bottom direction
 skinparam classAttributeIconSize 0
 skinparam ArrowColor Green
 
+' ===== Estados de contexto =====
 state "SISTEMA_DISPONIBLE" as SISTEMA_DISPONIBLE
 state "SESION_CERRADA" as SESION_CERRADA
 
-state "cerrarSesion()" as cerrarSesion {
-  [*] --> paso
+' ===== Caso de uso =====
+state "cerrarSesion()" as UC {
+ 
+  [*] --> N1
 
-  note right #FFF2CC
+  state " " as N1
+  state " " as N2
+
+  N1 --> N2
+  note on link
   Usuario solicita cerrar sesion
-  end note 
-
-  paso --> fin
-
-  note right #FFF2CC
-  Sistema solicita confirmacion de cierre
-  • Permite confirmar
-  • Permite cancelar
-  • Si confirma, limpia sesion y vuelve a inicio
   end note
 
-  fin --> [*]
+  N2 --> [*]
+  note on link
+  Sistema permite solicitar:
+  • confirmar cierre
+  • cancelar cierre
+  end note
 }
 
-SISTEMA_DISPONIBLE --> cerrarSesion : cerrarSesion()
-cerrarSesion --> SESION_CERRADA : (confirmar)
-cerrarSesion --> SISTEMA_DISPONIBLE : (cancelar)
+' ===== Transiciones de contexto =====
+SISTEMA_DISPONIBLE --> UC : cerrarSesion()
+UC --> SESION_CERRADA : confirmar
+UC --> SISTEMA_DISPONIBLE : cancelar
 
 @enduml
