@@ -1,50 +1,30 @@
-@startuml volverInicio
+@startuml volverAInicio
 top to bottom direction
 skinparam classAttributeIconSize 0
 skinparam ArrowColor Green
 
+state "AUTOMATIZACION_ACTIVA" as AUTOMATIZACION_ACTIVA
 state "SISTEMA_DISPONIBLE" as SISTEMA_DISPONIBLE
-state "GESTION_TAREAS_ABIERTO" as GESTION_TAREAS_ABIERTO
-state "PLANIFICACION_ABIERTO" as PLANIFICACION_ABIERTO
-state "ORGANIZACION_GRUPOS_ABIERTO" as ORGANIZACION_GRUPOS_ABIERTO
-state "GRUPO_ABIERTO" as GRUPO_ABIERTO
-state "CONSULTA_TAREAS_ABIERTO" as CONSULTA_TAREAS_ABIERTO 
-state "CREACION_TAREA_ABIERTO" as CREACION_TAREA_ABIERTO
 
-state "volverInicio()" as volverInicio {
-  [*] --> paso
+state "volverAInicio()" as UC {
+ 
+  [*] --> N1
 
-  note right #FFF2CC
-  Usuario solicita volver al inicio
+  state " " as N1
+  state " " as N2
+
+  N1 --> N2
+  note on link
+  Usuario solicita parar la automatizacion y volver a inicio
   end note
 
-  paso --> fin
-
-  note right #FFF2CC
-  Sistema navega al inicio (SISTEMA_DISPONIBLE)
-  • Permite volver desde cualquier gestion abierta
-  • Si hay cambios pendientes, permite:
-    - guardar y volver
-    - descartar y volver
-    - cancelar
+  N2 --> [*]
+  note on link
+  Sistema muestra inicio 
   end note
-
-  fin --> [*]
 }
 
-GESTION_TAREAS_ABIERTO --> volverInicio : volverInicio()
-PLANIFICACION_ABIERTO --> volverInicio : volverInicio()
-ORGANIZACION_GRUPOS_ABIERTO --> volverInicio : volverInicio()
-GRUPO_ABIERTO --> volverInicio : volverInicio()
-CONSULTA_TAREAS_ABIERTO --> volverInicio : volverInicio()
-CREACION_TAREA_ABIERTO --> volverInicio : volverInicio()
-
-volverInicio --> SISTEMA_DISPONIBLE : (volver)
-volverInicio --> GESTION_TAREAS_ABIERTO : (cancelar)
-volverInicio --> PLANIFICACION_ABIERTO : (cancelar)
-volverInicio --> ORGANIZACION_GRUPOS_ABIERTO : (cancelar)
-volverInicio --> GRUPO_ABIERTO : (cancelar)
-volverInicio --> CONSULTA_TAREAS_ABIERTO : (cancelar)
-volverInicio --> CREACION_TAREA_ABIERTO : (cancelar)
+AUTOMATIZACION_ACTIVA --> UC : volverAInicio()
+UC --> SISTEMA_DISPONIBLE : volverAInicio()
 
 @enduml
