@@ -4,7 +4,7 @@
 
 <div align=center>
 
-|![Diagrama de Actividad: editarGrupo()](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/editarGrupo/editarGrupo.png)|
+|![Diagrama de Actividad: editarGrupo()](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/editarGrupo/editarGrupo.svg)|
 |-|
 |Código fuente: [editarGrupo.puml](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/editarGrupo/editarGrupo.puml)|
 

@@ -1,74 +1,35 @@
 @startuml asignarTareaAUsuario
+
 hide empty description
+skinparam linetype polyline
 
-skinparam state {
-    BackgroundColor White
-    BorderColor Black
-    ArrowColor Green
-}
-skinparam note {
-    BackgroundColor LightYellow
-    BorderColor Gray
-}
+state in1 as "PLANIFICACION_ABIERTO"
+in1 -[#green]-> asignarTareaAUsuario
 
-state GRUPO_ABIERTO
+state asignarTareaAUsuario as "asignarTareaAUsuario()" {
 
-state "asignarTareaAUsuario()" as MainBlock {
+    state IngresandoAsignacion as " "
+    state ValidandoAsignacion as " "
 
-    [*] --> Paso1
+    [*] -[#green]-> IngresandoAsignacion
     note on link
-        **Administrador** selecciona 'Asignar Tarea'
-        y selecciona Tarea y Usuario
+        <b>Usuario</b> introduce usuario destinatario
     end note
 
-    state Paso1 as "Selección Tarea y Usuario"
-
-    Paso1 --> Paso2
+    IngresandoAsignacion -[#green]-> ValidandoAsignacion
     note on link
-        **Sistema** valida la existencia y disponibilidad
-        de la Tarea y del Usuario
+        <b>Sistema</b> valida existencia del usuario
     end note
 
-    state Paso2 as "Validación de Tarea/Usuario"
-
-    Paso2 --> Exito
+    ValidandoAsignacion -[#green]-> [*]
     note on link
-        [Tarea y Usuario válidos]
-    end note
-
-    Paso2 --> Fracaso
-    note on link
-        [Tarea o Usuario no válido O Tarea ya asignada]
-    end note
-
-    state Exito as " "
-    note right
-        **Sistema** registra la asignación y notifica al usuario
-    end note
-
-    state Fracaso as " "
-    note right
-        **Sistema** muestra mensaje de error
-    end note
-
-    Exito --> [*]
-    Fracaso --> [*]
-    note on link
-        **Sistema** actualiza la vista de asignaciones
+        <b>Sistema</b> registra asignación
     end note
 }
 
-GRUPO_ABIERTO -down-> MainBlock
-
-MainBlock -down-> GRUPO_ABIERTO
-
-state otras as "editarGrupo()\ninvitarUsuario()"
-GRUPO_ABIERTO -left-> otras
-otras -right-> GRUPO_ABIERTO
-
-state cerrar as "abrirEdicionGrupo()"
-state ORGANIZACION_GRUPOS_ABIERTO
-GRUPO_ABIERTO -right-> cerrar
-cerrar -down-> ORGANIZACION_GRUPOS_ABIERTO
+asignarTareaAUsuario -[#green]-> PLANIFICACION_ABIERTO
+note on link
+    Tarea asignada
+end note
 
 @enduml

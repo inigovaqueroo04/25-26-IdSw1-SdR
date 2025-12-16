@@ -32,3 +32,9 @@
 | :---: | :---: |
 | ![Diagrama ignorarConflicto](./ignorarConflicto/ignorarConflicto.svg)| [Ver código](./ignorarConflicto/ignorarConflicto.puml) |
 
+## volverAInicio()
+
+| Diagrama | Código Fuente |
+|---------|---------------|
+| ![Diagrama volverAInicio](./volverAInicio/volverAInicio.svg) | [Ver código](./volverAInicio/volverAInicio.puml) |
+

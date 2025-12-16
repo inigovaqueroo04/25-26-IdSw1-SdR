@@ -12,57 +12,49 @@ skinparam note {
     BorderColor Gray
 }
 
-' 1. Entrada
-state ORGANIZACION_GRUPOS_ABIERTO
+' 1. Estado de Entrada
+state GRUPOS_ABIERTO
 
 ' 2. Estado compuesto principal: crearGrupo()
 state "crearGrupo()" as MainBlock {
     
+    ' Inicio
     [*] --> Paso1
     note on link
-        **Administrador** solicita crear un nuevo grupo
+        **Administrador solicita** crear grupo
     end note
 
     state Paso1 as " "
-    
+
+    ' Sistema habilita formulario
     Paso1 --> Paso2
     note on link
-        **Sistema** solicita datos del grupo
-        (ID, Nombre, etc.)
+        **Sistema permite introducir** datos del grupo
+        (ID, Nombre, Descripción)
     end note
 
     state Paso2 as " "
 
-    Paso2 --> [*]
+    ' Actor rellena datos (Separado)
+    Paso2 --> Paso3
     note on link
-        **Administrador** introduce los datos y confirma
-        **Sistema** valida y crea el grupo
+        **Administrador introduce** datos
+    end note
+
+    state Paso3 as " "
+
+    ' Sistema confirma/muestra y termina (Separado)
+    Paso3 --> [*]
+    note on link
+        **Sistema presenta** grupo creado
     end note
 }
 
-' Conexión de entrada
-ORGANIZACION_GRUPOS_ABIERTO -down-> MainBlock
-
-' 3. Salida
+' 3. Estado de Salida
 state GRUPO_ABIERTO
+
+' 4. Conexiones
+GRUPOS_ABIERTO -down-> MainBlock
 MainBlock -down-> GRUPO_ABIERTO
-
-' 4. Operaciones disponibles tras crear el grupo (Salidas desde GRUPO_ABIERTO según Contexto)
-
-' Bucle de operaciones sobre el grupo (invitar, asignar, editar)
-state operacionesGrupo as "invitarUsuario()\nasignarTareaAUsuario()\neditarGrupo()"
-GRUPO_ABIERTO -down-> operacionesGrupo
-operacionesGrupo -up-> GRUPO_ABIERTO
-
-' Navegación hacia tareas
-state CONSULTA_TAREAS_ABIERTO
-state irTareas as "visualizarTareasGrupo()"
-GRUPO_ABIERTO -down-> irTareas
-irTareas -down-> CONSULTA_TAREAS_ABIERTO
-
-' Navegación de vuelta a la lista (abrirGrupos)
-state volverLista as "abrirGrupos()"
-GRUPO_ABIERTO -right-> volverLista
-volverLista -up-> ORGANIZACION_GRUPOS_ABIERTO
 
 @enduml

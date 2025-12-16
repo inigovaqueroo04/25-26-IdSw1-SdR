@@ -4,8 +4,8 @@
 
 <div align="center">
 
-![Diagrama de Actividad: volverAInicio()](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/volverAInicio/volverAInicio.png)
+![Diagrama de Actividad: volverAInicio()](/documents/actoresYCasosDeUso/detalladoYPrototipado/automatizacionActorTiempo/volverAInicio/volverAInicio.svg)
 
-[Código fuente: volverAInicio.puml](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/volverAInicio/volverAInicio.puml)
+[Código fuente: volverAInicio.puml](/documents/actoresYCasosDeUso/detalladoYPrototipado/automatizacionActorTiempo/volverAInicio/volverAInicio.puml)
 
 </div>

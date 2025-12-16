@@ -10,7 +10,7 @@
 
 | Diagrama | Código Fuente |
 |---------|---------------|
-| ![Diagrama iniciarSesion](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/iniciarSesion/iniciarSesion.png) | [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/iniciarSesion/iniciarSesion.puml) |
+| ![Diagrama iniciarSesion](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/iniciarSesion/iniciarSesion.svg) | [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/iniciarSesion/iniciarSesion.puml) |
 
 ---
 
@@ -18,7 +18,7 @@
 
 | Diagrama | Código Fuente |
 |---------|---------------|
-| ![Diagrama cerrarSesion](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/cerrarSesion/cerrarSesion.png) | [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/cerrarSesion/cerrarSesion.puml) |
+| ![Diagrama cerrarSesion](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/cerrarSesion/cerrarSesion.svg) | [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/cerrarSesion/cerrarSesion.puml) |
 
 ---
 
@@ -26,12 +26,8 @@
 
 | Diagrama | Código Fuente |
 |---------|---------------|
-| ![Diagrama completarGestion](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/completarGestion/completarGestion.png) | [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/completarGestion/completarGestion.puml) |
+| ![Diagrama completarGestion](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/completarGestion/completarGestion.svg) | [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/completarGestion/completarGestion.puml) |
 
 ---
 
-## volverAlInicio()
-
-| Diagrama | Código Fuente |
-|---------|---------------|
-| ![Diagrama volverAInicio](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/volverAInicio/volverAInicio.png) | [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/volverAInicio/volverAInicio.puml) |
+|
