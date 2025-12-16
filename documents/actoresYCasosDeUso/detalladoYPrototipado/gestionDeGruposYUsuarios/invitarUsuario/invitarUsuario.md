@@ -4,7 +4,7 @@
 
 <div align=center>
 
-|![Diagrama de Actividad: invitarUsuario()](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/invitarUsuario/invitarUsuario.png)|
+|![Diagrama de Actividad: invitarUsuario()](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/invitarUsuario/invitarUsuario.svg)|
 |-|
 |Código fuente: [invitarUsuario.puml](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/invitarUsuario/invitarUsuario.puml)|
 
