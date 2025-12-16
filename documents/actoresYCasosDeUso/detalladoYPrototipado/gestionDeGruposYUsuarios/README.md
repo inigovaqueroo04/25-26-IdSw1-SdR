@@ -46,3 +46,17 @@
 | Diagrama | Código Fuente |
 | :---: | :---: |
 | ![Diagrama asignarTareaAUsuario](./asignarTareaAUsuario/asignarTareaAUsuario.png)| [Ver código](./asignarTareaAUsuario/asignarTareaAUsuario.puml) |
+
+---
+
+## visualizarTareasGrupo()
+| Diagrama | Código Fuente |
+| :---: | :---: |
+| ![Diagrama visualizarTareasGrupo](./visualizarTareasGrupo/visualizarTareasGrupo.png)| [Ver código](./visualizarTareasGrupo/visualizarTareasGrupo.puml) |
+
+---
+
+## abrirEdicionGrupo()
+| Diagrama | Código Fuente |
+| :---: | :---: |
+| ![Diagrama abrirEdicionGrupo](./abrirEdicionGrupo/abrirEdicionGrupo.png)| [Ver código](./abrirEdicionGrupo/abrirEdicionGrupo.puml) |

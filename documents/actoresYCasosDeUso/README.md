@@ -25,12 +25,12 @@ Responsable de validar información y aplicar acciones internas como controles, 
 
 ## Casos de uso
 
-### Gestión de sesión y navegación
+### [Gestión de sesión y navegación](./detalladoYPrototipado/gestionDeSesionYNavegacion/README.md)
 
-1. `iniciarSesion()`
-2. `cerrarSesion()`
-3. `completarGestion()`
-4. `volverAInicio()`
+1. [iniciarSesion()](./detalladoYPrototipado/gestionDeSesionYNavegacion/iniciarSesion/iniciarSesion.md)
+2. [cerrarSesion()](./detalladoYPrototipado/gestionDeSesionYNavegacion/cerrarSesion/cerrarSesion.md)
+3. [completarGestion()](./detalladoYPrototipado/gestionDeSesionYNavegacion/completarGestion/completarGestion.md)
+4. [volverAInicio()](./detalladoYPrototipado/gestionDeSesionYNavegacion/volverAInicio/volverAInicio.md)
 
 ### [Gestión de grupos y usuarios](./detalladoYPrototipado/gestionDeGruposYUsuarios/README.md)
 
@@ -41,8 +41,8 @@ Responsable de validar información y aplicar acciones internas como controles, 
 5. [unirseAGrupo()](./detalladoYPrototipado/gestionDeGruposYUsuarios/unirseAGrupo/unirseAGrupo.md)
 6. [invitarUsuario()](./detalladoYPrototipado/gestionDeGruposYUsuarios/invitarUsuario/invitarUsuario.md)
 7. [asignarTareaAUsuario()](./detalladoYPrototipado/gestionDeGruposYUsuarios/asignarTareaAUsuario/asignarTareaAUsuario.md)
-8. `visualizarTareasGrupo()`
-9. `abrirEdicionGrupo()`
+8. [visualizarTareasGrupo()](./detalladoYPrototipado/gestionDeGruposYUsuarios/visualizarTareasGrupo/visualizarTareasGrupo.md)
+9. [abrirEdicionGrupo()](./detalladoYPrototipado/gestionDeGruposYUsuarios/abrirEdicionGrupo/abrirEdicionGrupo.md)
 
 ### [Gestión de tareas](./detalladoYPrototipado/gestionDeTareas/README.md)
 
@@ -65,4 +65,4 @@ Responsable de validar información y aplicar acciones internas como controles, 
 1. [iniciarAutomatizacion()](./detalladoYPrototipado/automatizacionActorTiempo/iniciarAutomatizacion/iniciarAutomatizacion.md)
 2. [detectarConflicto()](./detalladoYPrototipado/automatizacionActorTiempo/detectarConflictoHorario/detectarConflicto.md)
 3. [resolverConflicto()](./detalladoYPrototipado/automatizacionActorTiempo/resolverConflicto/resolverConflicto.md)
-4. `ignorarConflicto()`
+4. [ignorarConflicto()](./detalladoYPrototipado/automatizacionActorTiempo/ignorarConflicto/ignorarConflicto.md)
