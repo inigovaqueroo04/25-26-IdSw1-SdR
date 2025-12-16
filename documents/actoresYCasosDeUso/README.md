@@ -32,7 +32,6 @@ Responsable de validar información y aplicar acciones internas como controles, 
 1. [iniciarSesion()](./detalladoYPrototipado/gestionDeSesionYNavegacion/iniciarSesion/iniciarSesion.md)
 2. [cerrarSesion()](./detalladoYPrototipado/gestionDeSesionYNavegacion/cerrarSesion/cerrarSesion.md)
 3. [completarGestion()](./detalladoYPrototipado/gestionDeSesionYNavegacion/completarGestion/completarGestion.md)
-4. [volverAInicio()](./detalladoYPrototipado/gestionDeSesionYNavegacion/volverAInicio/volverAInicio.md)
 
 ### [Gestión de grupos y usuarios](./detalladoYPrototipado/gestionDeGruposYUsuarios/README.md)
 
@@ -42,9 +41,7 @@ Responsable de validar información y aplicar acciones internas como controles, 
 4. [eliminarGrupo()](./detalladoYPrototipado/gestionDeGruposYUsuarios/eliminarGrupo/eliminarGrupo.md)
 5. [unirseAGrupo()](./detalladoYPrototipado/gestionDeGruposYUsuarios/unirseAGrupo/unirseAGrupo.md)
 6. [invitarUsuario()](./detalladoYPrototipado/gestionDeGruposYUsuarios/invitarUsuario/invitarUsuario.md)
-7. [asignarTareaAUsuario()](./detalladoYPrototipado/gestionDeGruposYUsuarios/asignarTareaAUsuario/asignarTareaAUsuario.md)
-8. [visualizarTareasGrupo()](./detalladoYPrototipado/gestionDeGruposYUsuarios/visualizarTareasGrupo/visualizarTareasGrupo.md)
-9. [abrirEdicionGrupo()](./detalladoYPrototipado/gestionDeGruposYUsuarios/abrirEdicionGrupo/abrirEdicionGrupo.md)
+
 
 ### [Gestión de tareas](./detalladoYPrototipado/gestionDeTareas/README.md)
 
@@ -59,9 +56,9 @@ Responsable de validar información y aplicar acciones internas como controles, 
 
 1. [abrirPlanificacion()](./detalladoYPrototipado/planificacionYConfiguracion/abrirPlanificacion/abrirPlanificacion.md)
 2. [establecerHorario()](./detalladoYPrototipado/planificacionYConfiguracion/establecerHorario/establecerHorario.md)
-3. [vincularTareas()](./detalladoYPrototipado/planificacionYConfiguracion/vincularTareas/vincularTareas.md)
+3. [definirLocalizacion()](./detalladoYPrototipado/planificacionYConfiguracion/definirLocalizacion/definirLocalizacion.md)
 4. [configurarRecordatorio()](./detalladoYPrototipado/planificacionYConfiguracion/configurarRecordatorio/configurarRecordatorio.md)
-5. [definirLocalizacion()](./detalladoYPrototipado/planificacionYConfiguracion/definirLocalizacion/definirLocalizacion.md)
+5. [asignarTareaAUsuario()](./detalladoYPrototipado/gestionDeGruposYUsuarios/asignarTareaAUsuario/asignarTareaAUsuario.md)
 
 ### [Automatización (Actor Tiempo)](./detalladoYPrototipado/automatizacionActorTiempo/README.md)
 
@@ -69,3 +66,4 @@ Responsable de validar información y aplicar acciones internas como controles, 
 2. [detectarConflicto()](./detalladoYPrototipado/automatizacionActorTiempo/detectarConflictoHorario/detectarConflicto.md)
 3. [resolverConflicto()](./detalladoYPrototipado/automatizacionActorTiempo/resolverConflicto/resolverConflicto.md)
 4. [ignorarConflicto()](./detalladoYPrototipado/automatizacionActorTiempo/ignorarConflicto/ignorarConflicto.md)
+5. [volverAInicio()](./detalladoYPrototipado/gestionDeSesionYNavegacion/volverAInicio/volverAInicio.md)
