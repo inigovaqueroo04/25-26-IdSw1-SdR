@@ -4,30 +4,32 @@ skinparam classAttributeIconSize 0
 skinparam ArrowColor Green
 
 state "SESION_CERRADA" as SESION_CERRADA
-state "SISTEMA_DISPONIBLE" as SISTEMA_DISPONIBLE
+state "SISTEMA_DISPONIBLE" as SISTEMA_DISPONIBLE 
 
-state "iniciarSesion()" as iniciarSesion {
-  [*] --> paso
+state "iniciarSesion()" as UC {
 
-  note right #FFF2CC
+  [*] --> N1
+
+  state " " as N1
+  state " " as N2
+
+  N1 --> N2
+  note on link
   Usuario solicita iniciar sesion
-  end note 
+  end note
 
-  paso --> fin
-
-  note right #FFF2CC
+  N2 --> [*]
+  note on link
   Sistema presenta formulario de inicio de sesion
   • Usuario / email y contrasena
   • Permite confirmar inicio
-  • Permite cancelar
-  • Si credenciales invalidas, permite reintentar
+  • Permite cancelar inicio
+  • Permite reintentar si las credenciales no son correctas
   end note
-
-  fin --> [*]
 }
 
-SESION_CERRADA --> iniciarSesion : iniciarSesion()
-iniciarSesion --> SISTEMA_DISPONIBLE : (sesion iniciada)
-iniciarSesion --> SESION_CERRADA : (cancelar / error)
+SESION_CERRADA --> UC : iniciarSesion()
+UC --> SESION_CERRADA : cancelar / error
+UC --> SISTEMA_DISPONIBLE : sesion iniciada
 
 @enduml
