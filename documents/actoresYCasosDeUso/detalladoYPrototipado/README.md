@@ -5,7 +5,7 @@
 [![Diagramas de Contexto](https://img.shields.io/badge/Diagramas%20de%20Contexto-FFFFFF?style=for-the-badge&logo=bookstack&logoColor=black)](./documents/actoresYCasosDeUso/diagramaContexto/README.md)
 [![Detallar & Prototipar](https://img.shields.io/badge/Detallar%20&%20Prototipar-FFFFFF?style=for-the-badge&logo=figma&logoColor=black)](./documents/actoresYCasosDeUso/detalladoYPrototipado/README.md)
 
-### [Gestión de sesión y navegación](./gestionDeSesionYNavegacion/README.md)
+## [Gestión de sesión y navegación](./gestionDeSesionYNavegacion/README.md)
 ### Diagrama de Iniciar Sesión
 | Diagrama | Código Fuente |
 |----------|---------------|
@@ -27,7 +27,7 @@
 | ![Diagrama Cerrar Sesión](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/cerrarSesion/cerrarSesion.png)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/cerrarSesion/cerrarSesion.puml) |
 
 
-### [Gestión de grupos y usuarios](./gestionDeGruposYUsuarios/README.md)
+## [Gestión de grupos y usuarios](./gestionDeGruposYUsuarios/README.md)
 ### Diagrama de Abrir Grupos
 | Diagrama | Código Fuente |
 |----------|---------------|
@@ -74,7 +74,7 @@
 | ![Diagrama Abrir Edición Grupo](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/abrirEdicionGrupo/abrirEdicionGrupo.png)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/abrirEdicionGrupo/abrirEdicionGrupo.puml) |
 
 
-### [Gestión de tareas](./gestionDeTareas/README.md)
+## [Gestión de tareas](./gestionDeTareas/README.md)
 ### Diagrama de Abrir Tarea
 | Diagrama | Código Fuente |
 |----------|---------------|
@@ -100,7 +100,7 @@
 |----------|---------------|
 | ![Diagrama de Marcar Completada](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/marcarCompletada/marcarCompletada.png)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/marcarCompletada/marcarCompletada.puml) |
 
-### [Planificación y configuración](./planificacionYConfiguracion/README.md)
+## [Planificación y configuración](./planificacionYConfiguracion/README.md)
 ### Diagrama de Abrir Planificación
 | Diagrama | Código Fuente |
 |----------|---------------|
@@ -131,7 +131,7 @@
 |----------|---------------|
 | ![Diagrama de Definir Localización](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/definirLocalizacion/definirLocalizacion.png)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/definirLocalizacion/definirLocalizacion.puml) |
 
-### [Automatización (Actor Tiempo)](./automatizacionActorTiempo/README.md)
+## [Automatización (Actor Tiempo)](./automatizacionActorTiempo/README.md)
 ### Diagrama de Iniciar Automatización
 | Diagrama | Código Fuente |
 |----------|---------------|
