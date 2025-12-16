@@ -4,7 +4,7 @@
 
 <div align=center>
 
-|![Diagrama de Actividad: inicarAutomatizacion()](/documents/actoresYCasosDeUso/detalladoYPrototipado/automatizacionActorTiempo/iniciarAutomatizacion/iniciarAutomatizacion.png)|
+|![Diagrama de Actividad: inicarAutomatizacion()](/documents/actoresYCasosDeUso/detalladoYPrototipado/automatizacionActorTiempo/iniciarAutomatizacion/iniciarAutomatizacion.svg)|
 |-|
 |Código fuente: [iniciarAutomatizacion.puml](/documents/actoresYCasosDeUso/detalladoYPrototipado/automatizacionActorTiempo/iniciarAutomatizacion/iniciarAutomatizacion.pulm)|
 

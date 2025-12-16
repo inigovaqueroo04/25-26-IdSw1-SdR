@@ -1,7 +1,6 @@
 @startuml
 hide empty description
 
-
 skinparam state {
     BackgroundColor White
     BorderColor Black
@@ -12,47 +11,37 @@ skinparam note {
     BorderColor Gray
 }
 
-
 state SISTEMA_DISPONIBLE
 
 state "iniciarAutomatizacion()" as MainBlock {
     
     [*] --> Paso1
     note on link
-        **Usuario** solicita activar la automatización
+        ' Verbo estricto del ACTOR: SOLICITA
+        **Usuario solicita** iniciar la automatización
     end note
 
     state Paso1 as " "
     
     Paso1 --> Paso2
     note on link
-        **Sistema** valida configuraciones previas
+        ' Verbo estricto del SISTEMA: PERMITE SOLICITAR
+        ' (Se usa cuando el sistema valida ok y deja pasar)
+        **Sistema permite solicitar** el inicio de la configuración
     end note
 
     state Paso2 as " "
 
     Paso2 --> [*]
     note on link
-        **Sistema** activa el proceso de monitoreo en segundo plano
+        ' Verbo estricto del SISTEMA: MUESTRA / VISUALIZA
+        **Sistema muestra** el monitoreo en segundo plano
     end note
 }
 
-
 SISTEMA_DISPONIBLE -down-> MainBlock
-
 
 state AUTOMATIZACION_ACTIVA
 MainBlock -down-> AUTOMATIZACION_ACTIVA
-
-
-state eventoTiempo as "detectarConflicto()"
-AUTOMATIZACION_ACTIVA -down-> eventoTiempo
-state CONFLICTO_ABIERTO
-eventoTiempo -down-> CONFLICTO_ABIERTO
-
-
-state volver as "volverAInicio()"
-AUTOMATIZACION_ACTIVA -right-> volver
-volver -up-> SISTEMA_DISPONIBLE
 
 @enduml
