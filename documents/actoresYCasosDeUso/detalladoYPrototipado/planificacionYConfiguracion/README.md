@@ -8,32 +8,32 @@
 ## abrirPlanificacion()
 | Diagrama | Código Fuente |
 | :---: | :---: |
-| ![Diagrama abrirPlanificacion](./abrirPlanificacion/abrirPlanificacion.png)| [Ver código](./abrirPlanificacion/abrirPlanificacion.puml) |
+| ![Diagrama abrirPlanificacion](./abrirPlanificacion/abrirPlanificacion.svg)| [Ver código](./abrirPlanificacion/abrirPlanificacion.puml) |
 
 ---
 
 ## establecerHorario()
 | Diagrama | Código Fuente |
 | :---: | :---: |
-| ![Diagrama establecerHorario](./establecerHorario/establecerHorario.png)| [Ver código](./establecerHorario/establecerHorario.puml) |
+| ![Diagrama establecerHorario](./establecerHorario/establecerHorario.svg)| [Ver código](./establecerHorario/establecerHorario.puml) |
 
 ---
 
-## vincularTareas()
+## asignarTareaAUsuario()
 | Diagrama | Código Fuente |
 | :---: | :---: |
-| ![Diagrama vincularTareas](./vincularTareas/vincularTareas.png)| [Ver código](./vincularTareas/vincularTareas.puml) |
+| ![Diagrama asignarTareaAUsuario](./asignarTareaAUsuario/asignarTareaAUsuario.svg)| [Ver código](./asignarTareaAUsuario/asignarTareaAUsuario.puml) |
 
 ---
 
 ## configurarRecordatorio()
 | Diagrama | Código Fuente |
 | :---: | :---: |
-| ![Diagrama configurarRecordatorio](./configurarRecordatorio/configurarRecordatorio.png)| [Ver código](./configurarRecordatorio/configurarRecordatorio.puml) |
+| ![Diagrama configurarRecordatorio](./configurarRecordatorio/configurarRecordatorio.svg)| [Ver código](./configurarRecordatorio/configurarRecordatorio.puml) |
 
 ---
 
 ## definirLocalizacion()
 | Diagrama | Código Fuente |
 | :---: | :---: |
-| ![Diagrama definirLocalizacion](./definirLocalizacion/definirLocalizacion.png)| [Ver código](./definirLocalizacion/definirLocalizacion.puml) |
+| ![Diagrama definirLocalizacion](./definirLocalizacion/definirLocalizacion.svg)| [Ver código](./definirLocalizacion/definirLocalizacion.puml) |
