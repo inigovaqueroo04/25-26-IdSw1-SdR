@@ -4,7 +4,7 @@
 
 <div align=center>
 
-|![Diagrama de Actividad: asignarTareaAUsuario()](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/asignarTareaAUsuario/asignarTareaAUsuario.png)|
+|![Diagrama de Actividad: asignarTareaAUsuario()](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/asignarTareaAUsuario/asignarTareaAUsuario.svg)|
 |-|
 |Código fuente: [asignarTareaAUsuario.puml](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/asignarTareaAUsuario/asignarTareaAUsuario.puml)|
 
