@@ -17,10 +17,7 @@
 |----------|---------------|
 | ![Diagrama Completar Gestión](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/completarGestion/completarGestion.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/completarGestion/completarGestion.puml) |
 
-### Diagrama de Volver al Inicio
-| Diagrama | Código Fuente |
-|----------|---------------|
-| ![Diagrama Volver al Inicio](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/volverAInicio/volverAInicio.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/volverAInicio/volverAInicio.puml) |
+
 
 ### Diagrama de Cerrar Sesión
 | Diagrama | Código Fuente |
@@ -157,3 +154,8 @@
 | Diagrama | Código Fuente |
 |----------|---------------|
 | ![Diagrama de Detectar Conflicto](/documents/actoresYCasosDeUso/detalladoYPrototipado/automatizacionActorTiempo/ignorarConflicto/ignorarConflicto.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/automatizacionActorTiempo/ignorarConflicto/ignorarConflicto.puml) |
+
+### Diagrama de Volver al Inicio
+| Diagrama | Código Fuente |
+|----------|---------------|
+| ![Diagrama Volver al Inicio](/documents/actoresYCasosDeUso/detalladoYPrototipado/automatizacionActorTiempo/volverAInicio/volverAInicio.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/automatizacionActorTiempo/volverAInicio/volverAInicio.puml) |

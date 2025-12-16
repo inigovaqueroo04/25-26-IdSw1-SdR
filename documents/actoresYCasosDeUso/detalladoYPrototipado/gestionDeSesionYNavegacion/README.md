@@ -30,8 +30,4 @@
 
 ---
 
-## volverAlInicio()
-
-| Diagrama | Código Fuente |
-|---------|---------------|
-| ![Diagrama volverAInicio](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/volverAInicio/volverAInicio.svg) | [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/volverAInicio/volverAInicio.puml) |
+|
