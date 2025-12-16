@@ -1,24 +1,21 @@
 @startuml DiagramaOrganizaciónYGrupos
 left to right direction
 actor "Administrador" as Admin
-actor "Miembro" as Miem
 
 package "Organización y Grupos" {
-    usecase "Crear Grupo" as UC_G1
-    usecase "Unirse a Grupo" as UC_G2
-    usecase "Invitar Miembro" as UC_G3
-    usecase "Visualizar Tareas de Grupo" as UC_G4
-    usecase "Asignar Tarea" as UC_G5
+    usecase "crearGrupo()" as UC_G1
+    usecase "unirseAGrupo()" as UC_G2
+    usecase "invitarUsuario()" as UC_G3
+    usecase "editarGrupo()" as UC_G4
+    usecase "eliminarGrupo()" as UC_G5
     
     usecase "Modificar Rol" as UC_G6
 }
 
 Admin --> UC_G1
 Admin --> UC_G2
-Miem --> UC_G2
 Admin --> UC_G3
 Admin --> UC_G4
-Miem --> UC_G4
 Admin --> UC_G5
 UC_G3 <.. UC_G6 : <<extend>>
 
