@@ -4,7 +4,7 @@
 
 <div align=center>
 
-|![Diagrama de Actividad: definirLocalizacion()](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/definirLocalizacion/definirLocalizacion.png)|
+|![Diagrama de Actividad: definirLocalizacion()](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/definirLocalizacion/definirLocalizacion.svg)|
 |-|
 |Código fuente: [definirLocalizacion.puml](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/definirLocalizacion/definirLocalizacion.puml)|
 

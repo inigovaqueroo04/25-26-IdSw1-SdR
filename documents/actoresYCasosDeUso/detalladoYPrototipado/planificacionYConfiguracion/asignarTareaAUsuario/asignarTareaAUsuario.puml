@@ -1,0 +1,35 @@
+@startuml asignarTareaAUsuario
+
+hide empty description
+skinparam linetype polyline
+
+state in1 as "PLANIFICACION_ABIERTO"
+in1 -[#green]-> asignarTareaAUsuario
+
+state asignarTareaAUsuario as "asignarTareaAUsuario()" {
+
+    state IngresandoAsignacion as " "
+    state ValidandoAsignacion as " "
+
+    [*] -[#green]-> IngresandoAsignacion
+    note on link
+        <b>Usuario</b> introduce usuario destinatario
+    end note
+
+    IngresandoAsignacion -[#green]-> ValidandoAsignacion
+    note on link
+        <b>Sistema</b> valida existencia del usuario
+    end note
+
+    ValidandoAsignacion -[#green]-> [*]
+    note on link
+        <b>Sistema</b> registra asignación
+    end note
+}
+
+asignarTareaAUsuario -[#green]-> PLANIFICACION_ABIERTO
+note on link
+    Tarea asignada
+end note
+
+@enduml
