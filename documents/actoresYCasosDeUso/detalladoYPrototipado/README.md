@@ -91,6 +91,11 @@
 |----------|---------------|
 | ![Diagrama de Editar Tarea](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/editarTarea/editarTarea.png)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/editarTarea/editarTarea.puml) |
 
+### Diagrama de Relacionar Tarea
+| Diagrama | Código Fuente |
+|----------|---------------|
+| ![Diagrama de Relacionar Tarea](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/relacionarTareas/relacionarTareas.png)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/relacionarTareas/relacionarTareas.puml) |
+
 ### Diagrama de Eliminar Tarea
 | Diagrama | Código Fuente |
 |----------|---------------|
