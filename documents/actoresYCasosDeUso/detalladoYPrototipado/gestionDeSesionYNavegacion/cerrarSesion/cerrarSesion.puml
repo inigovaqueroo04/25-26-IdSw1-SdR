@@ -3,11 +3,9 @@ top to bottom direction
 skinparam classAttributeIconSize 0
 skinparam ArrowColor Green
 
-' ===== Estados de contexto =====
 state "SISTEMA_DISPONIBLE" as SISTEMA_DISPONIBLE
 state "SESION_CERRADA" as SESION_CERRADA
 
-' ===== Caso de uso =====
 state "cerrarSesion()" as UC {
  
   [*] --> N1
@@ -28,7 +26,6 @@ state "cerrarSesion()" as UC {
   end note
 }
 
-' ===== Transiciones de contexto =====
 SISTEMA_DISPONIBLE --> UC : cerrarSesion()
 UC --> SESION_CERRADA : confirmar
 UC --> SISTEMA_DISPONIBLE : cancelar
