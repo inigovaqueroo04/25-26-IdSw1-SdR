@@ -1,0 +1,18 @@
+@startsalt relacionarTareas
+{+
+  ^""Vincular Tareas""^
+  Tarea actual: **TSK-101: Redactar Documento**
+  .
+  Seleccione tarea a vincular:
+  ^TSK-102: Diseñar Mockups^
+  .
+  Tipo de relación:
+  (X) Bloquea a
+  ( ) Depende de
+  ( ) Relacionada con
+  .
+  {/ 
+   [Cancelar] | [Crear Vínculo]
+  }
+}
+@endsalt

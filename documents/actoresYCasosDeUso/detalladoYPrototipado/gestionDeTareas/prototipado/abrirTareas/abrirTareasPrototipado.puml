@@ -1,0 +1,20 @@
+@startsalt
+{+
+  ^""Gestión de Tareas""^
+  .
+  {SI
+    o "Buscar tarea por nombre..." | [Buscar]
+  }
+  .
+  {^" ID " | " Tarea " | " Prioridad " | " Estado " | " Acciones "
+    TSK-101 | Redactar Documento  | Alta      | Pendiente    | { [<&pencil>] | [<&trash>] | [<&link-intact>] | [<&check>] }
+    TSK-102 | Diseñar Mockups     | Media     | En Progreso  | { [<&pencil>] | [<&trash>] | [<&link-intact>] | [<&check>] }
+    TSK-103 | Revisar Pruebas     | Baja      | Completada   | { [<&pencil>] | [<&trash>] | [<&link-intact>] | [<&check>] }
+    .       | .                   | .         | .            | .
+  }
+  .
+  {/ 
+   [< Volver] | . | . | . | . | [Crear Nueva Tarea]
+  }
+}
+@endsalt
