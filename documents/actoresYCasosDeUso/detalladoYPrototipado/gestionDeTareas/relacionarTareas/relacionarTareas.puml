@@ -1,51 +1,69 @@
 @startuml relacionarTareas
+skinparam monochrome false
+skinparam shadow false
+top to bottom direction
+
 skinparam state {
     BackgroundColor White
     BorderColor Black
-    ArrowColor #008000
+    ArrowColor #009900
+    StartColor Black
+    EndColor Black
 }
+
 skinparam note {
-    BackgroundColor #FEFECE
-    BorderColor #D7B75F
+    BackgroundColor #FFFFE0
+    BorderColor #B0B060
+    FontName Arial
 }
 
-state TAREA_ABIERTO
-state "TAREA_ABIERTO" as TAREA_ABIERTO_FINAL
+state "TAREA_ABIERTO" as Inicio
 
-state "relacionarTareas()" as relacionarTareas {
-    state " " as Inicio <<start>>
-    state " " as Estado1
-    state " " as Estado2
-    state " " as Estado3
-    state " " as Fin <<end>>
+state "relacionarTareas()" as RelacionarTareasContainer {
     
-    ' Paso 1
-    Inicio --> Estado1
-    note on link
-        <b>Usuario</b> solicita introducir relación
-    end note
+    state " " as EstadoFormulario
+    state " " as EstadoDecision
     
-    ' Paso 2
-    Estado1 --> Estado2
+    [*] --> EstadoFormulario
     note on link
-        <b>Sistema</b> permite introducir tarea a vincular
+        **Administrador** solicita introducir relación
     end note
 
-    ' Paso 3 (Parte A: Usuario introduce)
-    Estado2 --> Estado3
+    EstadoFormulario --> EstadoDecision
     note on link
-        <b>Usuario</b> introduce selección
+        **Sistema** presenta buscador de tareas vinculables
+        **Sistema** permite solicitar:
+        * introducir identificador o título de la tarea a vincular
+        * seleccionar tipo de relación (predecesora/sucesora)
+        * establecer relación
+        * cancelar vinculación
     end note
 
-    ' Paso 3 (Parte B: Sistema muestra - Separado por estado intermedio)
-    Estado3 --> Fin
+    EstadoDecision -[#green]up-> EstadoFormulario
     note on link
-        <b>Sistema</b> muestra relación establecida
+        **Administrador** solicita cambiar la tarea seleccionada
+    end note
+
+    EstadoDecision -[#green]down-> [*]
+    note on link
+        **Administrador** selecciona tarea y solicita establecer relación
+    end note
+
+    EstadoDecision -[#red]down-> [*]
+    note on link
+        **Administrador** solicita cancelar vinculación
     end note
 }
 
-' El flujo vuelve al estado inicial (bucle)
-TAREA_ABIERTO --> relacionarTareas
-relacionarTareas --> TAREA_ABIERTO_FINAL
+state "TAREA_ABIERTO" as FinTarea
+
+Inicio --> RelacionarTareasContainer
+
+RelacionarTareasContainer -[#green]-> FinTarea : "               "
+
+RelacionarTareasContainer -[#red]down-> FinTarea
+note on link
+    cancelar vinculación
+end note
 
 @enduml

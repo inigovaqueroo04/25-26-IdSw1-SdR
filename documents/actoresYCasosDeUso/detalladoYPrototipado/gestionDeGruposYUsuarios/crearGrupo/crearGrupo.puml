@@ -1,5 +1,4 @@
-@startuml
-' Configuración visual
+@startuml crearGrupo
 skinparam monochrome false
 skinparam shadow false
 top to bottom direction
@@ -18,63 +17,51 @@ skinparam note {
     FontName Arial
 }
 
-' Estado inicial externo (Arriba)
 state "GRUPOS_ABIERTO" as Inicio
 
-' Estado compuesto principal
 state "crearGrupo()" as CrearGrupoContainer {
     
-    ' Puntos de anclaje internos
-    state " " as Paso1
-    state " " as Paso2
-    state " " as Paso3
-
-    ' Paso 1: Solicitud inicial
-    [*] --> Paso1
+    state " " as EstadoFormulario
+    state " " as EstadoDecision
+    
+    [*] --> EstadoFormulario
     note on link
         **Administrador** solicita crear grupo
     end note
 
-    ' Paso 2: Sistema pide datos mínimos
-    Paso1 --> Paso2
+    EstadoFormulario --> EstadoDecision
     note on link
         **Sistema** presenta solicitud de datos mínimos del grupo
-        • Nombre del grupo (obligatorio)
-        • Descripcíon del grupo
-        • Permite solicitar crear grupo
-        • Permite solicitar cancelar creación
+        **Sistema** permite solicitar:
+        * introducir nombre (obligatorio) y descripción
+        * crear grupo
+        * cancelar creación
     end note
 
-    ' Paso 3 (SEPARADO): Acción del Administrador
-    Paso2 --> Paso3
+    EstadoDecision -[#green]up-> EstadoFormulario
     note on link
-        **Administrador** introduce datos
+        **Administrador** solicita modificar datos introducidos
     end note
 
-    ' Paso 4 (SEPARADO): Acción del Sistema
-    Paso3 --> [*]
+    EstadoDecision -[#green]down-> [*]
     note on link
-        **Sistema** presenta grupo creado
+        **Administrador** introduce datos y solicita crear grupo
+    end note
+
+    EstadoDecision -[#red]down-> [*]
+    note on link
+        **Administrador** solicita cancelar creación
     end note
 }
 
-' Estados finales externos (Abajo)
-state GRUPO_ABIERTO
+state "GRUPO_ABIERTO" as FinExito
 state "GRUPOS_ABIERTO" as FinCancelacion
 
-' --- Forzar separación visual ---
-FinCancelacion -[hidden]left-> GRUPO_ABIERTO
-
-' --- TRANSICIONES EXTERNAS ---
-
-' Entrada
 Inicio --> CrearGrupoContainer
 
-' 1. Salida de ÉXITO (Verde) - Hacia GRUPO_ABIERTO
-CrearGrupoContainer --> GRUPO_ABIERTO
+CrearGrupoContainer -[#green]-> FinExito : "               "
 
-' 2. Salida de CANCELACIÓN (Azul) - Hacia GRUPOS_ABIERTO
-CrearGrupoContainer -[#blue]-> FinCancelacion
+CrearGrupoContainer -[#red]down-> FinCancelacion
 note on link
     cancelar creación
 end note

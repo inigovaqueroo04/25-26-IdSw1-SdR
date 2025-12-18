@@ -1,46 +1,69 @@
 @startuml crearTarea
+skinparam monochrome false
+skinparam shadow false
+top to bottom direction
+
 skinparam state {
     BackgroundColor White
     BorderColor Black
-    ArrowColor #008000
+    ArrowColor #009900
+    StartColor Black
+    EndColor Black
 }
+
 skinparam note {
-    BackgroundColor #FEFECE
-    BorderColor #D7B75F
+    BackgroundColor #FFFFE0
+    BorderColor #B0B060
+    FontName Arial
 }
 
-state "TAREAS_ABIERTO" as TAREAS_ABIERTO_IN
+state "TAREAS_ABIERTO" as Inicio
 
-state "crearTarea()" as crearTarea {
-    state " " as Inicio <<start>>
-    state " " as Estado1
-    state " " as Estado2
-    state " " as Estado3
-    state " " as Fin <<end>>
+state "crearTarea()" as CrearTareaContainer {
     
-    Inicio --> Estado1
-    note on link
-        <b>Usuario</b> solicita introducir tarea
-    end note
+    state " " as EstadoFormulario
+    state " " as EstadoDecision
     
-    Estado1 --> Estado2
+    [*] --> EstadoFormulario
     note on link
-        <b>Sistema</b> permite introducir datos
+        **Administrador** solicita introducir tarea
     end note
 
-    Estado2 --> Estado3
+    EstadoFormulario --> EstadoDecision
     note on link
-        <b>Usuario</b> introduce datos
+        **Sistema** presenta formulario de datos de la tarea
+        **Sistema** permite solicitar:
+        * introducir título, descripción y fecha
+        * crear tarea
+        * cancelar creación
     end note
 
-    Estado3 --> Fin
+    EstadoDecision -[#green]up-> EstadoFormulario
     note on link
-        <b>Sistema</b> visualiza nueva tarea
+        **Administrador** solicita modificar datos introducidos
+    end note
+
+    EstadoDecision -[#green]down-> [*]
+    note on link
+        **Administrador** introduce datos y solicita crear tarea
+    end note
+
+    EstadoDecision -[#red]down-> [*]
+    note on link
+        **Administrador** solicita cancelar creación
     end note
 }
 
-state "TAREA_ABIERTO" as TAREAS_ABIERTO_OUT
+state "TAREA_ABIERTO" as FinExito
+state "TAREAS_ABIERTO" as FinCancelacion
 
-TAREAS_ABIERTO_IN --> crearTarea
-crearTarea --> TAREAS_ABIERTO_OUT
+Inicio --> CrearTareaContainer
+
+CrearTareaContainer -[#green]-> FinExito : "               "
+
+CrearTareaContainer -[#red]down-> FinCancelacion
+note on link
+    cancelar creación
+end note
+
 @enduml
