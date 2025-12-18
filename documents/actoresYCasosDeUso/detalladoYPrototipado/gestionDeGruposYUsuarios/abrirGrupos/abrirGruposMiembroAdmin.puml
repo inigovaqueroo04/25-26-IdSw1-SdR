@@ -73,22 +73,12 @@ SISTEMA_DISPONIBLE --> AbrirGruposContainer
 
 AbrirGruposContainer --> GRUPO_ABIERTO
 note on link
-  crearGrupo()
-end note
-
-AbrirGruposContainer --> GRUPO_ABIERTO
-note on link
   editarGrupo()
 end note
 
 AbrirGruposContainer --> GRUPOS_ABIERTO
 note on link
-  eliminarGrupo()
-end note
-
-AbrirGruposContainer --> GRUPOS_ABIERTO
-note on link
-  unirseAGrupo()
+  abrirGrupos()
 end note
 
 AbrirGruposContainer --> SISTEMA_DISPONIBLE
