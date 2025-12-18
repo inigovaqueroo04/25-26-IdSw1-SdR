@@ -18,6 +18,7 @@ package "Nivel 2" {
 ' Nivel 3: Grupo
 package "Nivel 3" {
   class Grupo
+  class Invitacion
 }
 
 ' Nivel 4: Resto de clases
@@ -38,6 +39,9 @@ Tarea *-- Tarea : subtarea de >
 ' NUEVA RELACIÓN: Usuario tiene un Rol
 Usuario -right-> Rol : tiene >
 
+' NUEVA RELACIÓN: Usuario envia una Invitacion
+Usuario --> Invitacion : envia >
+
 ' Relaciones con el resto
 Tarea <-- ConflictoHorario : afecta a <
 Usuario <-- ConflictoHorario : notifica a <
@@ -45,5 +49,6 @@ Tarea --> Localizacion : se realiza en >
 Tarea --> Horario : se programa en > 
 Tarea *-- Recordatorio : notifica sobre < 
 Tarea --> RelacionTareas : se relaciona con >
+Invitacion -left-* Grupo : para unirse a >
 
 @enduml
