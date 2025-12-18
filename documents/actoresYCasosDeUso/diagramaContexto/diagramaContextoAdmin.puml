@@ -13,6 +13,7 @@ state "TAREA_ABIERTO" as EditPrograma
 state "GRUPOS_ABIERTO" as ListGrupos
 state "GRUPO_ABIERTO" as EditGrupo
 
+state "MIEMBRO_ABIERTO" as EditMiembro
 
 [*] --> NoAuth
 
@@ -41,12 +42,16 @@ EditPrograma --> EditPrograma: relacionarTareas()
 ListGrupos --> EditGrupo: crearGrupo()
 ListGrupos --> EditGrupo: editarGrupo()
 ListGrupos --> ListGrupos: eliminarGrupo()
-ListGrupos --> ListGrupos: unirseAGrupo()
+ListGrupos --> ListGrupos: abrirGrupos()
 
-EditGrupo --> ListProgramas: abrirTareas()
+EditGrupo --> ListProgramas: abrirGrupos(Grupo)
 EditGrupo --> ListGrupos: abrirGrupos()
 EditGrupo --> EditGrupo: editarGrupo()
 EditGrupo --> EditGrupo: invitarUsuario()
+EditGrupo --> EditMiembro: editarMiembro()
+
+EditMiembro --> EditGrupo: editarGrupo()
+EditMiembro --> EditMiembro: editarMiembro()
 
 ListProgramas --> Menu: completarGestion()
 ListGrupos --> Menu: completarGestion()
