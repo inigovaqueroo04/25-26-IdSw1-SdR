@@ -46,7 +46,7 @@ EditGrupo --> ListGrupos: abrirGrupos()
 EditGrupo --> EditGrupo: editarGrupo()
 EditGrupo --> EditGrupo: invitarUsuario()
 EditGrupo --> EditMiembro: editarMiembro()
-EditGrupo --> ListProgramas: abrirGrupos(grupo)
+EditGrupo --> ListProgramas: abrirTareas(grupo)
 
 EditMiembro --> EditGrupo: editarGrupo()
 EditMiembro --> EditMiembro: editarMiembro()
