@@ -33,6 +33,7 @@ state "abrirTareas()" as abrirTareas {
 
 state TAREAS_ABIERTO
 
+
 GRUPO_ABIERTO --> abrirTareas
 SISTEMA_DISPONIBLE--> abrirTareas
 TAREA_ABIERTO --> abrirTareas

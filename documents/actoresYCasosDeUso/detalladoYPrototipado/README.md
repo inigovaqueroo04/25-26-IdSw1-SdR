@@ -72,41 +72,47 @@
 
 ## [Gestión de tareas](./gestionDeTareas/README.md)
 
-### Diagrama de Abrir Tarea
+### abrirTarea()
 
-| Diagrama | Código Fuente |
+| Detallado | Prototipado |
 |----------|---------------|
-| ![Diagrama de Abrir Tarea](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/abrirTareas/abrirTareas.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/abrirTareas/abrirTareas.puml) |
+| ![Diagrama de Abrir Tarea](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/abrirTareas/abrirTareas.svg)| ![Prototipado](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/abrirTareas/abrirTareasPrototipado.svg) |
+[VER PUML](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/abrirTareas/abrirTareas.puml)
 
-### Diagrama de Crear Tarea
+### crearTarea()
 
-| Diagrama | Código Fuente |
+| Detallado | Prototipado |
 |----------|---------------|
-| ![Diagrama de Crear Tarea](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/crearTarea/crearTarea.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/crearTarea/crearTarea.puml) |
+| ![Diagrama de Crear Tarea](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/crearTarea/crearTarea.svg)| ![Prototipado](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/crearTarea/crearTareaPrototipado.svg) |
+[VER PUML](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/crearTarea/crearTarea.puml)
 
-### Diagrama de Editar Tarea
+### editarTarea()
 
-| Diagrama | Código Fuente |
+| Detallado | Prototipo |
 |----------|---------------|
-| ![Diagrama de Editar Tarea](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/editarTarea/editarTarea.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/editarTarea/editarTarea.puml) |
+| ![Diagrama de Editar Tarea](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/editarTarea/editarTarea.svg)| ![Prototipo](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/editarTarea/editarTareaPrototipado.svg) |
+[VER PUML](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/editarTarea/editarTarea.puml)
 
-### Diagrama de Relacionar Tarea
+### relacionarTarea()
 
-| Diagrama | Código Fuente |
+| Detallado | Prototipado |
 |----------|---------------|
-| ![Diagrama de Relacionar Tarea](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/relacionarTareas/relacionarTareas.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/relacionarTareas/relacionarTareas.puml) |
+| ![Diagrama de Relacionar Tarea](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/relacionarTareas/relacionarTareas.svg)| ![Prototipo](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/relacionarTareas/relacionarTareasPrototipado.svg) |
+[VER PUML](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/relacionarTareas/relacionarTareas.puml)
 
-### Diagrama de Eliminar Tarea
+### eliminarTarea()
 
-| Diagrama | Código Fuente |
+| Detallado | Prototipado |
 |----------|---------------|
-| ![Diagrama de Eliminar Tarea](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/eliminarTarea/eliminarTarea.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/eliminarTarea/eliminarTarea.puml) |
+| ![Diagrama de Eliminar Tarea](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/eliminarTarea/eliminarTarea.svg)| ![Prototipado](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/eliminarTarea/eliminarTareaPrototipado.svg) |
+[VER PUML](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/eliminarTarea/eliminarTarea.puml)
 
-### Diagrama de Marcar Completada
+### marcarTarea()
 
-| Diagrama | Código Fuente |
+| Detallado | Prototipado |
 |----------|---------------|
-| ![Diagrama de Marcar Completada](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/marcarCompletada/marcarCompletada.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/marcarCompletada/marcarCompletada.puml) |
+| ![Diagrama de Marcar Completada](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/marcarCompletada/marcarCompletada.svg)| [Prototipado](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/marcarCompletada/marcarCompletadaPrototipado.svg) |
+[VER PUML](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/marcarCompletada/marcarCompletada.puml)
 
 ## [Planificación y configuración](./planificacionYConfiguracion/README.md)
 
