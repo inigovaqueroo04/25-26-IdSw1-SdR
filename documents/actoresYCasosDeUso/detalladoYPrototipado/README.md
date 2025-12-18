@@ -93,7 +93,7 @@
 | ![Diagrama de Editar Tarea](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/editarTarea/editarTarea.svg)| ![Prototipo](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/editarTarea/editarTareaPrototipado.svg) |
 [VER PUML](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/editarTarea/editarTarea.puml)
 
-### relacionarTarea()
+### relacionarTareas()
 
 | Detallado | Prototipado |
 |----------|---------------|
@@ -107,7 +107,7 @@
 | ![Diagrama de Eliminar Tarea](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/eliminarTarea/eliminarTarea.svg)| ![Prototipado](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/eliminarTarea/eliminarTareaPrototipado.svg) |
 [VER PUML](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/eliminarTarea/eliminarTarea.puml)
 
-### marcarTarea()
+### marcarCompletada()
 
 | Detallado | Prototipado |
 |----------|---------------|
