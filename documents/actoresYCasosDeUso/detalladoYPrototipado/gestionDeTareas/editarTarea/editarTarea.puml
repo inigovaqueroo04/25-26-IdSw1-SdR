@@ -104,7 +104,7 @@ state "editarTarea()" as EditarTareaContainer {
     ' 5. Bucle de edición
     PasoDecisionFinal -[#green]up-> PasoVisualizacion
     note on link
-        realizar otra modificación
+        **Administrador** solicita más modificaciones
     end note
 
     ' --- FLUJO DE GUARDADO SEPARADO ---
