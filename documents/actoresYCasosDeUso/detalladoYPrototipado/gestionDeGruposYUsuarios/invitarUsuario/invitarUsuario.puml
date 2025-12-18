@@ -34,13 +34,14 @@ state "invitarUsuario()" as MainBlock {
     note on link
         **Sistema** presenta formulario de invitación
         • **Sistema** permite introducir el identificador
+        • **Sistema** permite introducir fecha de caducidad
         • **Sistema** permite solicitar enviar invitación
         • **Sistema** permite solicitar cancelar invitación
     end note
 
     Paso2 --> Paso3
     note on link
-        **Administrador** introduce el identificador y solicita enviar
+        **Administrador** introduce el identificador y fecha y solicita enviar
     end note
 
     Paso3 --> [*]
