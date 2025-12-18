@@ -27,6 +27,8 @@ A continuación se presenta el **Modelo de Dominio**, base conceptual sobre la c
 ## 🎭 Actores Y Casos De Uso
 A continuación se presentan los **actores** y **casos de uso**:
 ### [Actores y CasosDeUso](https://github.com/Sergiorl2/25-26-IdSw1-SdR/tree/develop/documents/actoresYCasosDeUso/README.md)
+### [Diagramas de Contexto](https://github.com/Sergiorl2/25-26-IdSw1-SdR/tree/develop/documents/actoresYCasosDeUso/diagramaContexto/README.md)
+### [Detallar y Prototipar](https://github.com/Sergiorl2/25-26-IdSw1-SdR/tree/develop/documents/actoresYCasosDeUso/detalladoYPrototipado/README.md)
 
 
 ## ⏰ Reuniones
