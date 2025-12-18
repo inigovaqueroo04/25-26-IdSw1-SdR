@@ -1,7 +1,7 @@
 @startuml DiagramaGestionTareas
 left to right direction
 
-actor "Administrador" as Admin
+actor "Administrador/ Miembro Administrador" as Admin
 actor "Miembro" as Miem
 
 package "Gestión de Tareas" {
