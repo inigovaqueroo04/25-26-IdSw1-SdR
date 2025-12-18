@@ -1,0 +1,71 @@
+@startuml abrirInvitaciones
+skinparam monochrome false
+skinparam shadow false
+top to bottom direction
+
+skinparam state {
+    BackgroundColor White
+    BorderColor Black
+    ArrowColor #009900
+    StartColor Black
+    EndColor Black
+}
+
+skinparam note {
+    BackgroundColor #FFFFE0
+    BorderColor #B0B060
+    FontName Arial
+}
+
+state "SISTEMA_DISPONIBLE" as Inicio
+
+state "abrirInvitaciones()" as MainBlock {
+    top to bottom direction
+
+    state " " as PasoInicial
+    state " " as PasoLista
+
+    [*] --> PasoInicial
+    note on link
+        **Miembro** solicita abrir invitaciones
+    end note
+
+    PasoInicial --> PasoLista
+    note on link
+        **Sistema** presenta lista de invitaciones
+        • Identificador y estado de cada invitación
+        • **Sistema** permite solicitar filtrar lista
+        • **Sistema** permite solicitar editar invitación
+    end note
+
+    PasoLista -right-> PasoLista
+    note on link
+        **Miembro** solicita filtrar lista
+        **Sistema** presenta lista filtrada
+    end note
+    
+    PasoLista --> [*]
+    note on link
+        **Miembro** solicita una de las opciones
+    end note
+}
+
+state "INVITACION_ABIERTO" as FinDetalle
+state "INVITACIONES_ABIERTO" as FinLista
+state "SISTEMA_DISPONIBLE" as FinSistema
+
+Inicio --> MainBlock
+
+MainBlock -[#009900]-> FinDetalle
+note on link
+    editarInvitacion()
+end note
+
+MainBlock --> FinLista
+
+MainBlock --> FinSistema
+note on link
+    completarGestion()
+end note
+
+@enduml
