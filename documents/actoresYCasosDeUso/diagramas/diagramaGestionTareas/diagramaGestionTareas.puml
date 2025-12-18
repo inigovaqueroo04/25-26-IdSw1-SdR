@@ -1,29 +1,44 @@
 @startuml DiagramaGestionTareas
 left to right direction
+
 actor "Administrador" as Admin
 actor "Miembro" as Miem
 
-    package "Gestión de Tareas" {
-        usecase "Relacionar tareas" as UC5
-        usecase "Crear Tarea" as UC1
-        usecase "Modificar Tarea" as UC2
-        usecase "Eliminar Tarea" as UC3
-        usecase "Marcar como Completada" as UC4
-        usecase "Añadir Subtarea" as UC5a
-        usecase "Quitar Subtarea" as UC5b
-        usecase "Establecer Horario" as UC6
-        usecase "Definir Localización" as UC7 
-    }
+package "Gestión de Tareas" {
+    ' Casos de Uso Principales
+    usecase "crearTarea()" as UC1
+    usecase "editarTarea()" as UC2
+    usecase "eliminarTarea()" as UC3
+    usecase "marcarCompletada()" as UC4
+    usecase "abrirTareas()" as UC8
 
-    Admin --> UC1
-    Admin--> UC2
-    Admin--> UC3
-    Admin --> UC4
-    Miem --> UC4
-    Admin--> UC5
-    UC5 <.. UC5a : <<extend>>
-    UC5 <.. UC5b : <<extend>>
-    UC2 <.. UC4 : <<extend>>
-    UC1 <.. UC6 : <<extend>>
-    UC1 <.. UC7 : <<extend>>
+    ' Casos de Uso de Detalle (Extensiones)
+    usecase "relacionarTareas()" as UC5
+    usecase "establecerHorario()" as UC6
+    usecase "definirLocalizacion()" as UC7
+    usecase "validarConflicto()" as UC9
+    usecase "configurarRecordatorio()" as UC10
+    usecase "asignarTareaAUsuario()" as UC11
+}
+
+' Relaciones directas para el Administrador
+Admin --> UC1
+Admin --> UC2
+Admin --> UC3
+Admin --> UC4
+Admin --> UC8
+
+' Relaciones directas para el Miembro
+Miem --> UC4
+Miem --> UC8
+
+' Relaciones de extensión (UC2 concentra ahora toda la configuración avanzada)
+UC2 <.. UC4 : <<extend>>
+UC2 <.. UC5 : <<extend>>
+UC2 <.. UC6 : <<extend>>
+UC2 <.. UC7 : <<extend>>
+UC2 <.. UC9 : <<extend>>
+UC2 <.. UC10 : <<extend>>
+UC2 <.. UC11 : <<extend>>
+
 @enduml
