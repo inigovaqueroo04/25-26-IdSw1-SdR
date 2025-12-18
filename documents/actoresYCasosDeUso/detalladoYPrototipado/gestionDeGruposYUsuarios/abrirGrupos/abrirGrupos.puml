@@ -1,57 +1,99 @@
 @startuml
-hide empty description
+' Configuración visual idéntica al ejemplo
+skinparam monochrome false
+skinparam shadow false
+top to bottom direction
 
-' Estilos visuales
 skinparam state {
     BackgroundColor White
     BorderColor Black
-    ArrowColor Green
+    ArrowColor #009900
+    StartColor Black
+    EndColor Black
 }
+
 skinparam note {
-    BackgroundColor LightYellow
-    BorderColor Gray
+    BackgroundColor #FFFFE0
+    BorderColor #B0B060
+    FontName Arial
 }
 
-' 1. Estados de Entrada (Arriba)
+' Estado inicial externo
 state SISTEMA_DISPONIBLE
-state GRUPO_ABIERTO
 
-' 2. Estado de Salida (Abajo)
-state GRUPOS_ABIERTO
+' Estado compuesto
+state "abrirGrupos()" as AbrirGruposContainer {
+    top to bottom direction
 
-' 3. Estado compuesto principal: abrirGrupos()
-state "abrirGrupos()" as MainBlock {
-    
-    ' Inicio del bloque
-    [*] --> Paso1
+    ' Estados de anclaje internos (sin nombre visible)
+    state " " as PasoInicial
+    state " " as PasoLista
+
+    ' 1. Inicio -> Solicitud
+    [*] --> PasoInicial
     note on link
-        ' Verbo del Actor
         **Administrador** solicita abrir grupos
     end note
 
-    ' Estado intermedio invisible (para separar visualmente)
-    state Paso1 as " "
-    
-    ' Fin del bloque
-    Paso1 --> [*]
+    ' 2. Solicitud -> Presentación de lista
+    PasoInicial --> PasoLista
     note on link
-        ' Verbos del Sistema
-        **Sistema** visualiza lista de grupos
-        * ID y nombre de cada grupo
-        ----
-        **Sistema** permite solicitar crear grupo nuevo
-        **Sistema** permite solicitar editar grupo
-        **Sistema** permite solicitar unirse a un grupo
-        **Sistema** permite solicitar eliminar grupo
+        **Sistema** presenta lista de grupos
+        • ID y nombre de cada grupo
+        • Permite solicitar filtrar lista
+        • Permite solicitar crear grupo nuevo
+        • Permite solicitar editar grupo
+        • Permite solicitar unirse a un grupo
+        • Permite solicitar eliminar grupo
+    end note
+
+    ' 3. Bucle de Filtrado (Self-transition)
+    PasoLista -right-> PasoLista
+    note on link
+        **Administrador** solicita filtrar lista
+        **Sistema** presenta lista filtrada
+    end note
+    
+    ' 4. Selección de opción -> Fin interno
+    PasoLista --> [*]
+    note on link
+        **Administrador** solicita una de las opciones
     end note
 }
 
-' 4. Conexiones
-' Ambas entradas llevan al bloque principal
-SISTEMA_DISPONIBLE -down-> MainBlock
-GRUPO_ABIERTO -down-> MainBlock
+' Estados finales externos
+state GRUPO_ABIERTO
+state GRUPOS_ABIERTO
 
-' El bloque principal lleva al estado final
-MainBlock -down-> GRUPOS_ABIERTO
+' Transición de entrada
+SISTEMA_DISPONIBLE --> AbrirGruposContainer
+
+' Transiciones de salida (Acciones)
+' Se usan notas en los links para simular el estilo del ejemplo
+
+AbrirGruposContainer --> GRUPO_ABIERTO
+note on link
+  crearGrupo()
+end note
+
+AbrirGruposContainer --> GRUPO_ABIERTO
+note on link
+  editarGrupo()
+end note
+
+AbrirGruposContainer --> GRUPOS_ABIERTO
+note on link
+  eliminarGrupo()
+end note
+
+AbrirGruposContainer --> GRUPOS_ABIERTO
+note on link
+  unirseAGrupo()
+end note
+
+AbrirGruposContainer --> SISTEMA_DISPONIBLE
+note on link
+  completarGestion()
+end note
 
 @enduml
