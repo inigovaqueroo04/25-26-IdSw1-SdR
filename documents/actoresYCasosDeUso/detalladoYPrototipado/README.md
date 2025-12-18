@@ -72,7 +72,7 @@
 
 ## [Gestión de tareas](./gestionDeTareas/README.md)
 
-### abrirTarea()
+### abrirTareas()
 
 | Detallado | Prototipado |
 |----------|---------------|
@@ -111,37 +111,42 @@
 
 | Detallado | Prototipado |
 |----------|---------------|
-| ![Diagrama de Marcar Completada](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/marcarCompletada/marcarCompletada.svg)| [Prototipado](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/marcarCompletada/marcarCompletadaPrototipado.svg) |
+| ![Diagrama de Marcar Completada](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/marcarCompletada/marcarCompletada.svg)| ![Prototipado](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/marcarCompletada/marcarCompletadaPrototipado.svg) |
 [VER PUML](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/marcarCompletada/marcarCompletada.puml)
 
 ## [Planificación y configuración](./planificacionYConfiguracion/README.md)
 
-### Diagrama de Abrir Planificación
+### abrirPlanificacion()
 
-| Diagrama | Código Fuente |
+| Detallado | Prototipado |
 |----------|---------------|
-| ![Diagrama de Abrir Planificación](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/abrirPlanificacion/abrirPlanificacion.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/abrirPlanificacion/abrirPlanificacion.puml) |
+| ![Diagrama de Abrir Planificación](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/abrirPlanificacion/abrirPlanificacion.svg)| ![Prototipado](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/abrirPlanificacion/abrirPlanificacionPrototipado.svg) |
+[VER PUML](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/abrirPlanificacion/abrirPlanificacion.puml)
 
-### Diagrama de Asignar Tarea Usuario
+### asignarTareaAUsuario()
 
-| Diagrama | Código Fuente |
+| Detallado | Prototipado |
 |----------|---------------|
-| ![Diagrama Asignar Tarea Usuario](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/asignarTareaAUsuario/asignarTareaAUsuario.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/asignarTareaAUsuario/asignarTareaAUsuario.puml) |
+| ![Diagrama Asignar Tarea Usuario](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/asignarTareaAUsuario/asignarTareaAUsuario.svg)| ![Prototipado](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/asignarTareaAUsuario/asignarTareaAUsuarioPrototipado).svg |
+[Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/asignarTareaAUsuario/asignarTareaAUsuario.puml)
 
-### Diagrama de Establecer Horario
+### establecerHorario()
 
-| Diagrama | Código Fuente |
+| Detallado | Prototipado |
 |----------|---------------|
-| ![Diagrama de Establecer Horario](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/establecerHorario/establecerHorario.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/establecerHorario/establecerHorario.puml) |
+| ![Diagrama de Establecer Horario](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/establecerHorario/establecerHorario.svg)| ![Prototipado](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/establecerHorario/establecerHorarioPrototipado.svg) |
+[VER PUML](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/establecerHorario/establecerHorario.puml)
 
-### Diagrama de Configurar Recordatorio
+### configurarRecordatorio()
 
-| Diagrama | Código Fuente |
+| Detallado | Prototipado|
 |----------|---------------|
-| ![Diagrama de Configurar Recordatorio](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/configurarRecordatorio/configurarRecordatorio.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/configurarRecordatorio/configurarRecordatorio.puml) |
+| ![Diagrama de Configurar Recordatorio](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/configurarRecordatorio/configurarRecordatorio.svg)| ![Prototipado](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/configurarRecordatorio/configurarRecordatorioPrototipado.svg) |
+[VER PUML](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/configurarRecordatorio/configurarRecordatorio.puml)
 
-### Diagrama de Definir Localización
+### definirLocalizacion()
 
-| Diagrama | Código Fuente |
+| Detallado | Prototipado |
 |----------|---------------|
-| ![Diagrama de Definir Localización](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/definirLocalizacion/definirLocalizacion.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/definirLocalizacion/definirLocalizacion.puml) |
+| ![Diagrama de Definir Localización](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/definirLocalizacion/definirLocalizacion.svg)| [Prototipado](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/definirLocalizacion/definirLocalizacionPrototipado.svg) |
+[VER PUML](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/definirLocalizacion/definirLocalizacion.puml)
