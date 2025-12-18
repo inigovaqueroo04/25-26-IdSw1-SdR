@@ -19,6 +19,7 @@ skinparam note {
 
 state "SISTEMA_DISPONIBLE" as Inicio
 state "TAREAS_ABIERTO" as EntradaLista
+state "GRUPO_ABIERTO" as GrupoAbierto
 
 state "abrirTareas()" as AbrirTareasContainer {
     top to bottom direction
@@ -60,6 +61,7 @@ state "SISTEMA_DISPONIBLE" as SalidaSistema
 
 Inicio --> AbrirTareasContainer
 EntradaLista --> AbrirTareasContainer
+GrupoAbierto --> AbrirTareasContainer
 
 AbrirTareasContainer --> FinDetalle
 note on link

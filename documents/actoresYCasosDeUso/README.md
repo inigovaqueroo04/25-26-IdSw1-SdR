@@ -73,7 +73,7 @@ Personas del grupo que consultan y realizan las tareas asignadas, marcan activid
 4. [relacionarTareas()](./detalladoYPrototipado/gestionDeTareas/relacionarTareas/relacionarTareas.md)
 5. [eliminarTarea()](./detalladoYPrototipado/gestionDeTareas/eliminarTarea/eliminarTarea.md)
 6. [marcarCompletada()](./detalladoYPrototipado/gestionDeTareas/marcarCompletada/marcarCompletada.md)
-6. [validarConflicto()](./detalladoYPrototipado/gestionDeTareas/validarConflicto/validarConflicto.md)
+6. [validarConflicto()](./detalladoYPrototipado/gestionDeTareas/validarConflicto/editarTarea.md)
 
 ### [Planificación y configuración](./detalladoYPrototipado/planificacionYConfiguracion/README.md)
 
