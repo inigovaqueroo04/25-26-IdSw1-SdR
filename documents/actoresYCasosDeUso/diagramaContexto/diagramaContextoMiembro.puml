@@ -23,6 +23,8 @@ ListProgramas --> Menu: completarGestion()
 
 ListInvitaciones --> EditInvitacion: editarInvitacion()
 ListInvitaciones --> Menu: completarGestion()
+ListInvitaciones --> ListInvitaciones: abrirInvitaciones()
+
 
 EditInvitacion --> ListInvitaciones: abrirInvitaciones()
 EditInvitacion --> EditInvitacion: editarInvitacion()
