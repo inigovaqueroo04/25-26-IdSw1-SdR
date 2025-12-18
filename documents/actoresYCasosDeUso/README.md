@@ -27,12 +27,6 @@
 |----------|---------------|
 | ![Diagrama de Planificación Y Detalles](./diagramas/diagramaPlanificaciónYDetalles/diagramaPlanificacionYDetalles.svg)| [Ver código](./diagramas/diagramaPlanificaciónYDetalles/diagramaPlanificacionYDetalles.puml) |
 
-## Diagrama de Automatización 
-
-| Diagrama | Código Fuente |
-|----------|---------------|
-| ![Diagrama de Automatización](./diagramas/diagramaAutomatización/diagramaAutomatizacion.svg)| [Ver código](./diagramas/diagramaAutomatización/diagramaAutomatizacion.puml) |
-
 
 ## Actores
 
