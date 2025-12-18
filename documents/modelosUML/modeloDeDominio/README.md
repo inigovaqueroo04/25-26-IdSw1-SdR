@@ -36,3 +36,5 @@
 | Diagrama | Código Fuente |
 |----------|---------------|
 | ![Diagrama de Estados Conflicto Horario](./diagramaEstados/diagramaEstadosConflictoHorario.svg)| [Ver código](./diagramaEstados/diagramaEstadosConflictoHorario.puml) |
+
+[![Ver Documentacion](https://img.shields.io/badge/VER%20DOCUMENTACIÓN-FFFFFF?style=for-the-badge&logo=readthedocs&logoColor=black)](../primeraReunion/diagramaClases/diagramaClases.md)
