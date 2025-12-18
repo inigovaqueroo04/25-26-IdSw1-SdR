@@ -13,9 +13,13 @@
 | ![Diagrama de Gestion de Tareas](./diagramas/diagramaGestionTareas/diagramaGestionTareas.svg)| [Ver código](./diagramas/diagramaGestionTareas/diagramaGestionTareas.puml) |
 
 ## Diagrama de Organizacion y Grupos 
-| Diagrama | Código Fuente |
+| Diagrama Administrador | Código Fuente |
 |----------|---------------|
-| ![Diagrama de Organización y Grupos](./diagramas/diagramaOrganizaciónYGrupos/diagramaOrganizacionYGrupos.svg)| [Ver código](./diagramas/diagramaOrganizaciónYGrupos/diagramaOrganizacionYGrupos.puml) |
+| ![Diagrama de Organización y Grupos](./diagramas/diagramaOrganizaciónYGrupos/diagramaOrganizacionYGruposAdmin.svg)| [Ver código](./diagramas/diagramaOrganizaciónYGrupos/diagramaOrganizacionYGruposAdmin.puml) |
+
+| Diagrama Miembro Administrador y Miembro | Código Fuente |
+|----------|---------------|
+| ![Diagrama de Organización y Grupos](./diagramas/diagramaOrganizaciónYGrupos/diagramaOrganizacionYGruposMiembroAdmin.svg)| [Ver código](./diagramas/diagramaOrganizaciónYGrupos/diagramaOrganizacionYGruposMiembroAdmin.puml) |
 
 ## Diagrama de Planificación Y Detalles 
 

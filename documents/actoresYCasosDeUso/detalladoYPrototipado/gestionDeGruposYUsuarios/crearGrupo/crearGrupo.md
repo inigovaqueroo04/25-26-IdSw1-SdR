@@ -1,7 +1,7 @@
 # crearGrupo() -> Detalle y Prototipado
 
 ## Diagrama de Actividad
-
+### Administrador
 <div align=center>
 
 |![Diagrama de Actividad: crearGrupo()](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/crearGrupo/crearGrupo.svg)|
