@@ -6,19 +6,6 @@
 [![Detallar & Prototipar](https://img.shields.io/badge/Detallar%20&%20Prototipar-FFFFFF?style=for-the-badge&logo=figma&logoColor=black)](../detalladoYPrototipado/README.md)
 
 
-## Introducción
-
-Este documento presenta los diagramas de contexto del sistema descompuestos por los actores principales. Esta aproximación modular mejora la comprensión de los flujos de trabajo específicos: la complejidad de la gestión y configuración (Administrador), la sencillez de la operación diaria (Miembro) y los procesos automáticos (Tiempo).
-
----
-
-## Propósito
-
-- Mostrar la perspectiva específica de cada actor dentro del sistema.
-- Especificar la secuencialidad de navegación mediante estados y transiciones.
-- Definir las precondiciones de navegación de forma visual para cada contexto.
-- Facilitar la comprensión de la separación de responsabilidades entre los actores.
-
 ---
 
 # Diagramas por Actor
@@ -64,6 +51,21 @@ Este diagrama ilustra los flujos que se activan automáticamente por el sistema,
 </div>
 
 ---
+
+## Introducción
+
+Este documento presenta los diagramas de contexto del sistema descompuestos por los actores principales. Esta aproximación modular mejora la comprensión de los flujos de trabajo específicos: la complejidad de la gestión y configuración (Administrador), la sencillez de la operación diaria (Miembro) y los procesos automáticos (Tiempo).
+
+---
+
+## Propósito
+
+- Mostrar la perspectiva específica de cada actor dentro del sistema.
+- Especificar la secuencialidad de navegación mediante estados y transiciones.
+- Definir las precondiciones de navegación de forma visual para cada contexto.
+- Facilitar la comprensión de la separación de responsabilidades entre los actores.
+
+
 
 # Estados Consolidados del Sistema
 
