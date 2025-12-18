@@ -1,7 +1,11 @@
-### Editar Invitación
+# editarInvitacion() -> Detalle y Prototipado
 
-Descripción breve: Editar los detalles de una invitación enviada.
+## Diagrama de Actividad
 
-Ruta: `gestionDeGruposYUsuarios/editarInvitacion/editarInvitacion.md`
+<div align=center>
 
-Contenido detallado pendiente.
+|![Diagrama de Actividad: editarInvitacion()](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/editarInvitacion/editarInvitacion.svg)|
+|-|
+|Código fuente: [editarInvitacion.puml](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/editarInvitacion/editarInvitacion.puml)|
+
+</div>

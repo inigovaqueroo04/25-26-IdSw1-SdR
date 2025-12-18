@@ -1,40 +1,48 @@
 @startuml invitarUsuario
-hide empty description
+skinparam monochrome false
+skinparam shadow false
+top to bottom direction
 
 skinparam state {
     BackgroundColor White
     BorderColor Black
-    ArrowColor Green
-}
-skinparam note {
-    BackgroundColor LightYellow
-    BorderColor Gray
+    ArrowColor #009900
+    StartColor Black
+    EndColor Black
 }
 
-state GRUPO_ABIERTO
+skinparam note {
+    BackgroundColor #FFFFE0
+    BorderColor #B0B060
+    FontName Arial
+}
+
+state "GRUPO_ABIERTO" as Inicio
 
 state "invitarUsuario()" as MainBlock {
+    
+    state " " as Paso1
+    state " " as Paso2
+    state " " as Paso3
 
     [*] --> Paso1
     note on link
         **Administrador** solicita invitar usuario
     end note
 
-    state Paso1 as " "
-
     Paso1 --> Paso2
     note on link
-        **Sistema** permite introducir el identificador
+        **Sistema** presenta formulario de invitación
+        • **Sistema** permite introducir el identificador
+        • **Sistema** permite introducir fecha de caducidad
+        • **Sistema** permite solicitar enviar invitación
+        • **Sistema** permite solicitar cancelar invitación
     end note
-
-    state Paso2 as " "
 
     Paso2 --> Paso3
     note on link
-        **Administrador** introduce el identificador
+        **Administrador** introduce el identificador y fecha y solicita enviar
     end note
-
-    state Paso3 as " "
 
     Paso3 --> [*]
     note on link
@@ -42,9 +50,15 @@ state "invitarUsuario()" as MainBlock {
     end note
 }
 
-state "GRUPO_ABIERTO" as GRUPO_ABIERTO_FINAL
+state "GRUPO_ABIERTO" as Fin
 
-GRUPO_ABIERTO -down-> MainBlock
-MainBlock -down-> GRUPO_ABIERTO_FINAL
+Inicio --> MainBlock
+
+MainBlock --> Fin
+
+MainBlock -[#red]right-> Fin
+note on link
+    cancelar invitación
+end note
 
 @enduml

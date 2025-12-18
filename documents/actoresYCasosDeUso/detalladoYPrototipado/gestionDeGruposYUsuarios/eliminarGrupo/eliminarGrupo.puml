@@ -1,48 +1,52 @@
 @startuml eliminarGrupo
-hide empty description
+skinparam monochrome false
+skinparam shadow false
+top to bottom direction
 
 skinparam state {
     BackgroundColor White
     BorderColor Black
-    ArrowColor Green
+    ArrowColor #009900
 }
+
 skinparam note {
-    BackgroundColor LightYellow
-    BorderColor Gray
+    BackgroundColor #FFFFE0
+    BorderColor #B0B060
 }
 
-' Estado inicial arriba
-state GRUPOS_ABIERTO
+state "GRUPOS_ABIERTO" as Inicio
 
-state "eliminarGrupo()" as MainBlock {
+state "eliminarGrupo()" as EliminarGrupoContainer {
+    state " " as Paso1
+    state " " as Paso2
+    state " " as Paso3
+
     [*] --> Paso1
     note on link
         **Administrador** solicita eliminar grupo
     end note
 
-    state Paso1 as " "
     Paso1 --> Paso2
     note on link
-        **Sistema** solicita confirmación de eliminación
+        **Sistema** presenta solicitud de confirmación
+        • **Sistema** permite solicitar confirmar eliminación
+        • **Sistema** permite solicitar cancelar eliminación
     end note
 
-    state Paso2 as " "
     Paso2 --> Paso3
     note on link
-        **Administrador** introduce la confirmación
+        **Administrador** solicita confirmar eliminación
     end note
 
-    state Paso3 as " "
     Paso3 --> [*]
     note on link
-        **Sistema** elimina el grupo 
-        y actualiza la lista
+        **Sistema** presenta lista de grupos actualizada
     end note
 }
 
-' Creamos un "alias" para que aparezca una copia abajo
-state "GRUPOS_ABIERTO" as GRUPOS_ABIERTO_FINAL
+state "GRUPOS_ABIERTO" as Fin
 
-GRUPOS_ABIERTO -down-> MainBlock
-MainBlock -down-> GRUPOS_ABIERTO_FINAL
+Inicio --> EliminarGrupoContainer
+EliminarGrupoContainer --> Fin
+EliminarGrupoContainer -[#red]right-> Fin : cancelar eliminación
 @enduml
