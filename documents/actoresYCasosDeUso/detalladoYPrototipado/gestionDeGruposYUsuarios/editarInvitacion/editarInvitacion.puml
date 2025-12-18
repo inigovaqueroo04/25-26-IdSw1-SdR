@@ -22,31 +22,31 @@ state "INVITACION_ABIERTO" as EntradaDetalle
 
 state "editarInvitacion()" as MainBlock {
     
-    state " " as Paso1
-    state " " as Paso2
-    state " " as Paso3
-
-    [*] --> Paso1
+    state " " as EstadoVisualizacion
+    state " " as EstadoDecision
+    
+    [*] --> EstadoVisualizacion
     note on link
         **Miembro** solicita editar invitación
     end note
 
-    Paso1 --> Paso2
+    EstadoVisualizacion --> EstadoDecision
     note on link
         **Sistema** visualiza datos de la invitación
-        • **Sistema** permite introducir cambios en el estado (Aceptar/Rechazar)
-        • **Sistema** permite solicitar guardar cambios
-        • **Sistema** permite solicitar cancelar edición
+        **Sistema** permite solicitar:
+        * introducir cambios en el estado (Aceptar/Rechazar)
+        * guardar cambios
+        * cancelar edición
     end note
 
-    Paso2 --> Paso3
+    EstadoDecision -[#green]down-> [*]
     note on link
         **Miembro** introduce los cambios y solicita guardar
     end note
 
-    Paso3 --> [*]
+    EstadoDecision -[#red]down-> [*]
     note on link
-        **Sistema** visualiza la invitación actualizada
+        **Miembro** solicita cancelar edición
     end note
 }
 
@@ -56,7 +56,7 @@ state "INVITACIONES_ABIERTO" as FinLista
 EntradaLista --> MainBlock
 EntradaDetalle --> MainBlock
 
-MainBlock -[#009900]-> FinInvitacion
+MainBlock -[#green]-> FinInvitacion : "               "
 
 MainBlock -[#red]down-> FinInvitacion
 note on link

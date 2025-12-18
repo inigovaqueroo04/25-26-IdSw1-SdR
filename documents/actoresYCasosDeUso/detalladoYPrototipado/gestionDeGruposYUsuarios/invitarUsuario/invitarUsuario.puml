@@ -21,32 +21,31 @@ state "GRUPO_ABIERTO" as Inicio
 
 state "invitarUsuario()" as MainBlock {
     
-    state " " as Paso1
-    state " " as Paso2
-    state " " as Paso3
-
-    [*] --> Paso1
+    state " " as EstadoFormulario
+    state " " as EstadoDecision
+    
+    [*] --> EstadoFormulario
     note on link
         **Administrador** solicita invitar usuario
     end note
 
-    Paso1 --> Paso2
+    EstadoFormulario --> EstadoDecision
     note on link
         **Sistema** presenta formulario de invitación
-        • **Sistema** permite introducir el identificador
-        • **Sistema** permite introducir fecha de caducidad
-        • **Sistema** permite solicitar enviar invitación
-        • **Sistema** permite solicitar cancelar invitación
+        **Sistema** permite solicitar:
+        * introducir identificador y fecha
+        * enviar invitación
+        * cancelar invitación
     end note
 
-    Paso2 --> Paso3
+    EstadoDecision -[#green]down-> [*]
     note on link
-        **Administrador** introduce el identificador y fecha y solicita enviar
+        **Administrador** introduce identificador y fecha y solicita enviar
     end note
 
-    Paso3 --> [*]
+    EstadoDecision -[#red]down-> [*]
     note on link
-        **Sistema** visualiza la confirmación del envío
+        **Administrador** solicita cancelar invitación
     end note
 }
 
@@ -54,9 +53,9 @@ state "GRUPO_ABIERTO" as Fin
 
 Inicio --> MainBlock
 
-MainBlock --> Fin
+MainBlock -[#green]-> Fin : "               "
 
-MainBlock -[#red]right-> Fin
+MainBlock -[#red]-> Fin
 note on link
     cancelar invitación
 end note
