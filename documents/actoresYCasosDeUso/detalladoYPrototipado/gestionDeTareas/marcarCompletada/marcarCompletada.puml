@@ -1,34 +1,62 @@
 @startuml marcarCompletada
+skinparam monochrome false
+skinparam shadow false
+top to bottom direction
+
 skinparam state {
     BackgroundColor White
     BorderColor Black
-    ArrowColor #008000
+    ArrowColor #009900
+    StartColor Black
+    EndColor Black
 }
+
 skinparam note {
-    BackgroundColor #FEFECE
-    BorderColor #D7B75F
+    BackgroundColor #FFFFE0
+    BorderColor #B0B060
+    FontName Arial
 }
 
-state TAREAS_ABIERTO
-state "TAREAS_ABIERTO" as TAREAS_ABIERTO_FINAL
+state "TAREAS_ABIERTO" as Inicio
 
-state "marcarCompletada()" as marcarCompletada {
-    state " " as Inicio <<start>>
-    state " " as Intermedio
-    state " " as Fin <<end>>
+state "marcarCompletada()" as MarcarCompletadaContainer {
     
-    Inicio --> Intermedio
+    state " " as EstadoConfirmacion
+    state " " as EstadoDecision
+    
+    [*] --> EstadoConfirmacion
     note on link
-        <b>Usuario</b> solicita marcar completada
+        **Usuario** solicita marcar tarea como completada
     end note
-    
-    Intermedio --> Fin
+
+    EstadoConfirmacion --> EstadoDecision
     note on link
-        <b>Sistema</b> visualiza estado completado
-        * Fecha finalización
+        **Sistema** presenta solicitud de confirmación de cierre
+        **Sistema** permite solicitar:
+        * confirmar finalización (registra fecha actual)
+        * cancelar acción
+    end note
+
+    EstadoDecision -[#green]down-> [*]
+    note on link
+        **Usuario** solicita confirmar finalización
+    end note
+
+    EstadoDecision -[#red]down-> [*]
+    note on link
+        **Usuario** solicita cancelar acción
     end note
 }
 
-TAREAS_ABIERTO --> marcarCompletada
-marcarCompletada --> TAREAS_ABIERTO_FINAL
+state "TAREAS_ABIERTO" as FinLista
+
+Inicio --> MarcarCompletadaContainer
+
+MarcarCompletadaContainer -[#green]-> FinLista : "               "
+
+MarcarCompletadaContainer -[#red]down-> FinLista
+note on link
+    cancelar acción
+end note
+
 @enduml
