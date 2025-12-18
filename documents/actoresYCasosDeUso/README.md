@@ -29,23 +29,40 @@
 |----------|---------------|
 | ![Diagrama de Automatización](./diagramas/diagramaAutomatización/diagramaAutomatizacion.svg)| [Ver código](./diagramas/diagramaAutomatización/diagramaAutomatizacion.puml) |
 
-Este documento recoge los actores principales del sistema y los casos de uso organizados de forma jerárquica. La idea es mostrar de manera sencilla cómo interactúan las personas con la aplicación y qué funcionalidades se ofrecen.
-
-# [Diagramas](./diagramas/README.md)
 
 ## Actores
 
-### Administrador del grupo
+### Administrador
 
 Persona que gestiona el grupo familiar y controla toda la configuración. Puede crear y modificar miembros, tareas y reglas.
+
+### Miembro Administrador
+
+Persona que gestiona el grupo familiar y controla toda la configuración. Puede crear y modificar miembros, tareas y reglas, pero no tiene acceso a crear ni eliminar grupos.
 
 ### Miembro
 
 Personas del grupo que consultan y realizan las tareas asignadas, marcan actividades completadas y visualizan la información general.
 
-### Tiempo
 
-Responsable de validar información y aplicar acciones internas como controles, recordatorios o actualizaciones automáticas.
+## Diagrama de Contexto de Administrador
+
+| Diagrama | Código Fuente |
+|----------|---------------|
+| ![Diagrama de Contexto - Administrador](./diagramaContexto/diagramaContextoAdmin.svg)| [Ver código](./diagramaContexto/diagramaContextoAdmin.puml) |
+
+## Diagrama de Contexto de Miembro Administrador
+
+| Diagrama | Código Fuente |
+|----------|---------------|
+| ![Diagrama de Contexto - Miembro Administrador](./diagramaContexto/diagramaContextoMiembroAdmin.svg)| [Ver código](./diagramaContexto/diagramaContextoMiembroAdmin.puml) |
+
+## Diagrama de Contexto de Miembro
+
+| Diagrama | Código Fuente |
+|----------|---------------|
+| ![Diagrama de Contexto - Miembro](./diagramaContexto/diagramaContextoMiembro.svg)| [Ver código](./diagramaContexto/diagramaContextoMiembro.puml) |
+
 
 ## Casos de uso
 
