@@ -1,7 +1,7 @@
 @startuml DiagramaGestionTareas
 left to right direction
 
-actor "Administrador" as Admin
+actor "Administrador/ Miembro Administrador" as Admin
 actor "Miembro" as Miem
 
 package "Gestión de Tareas" {
@@ -26,6 +26,7 @@ Admin --> UC1
 Admin --> UC2
 Admin --> UC3
 Admin --> UC4
+Admin --> UC5
 Admin --> UC8
 
 ' Relaciones directas para el Miembro
