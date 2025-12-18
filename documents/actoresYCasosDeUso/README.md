@@ -6,11 +6,11 @@
 [![Diagramas de Contexto](https://img.shields.io/badge/Diagramas%20de%20Contexto-FFFFFF?style=for-the-badge&logo=bookstack&logoColor=black)](./diagramaContexto/README.md)
 [![Detallar & Prototipar](https://img.shields.io/badge/Detallar%20&%20Prototipar-FFFFFF?style=for-the-badge&logo=figma&logoColor=black)](./detalladoYPrototipado/README.md)
 
+## Diagrama de Gestión de Sesión y Navegación
 
-## Diagrama de Gestión de Tareas 
 | Diagrama | Código Fuente |
 |----------|---------------|
-| ![Diagrama de Gestion de Tareas](./diagramas/diagramaGestionTareas/diagramaGestionTareas.svg)| [Ver código](./diagramas/diagramaGestionTareas/diagramaGestionTareas.puml) |
+| ![Diagrama de Gestión de Sesión y Navegación](./diagramas/diagramaGestionSesionYNavegacion/diagramaGestionSesionYNavegacion.svg)| [Ver código](./diagramas/diagramaGestionSesionYNavegacion/diagramaGestionSesionYNavegacion.puml) |
 
 ## Diagrama de Organizacion y Grupos 
 | Diagrama Administrador | Código Fuente |
@@ -21,17 +21,16 @@
 |----------|---------------|
 | ![Diagrama de Organización y Grupos](./diagramas/diagramaOrganizaciónYGrupos/diagramaOrganizacionYGruposMiembroAdmin.svg)| [Ver código](./diagramas/diagramaOrganizaciónYGrupos/diagramaOrganizacionYGruposMiembroAdmin.puml) |
 
+## Diagrama de Gestión de Tareas 
+| Diagrama | Código Fuente |
+|----------|---------------|
+| ![Diagrama de Gestion de Tareas](./diagramas/diagramaGestionTareas/diagramaGestionTareas.svg)| [Ver código](./diagramas/diagramaGestionTareas/diagramaGestionTareas.puml) |
+
 ## Diagrama de Planificación Y Detalles 
 
 | Diagrama | Código Fuente |
 |----------|---------------|
 | ![Diagrama de Planificación Y Detalles](./diagramas/diagramaPlanificaciónYDetalles/diagramaPlanificacionYDetalles.svg)| [Ver código](./diagramas/diagramaPlanificaciónYDetalles/diagramaPlanificacionYDetalles.puml) |
-
-## Diagrama de Gestión de Sesión y Navegación
-
-| Diagrama | Código Fuente |
-|----------|---------------|
-| ![Diagrama de Gestión de Sesión y Navegación](./diagramas/diagramaGestionSesionYNavegacion/diagramaGestionSesionYNavegacion.svg)| [Ver código](./diagramas/diagramaGestionSesionYNavegacion/diagramaGestionSesionYNavegacion.puml) |
 
 ## Actores
 
