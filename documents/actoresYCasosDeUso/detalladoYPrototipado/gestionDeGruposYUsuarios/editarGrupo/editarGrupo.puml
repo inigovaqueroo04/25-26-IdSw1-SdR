@@ -1,5 +1,4 @@
-@startuml
-' Configuración visual
+@startuml editarGrupo
 skinparam monochrome false
 skinparam shadow false
 top to bottom direction
@@ -18,12 +17,11 @@ skinparam note {
     FontName Arial
 }
 
-' Estados externos de entrada
-state GRUPOS_ABIERTO
-state GRUPO_ABIERTO
-state TAREAS_ABIERTO
+state "GRUPOS_ABIERTO" as InicioLista
+state "GRUPO_ABIERTO" as InicioDetalle
+state "TAREAS_ABIERTO" as InicioTareas
+state "MIEMBRO_ABIERTO" as InicioMiembros
 
-' Estado compuesto principal
 state "editarGrupo()" as EditarGrupoContainer {
     
     state " " as EstadoPreVisualizacion
@@ -43,13 +41,11 @@ state "editarGrupo()" as EditarGrupoContainer {
         * cancelar edición
     end note
 
-    ' Bucle
     EstadoDecision -[#green]up-> EstadoPreVisualizacion
     note on link
         **Administrador** solicita modificar campos
     end note
 
-    ' Salidas internas
     EstadoDecision -[#green]down-> [*]
     note on link
         **Administrador** solicita guardar y salir
@@ -61,22 +57,15 @@ state "editarGrupo()" as EditarGrupoContainer {
     end note
 }
 
-' Estado final externo
 state "GRUPO_ABIERTO" as GrupoAbiertoFinal
 
-' --- TRANSICIONES EXTERNAS ---
+InicioLista --> EditarGrupoContainer
+InicioDetalle --> EditarGrupoContainer
+InicioTareas --> EditarGrupoContainer
+InicioMiembros --> EditarGrupoContainer
 
-GRUPOS_ABIERTO --> EditarGrupoContainer
-GRUPO_ABIERTO --> EditarGrupoContainer
-TAREAS_ABIERTO --> EditarGrupoContainer
+EditarGrupoContainer -[#green]-> GrupoAbiertoFinal : "               "
 
-' --- SALIDAS HACIA GRUPO_ABIERTO ---
-
-' 1. Salida de Éxito (Verde)
-' TRUCO: Añadimos comillas con espacios vacíos para forzar la separación visual
-EditarGrupoContainer -[#green]-> GrupoAbiertoFinal : "              "
-
-' 2. Salida de Cancelación (Rojo)
 EditarGrupoContainer -[#red]-> GrupoAbiertoFinal
 note on link
     cancelar edición
