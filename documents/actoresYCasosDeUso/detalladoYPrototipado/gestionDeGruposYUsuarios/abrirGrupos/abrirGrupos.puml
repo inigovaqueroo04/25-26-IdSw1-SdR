@@ -63,7 +63,7 @@ state "abrirGrupos()" as AbrirGruposContainer {
 
 ' Estados finales externos
 state GRUPO_ABIERTO
-state ORGANIZACION_GRUPOS_ABIERTO
+state GRUPOS_ABIERTO
 
 ' Transición de entrada
 SISTEMA_DISPONIBLE --> AbrirGruposContainer
@@ -81,12 +81,12 @@ note on link
   editarGrupo()
 end note
 
-AbrirGruposContainer --> ORGANIZACION_GRUPOS_ABIERTO
+AbrirGruposContainer --> GRUPOS_ABIERTO
 note on link
   eliminarGrupo()
 end note
 
-AbrirGruposContainer --> ORGANIZACION_GRUPOS_ABIERTO
+AbrirGruposContainer --> GRUPOS_ABIERTO
 note on link
   unirseAGrupo()
 end note

@@ -1,60 +1,82 @@
 @startuml
-hide empty description
+' Configuración visual
+skinparam monochrome false
+skinparam shadow false
+top to bottom direction
 
-' Estilos visuales
 skinparam state {
     BackgroundColor White
     BorderColor Black
-    ArrowColor Green
+    ArrowColor #009900
+    StartColor Black
+    EndColor Black
 }
+
 skinparam note {
-    BackgroundColor LightYellow
-    BorderColor Gray
+    BackgroundColor #FFFFE0
+    BorderColor #B0B060
+    FontName Arial
 }
 
-' 1. Estado de Entrada
-state GRUPOS_ABIERTO
+' Estado inicial externo (Arriba)
+state "GRUPOS_ABIERTO" as Inicio
 
-' 2. Estado compuesto principal: crearGrupo()
-state "crearGrupo()" as MainBlock {
+' Estado compuesto principal
+state "crearGrupo()" as CrearGrupoContainer {
     
-    ' Inicio
+    ' Puntos de anclaje internos
+    state " " as Paso1
+    state " " as Paso2
+    state " " as Paso3
+
+    ' Paso 1: Solicitud inicial
     [*] --> Paso1
     note on link
-        **Administrador solicita** crear grupo
+        **Administrador** solicita crear grupo
     end note
 
-    state Paso1 as " "
-
-    ' Sistema habilita formulario
+    ' Paso 2: Sistema pide datos mínimos
     Paso1 --> Paso2
     note on link
-        **Sistema permite introducir** datos del grupo
-        (ID, Nombre, Descripción)
+        **Sistema** presenta solicitud de datos mínimos del grupo
+        • Nombre del grupo (obligatorio)
+        • Descripcíon del grupo
+        • Permite solicitar crear grupo
+        • Permite solicitar cancelar creación
     end note
 
-    state Paso2 as " "
-
-    ' Actor rellena datos (Separado)
+    ' Paso 3 (SEPARADO): Acción del Administrador
     Paso2 --> Paso3
     note on link
-        **Administrador introduce** datos
+        **Administrador** introduce datos
     end note
 
-    state Paso3 as " "
-
-    ' Sistema confirma/muestra y termina (Separado)
+    ' Paso 4 (SEPARADO): Acción del Sistema
     Paso3 --> [*]
     note on link
-        **Sistema presenta** grupo creado
+        **Sistema** presenta grupo creado
     end note
 }
 
-' 3. Estado de Salida
+' Estados finales externos (Abajo)
 state GRUPO_ABIERTO
+state "GRUPOS_ABIERTO" as FinCancelacion
 
-' 4. Conexiones
-GRUPOS_ABIERTO -down-> MainBlock
-MainBlock -down-> GRUPO_ABIERTO
+' --- Forzar separación visual ---
+FinCancelacion -[hidden]left-> GRUPO_ABIERTO
+
+' --- TRANSICIONES EXTERNAS ---
+
+' Entrada
+Inicio --> CrearGrupoContainer
+
+' 1. Salida de ÉXITO (Verde) - Hacia GRUPO_ABIERTO
+CrearGrupoContainer --> GRUPO_ABIERTO
+
+' 2. Salida de CANCELACIÓN (Azul) - Hacia GRUPOS_ABIERTO
+CrearGrupoContainer -[#blue]-> FinCancelacion
+note on link
+    cancelar creación
+end note
 
 @enduml
