@@ -43,7 +43,6 @@ state "abrirGrupos()" as AbrirGruposContainer {
         • Permite solicitar filtrar lista
         • Permite solicitar crear grupo nuevo
         • Permite solicitar editar grupo
-        • Permite solicitar unirse a un grupo
         • Permite solicitar eliminar grupo
     end note
 
