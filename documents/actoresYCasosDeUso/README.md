@@ -62,7 +62,9 @@ Responsable de validar información y aplicar acciones internas como controles, 
 3. [editarGrupo()](./detalladoYPrototipado/gestionDeGruposYUsuarios/editarGrupo/editarGrupo.md)
 4. [eliminarGrupo()](./detalladoYPrototipado/gestionDeGruposYUsuarios/eliminarGrupo/eliminarGrupo.md)
 6. [invitarUsuario()](./detalladoYPrototipado/gestionDeGruposYUsuarios/invitarUsuario/invitarUsuario.md)
-
+7. [editarMiembro()](./detalladoYPrototipado/gestionDeGruposYUsuarios/editarMiembro/editarMiembro.md)
+7. [abrirInvitaciones()](./detalladoYPrototipado/gestionDeGruposYUsuarios/abrirInvitaciones/abrirInvitaciones.md)
+7. [editarInvitacion()](./detalladoYPrototipado/gestionDeGruposYUsuarios/editarInvitacion/editarInvitacion.md)
 
 ### [Gestión de tareas](./detalladoYPrototipado/gestionDeTareas/README.md)
 
@@ -72,6 +74,7 @@ Responsable de validar información y aplicar acciones internas como controles, 
 4. [relacionarTareas()](./detalladoYPrototipado/gestionDeTareas/relacionarTareas/relacionarTareas.md)
 5. [eliminarTarea()](./detalladoYPrototipado/gestionDeTareas/eliminarTarea/eliminarTarea.md)
 6. [marcarCompletada()](./detalladoYPrototipado/gestionDeTareas/marcarCompletada/marcarCompletada.md)
+6. [validarConflicto()](./detalladoYPrototipado/gestionDeTareas/validarConflicto/validarConflicto.md)
 
 ### [Planificación y configuración](./detalladoYPrototipado/planificacionYConfiguracion/README.md)
 
@@ -80,11 +83,3 @@ Responsable de validar información y aplicar acciones internas como controles, 
 3. [definirLocalizacion()](./detalladoYPrototipado/planificacionYConfiguracion/definirLocalizacion/definirLocalizacion.md)
 4. [configurarRecordatorio()](./detalladoYPrototipado/planificacionYConfiguracion/configurarRecordatorio/configurarRecordatorio.md)
 5. [asignarTareaAUsuario()](./detalladoYPrototipado/gestionDeGruposYUsuarios/asignarTareaAUsuario/asignarTareaAUsuario.md)
-
-### [Automatización (Actor Tiempo)](./detalladoYPrototipado/automatizacionActorTiempo/README.md)
-
-1. [iniciarAutomatizacion()](./detalladoYPrototipado/automatizacionActorTiempo/iniciarAutomatizacion/iniciarAutomatizacion.md)
-2. [detectarConflicto()](./detalladoYPrototipado/automatizacionActorTiempo/detectarConflictoHorario/detectarConflicto.md)
-3. [resolverConflicto()](./detalladoYPrototipado/automatizacionActorTiempo/resolverConflicto/resolverConflicto.md)
-4. [ignorarConflicto()](./detalladoYPrototipado/automatizacionActorTiempo/ignorarConflicto/ignorarConflicto.md)
-5. [volverAInicio()](./detalladoYPrototipado/gestionDeSesionYNavegacion/volverAInicio/volverAInicio.md)
