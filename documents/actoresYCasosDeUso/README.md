@@ -7,6 +7,28 @@
 [![Detallar & Prototipar](https://img.shields.io/badge/Detallar%20&%20Prototipar-FFFFFF?style=for-the-badge&logo=figma&logoColor=black)](./detalladoYPrototipado/README.md)
 
 
+## Diagrama de Gestion de Tareas 
+| Diagrama | Código Fuente |
+|----------|---------------|
+| ![Diagrama de Gestion de Tareas](./diagramas/diagramaGestionTareas/diagramaGestionTareas.svg)| [Ver código](./diagramas/diagramaGestionTareas/diagramaGestionTareas.puml) |
+
+## Diagrama de Organizacion y Grupos 
+| Diagrama | Código Fuente |
+|----------|---------------|
+| ![Diagrama de Organización y Grupos](./diagramas/diagramaOrganizaciónYGrupos/diagramaOrganizacionYGrupos.svg)| [Ver código](./diagramas/diagramaOrganizaciónYGrupos/diagramaOrganizacionYGrupos.puml) |
+
+## Diagrama de Planificación Y Detalles 
+
+| Diagrama | Código Fuente |
+|----------|---------------|
+| ![Diagrama de Planificación Y Detalles](./diagramas/diagramaPlanificaciónYDetalles/diagramaPlanificacionYDetalles.svg)| [Ver código](./diagramas/diagramaPlanificaciónYDetalles/diagramaPlanificacionYDetalles.puml) |
+
+## Diagrama de Automatización 
+
+| Diagrama | Código Fuente |
+|----------|---------------|
+| ![Diagrama de Automatización](./diagramas/diagramaAutomatización/diagramaAutomatizacion.svg)| [Ver código](./diagramas/diagramaAutomatización/diagramaAutomatizacion.puml) |
+
 Este documento recoge los actores principales del sistema y los casos de uso organizados de forma jerárquica. La idea es mostrar de manera sencilla cómo interactúan las personas con la aplicación y qué funcionalidades se ofrecen.
 
 # [Diagramas](./diagramas/README.md)
