@@ -1,7 +1,11 @@
-### Abrir Invitaciones
+# abrirInvitaciones() -> Detalle y Prototipado
 
-Descripción breve: Visualizar y gestionar invitaciones pendientes.
+## Diagrama de Actividad
 
-Ruta: `gestionDeGruposYUsuarios/abrirInvitaciones/abrirInvitaciones.md`
+<div align=center>
 
-Contenido detallado pendiente.
+|![Diagrama de Actividad: abrirInvitaciones()](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/abrirInvitaciones/abrirInvitaciones.svg)|
+|-|
+|Código fuente: [abrirInvitaciones.puml](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/abrirInvitaciones/abrirInvitaciones.puml)|
+
+</div>

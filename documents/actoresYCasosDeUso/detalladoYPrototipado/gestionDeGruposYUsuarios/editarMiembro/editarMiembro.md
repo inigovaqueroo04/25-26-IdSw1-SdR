@@ -1,7 +1,11 @@
-### Editar Miembro
+# editarMiembro() -> Detalle y Prototipado
 
-Descripción breve: Operaciones para editar los datos de un miembro del grupo.
+## Diagrama de Actividad
 
-Ruta: `gestionDeGruposYUsuarios/editarMiembro/editarMiembro.md`
+<div align=center>
 
-Contenido detallado pendiente.
+|![Diagrama de Actividad: editarMiembro()](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/editarMiembro/editarMiembro.svg)|
+|-|
+|Código fuente: [editarMiembro.puml](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/editarMiembro/editarMiembro.puml)|
+
+</div>

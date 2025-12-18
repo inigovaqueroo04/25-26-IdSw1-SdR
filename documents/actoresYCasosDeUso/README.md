@@ -7,7 +7,7 @@
 [![Detallar & Prototipar](https://img.shields.io/badge/Detallar%20&%20Prototipar-FFFFFF?style=for-the-badge&logo=figma&logoColor=black)](./detalladoYPrototipado/README.md)
 
 
-## Diagrama de Gestion de Tareas 
+## Diagrama de Gestión de Tareas 
 | Diagrama | Código Fuente |
 |----------|---------------|
 | ![Diagrama de Gestion de Tareas](./diagramas/diagramaGestionTareas/diagramaGestionTareas.svg)| [Ver código](./diagramas/diagramaGestionTareas/diagramaGestionTareas.puml) |
@@ -45,23 +45,6 @@ Persona que gestiona el grupo familiar y controla toda la configuración. Puede 
 Personas del grupo que consultan y realizan las tareas asignadas, marcan actividades completadas y visualizan la información general.
 
 
-## Diagrama de Contexto de Administrador
-
-| Diagrama | Código Fuente |
-|----------|---------------|
-| ![Diagrama de Contexto - Administrador](./diagramaContexto/diagramaContextoAdmin.svg)| [Ver código](./diagramaContexto/diagramaContextoAdmin.puml) |
-
-## Diagrama de Contexto de Miembro Administrador
-
-| Diagrama | Código Fuente |
-|----------|---------------|
-| ![Diagrama de Contexto - Miembro Administrador](./diagramaContexto/diagramaContextoMiembroAdmin.svg)| [Ver código](./diagramaContexto/diagramaContextoMiembroAdmin.puml) |
-
-## Diagrama de Contexto de Miembro
-
-| Diagrama | Código Fuente |
-|----------|---------------|
-| ![Diagrama de Contexto - Miembro](./diagramaContexto/diagramaContextoMiembro.svg)| [Ver código](./diagramaContexto/diagramaContextoMiembro.puml) |
 
 
 ## Casos de uso
