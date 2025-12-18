@@ -48,3 +48,6 @@
 | Diagrama | Código Fuente |
 |----------|---------------|
 | ![Diagrama de Automatización](../diagramaContexto/diagramaContextoTiempo.svg)| [Ver código](../diagramaContexto/diagramaContextoTiempo.puml) |
+
+
+[![Ver Documentacion](https://img.shields.io/badge/VER%20DOCUMENTACIóN-FFFFFF?style=for-the-badge&logo=readthedocs&logoColor=black)](../README.md)
