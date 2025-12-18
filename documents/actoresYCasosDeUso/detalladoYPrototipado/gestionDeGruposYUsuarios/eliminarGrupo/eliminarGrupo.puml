@@ -7,46 +7,56 @@ skinparam state {
     BackgroundColor White
     BorderColor Black
     ArrowColor #009900
+    StartColor Black
+    EndColor Black
 }
 
 skinparam note {
     BackgroundColor #FFFFE0
     BorderColor #B0B060
+    FontName Arial
 }
 
 state "GRUPOS_ABIERTO" as Inicio
 
 state "eliminarGrupo()" as EliminarGrupoContainer {
-    state " " as Paso1
-    state " " as Paso2
-    state " " as Paso3
-
-    [*] --> Paso1
+    
+    state " " as EstadoConfirmacion
+    state " " as EstadoDecision
+    
+    [*] --> EstadoConfirmacion
     note on link
         **Administrador** solicita eliminar grupo
     end note
 
-    Paso1 --> Paso2
+    EstadoConfirmacion --> EstadoDecision
     note on link
         **Sistema** presenta solicitud de confirmación
-        • **Sistema** permite solicitar confirmar eliminación
-        • **Sistema** permite solicitar cancelar eliminación
+        **Sistema** permite solicitar:
+        * confirmar eliminación
+        * cancelar eliminación
     end note
 
-    Paso2 --> Paso3
+    EstadoDecision -[#green]down-> [*]
     note on link
         **Administrador** solicita confirmar eliminación
     end note
 
-    Paso3 --> [*]
+    EstadoDecision -[#red]down-> [*]
     note on link
-        **Sistema** presenta lista de grupos actualizada
+        **Administrador** solicita cancelar eliminación
     end note
 }
 
 state "GRUPOS_ABIERTO" as Fin
 
 Inicio --> EliminarGrupoContainer
-EliminarGrupoContainer --> Fin
-EliminarGrupoContainer -[#red]right-> Fin : cancelar eliminación
+
+EliminarGrupoContainer -[#green]-> Fin : "               "
+
+EliminarGrupoContainer -[#red]-> Fin
+note on link
+    cancelar eliminación
+end note
+
 @enduml

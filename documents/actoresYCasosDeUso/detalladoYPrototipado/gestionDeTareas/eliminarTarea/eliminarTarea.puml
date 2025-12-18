@@ -1,49 +1,63 @@
 @startuml eliminarTarea
+skinparam monochrome false
+skinparam shadow false
+top to bottom direction
+
 skinparam state {
     BackgroundColor White
     BorderColor Black
-    ArrowColor #008000
+    ArrowColor #009900
+    StartColor Black
+    EndColor Black
 }
+
 skinparam note {
-    BackgroundColor #FEFECE
-    BorderColor #D7B75F
+    BackgroundColor #FFFFE0
+    BorderColor #B0B060
+    FontName Arial
 }
 
-state TAREA_ABIERTO
+state "TAREA_ABIERTO" as Inicio
 
-state "eliminarTarea()" as eliminarTarea {
-    state " " as Inicio <<start>>
-    state " " as Confirmacion
-    state " " as Confirmacion2
-    state " " as Estado2
-    state " " as Fin <<end>>
+state "eliminarTarea()" as EliminarTareaContainer {
     
-    Inicio --> Confirmacion
-    note on link
-        <b>Usuario</b> solicita eliminar tarea
-    end note
-
-        Confirmacion --> Confirmacion2
-    note on link
-                <b>Sistema</b> solicita confirmación
-    end note
+    state " " as EstadoConfirmacion
+    state " " as EstadoDecision
     
-    Confirmacion2 --> Estado2
+    [*] --> EstadoConfirmacion
     note on link
-                <b>Usuario</b> introduce confirmación
+        **Administrador** solicita eliminar tarea
     end note
 
-    Estado2 --> Fin
+    EstadoConfirmacion --> EstadoDecision
     note on link
-        <b>Sistema</b> presenta listado actualizado
+        **Sistema** presenta solicitud de confirmación
+        **Sistema** permite solicitar:
+        * confirmar eliminación
+        * cancelar eliminación
+    end note
+
+    EstadoDecision -[#green]down-> [*]
+    note on link
+        **Administrador** solicita confirmar eliminación
+    end note
+
+    EstadoDecision -[#red]down-> [*]
+    note on link
+        **Administrador** solicita cancelar eliminación
     end note
 }
 
-state TAREAS_ABIERTO
+state "TAREAS_ABIERTO" as FinLista
+state "TAREA_ABIERTO" as FinDetalle
 
-TAREA_ABIERTO --> eliminarTarea
-eliminarTarea --> TAREAS_ABIERTO
+Inicio --> EliminarTareaContainer
+
+EliminarTareaContainer -[#green]-> FinLista : "               "
+
+EliminarTareaContainer -[#red]down-> FinDetalle
 note on link
-    Tarea eliminada
+    cancelar eliminación
 end note
+
 @enduml

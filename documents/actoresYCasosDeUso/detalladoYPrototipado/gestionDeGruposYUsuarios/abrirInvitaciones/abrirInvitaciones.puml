@@ -18,8 +18,9 @@ skinparam note {
 }
 
 state "SISTEMA_DISPONIBLE" as Inicio
+state "INVITACIONES_ABIERTO" as EntradaLista
 
-state "abrirInvitaciones()" as MainBlock {
+state "abrirInvitaciones()" as AbrirInvitacionesContainer {
     top to bottom direction
 
     state " " as PasoInicial
@@ -34,8 +35,8 @@ state "abrirInvitaciones()" as MainBlock {
     note on link
         **Sistema** presenta lista de invitaciones
         • Identificador y estado de cada invitación
-        • **Sistema** permite solicitar filtrar lista
-        • **Sistema** permite solicitar editar invitación
+        • Permite solicitar filtrar lista
+        • Permite solicitar editar invitación
     end note
 
     PasoLista -right-> PasoLista
@@ -54,18 +55,22 @@ state "INVITACION_ABIERTO" as FinDetalle
 state "INVITACIONES_ABIERTO" as FinLista
 state "SISTEMA_DISPONIBLE" as FinSistema
 
-Inicio --> MainBlock
+Inicio --> AbrirInvitacionesContainer
+EntradaLista --> AbrirInvitacionesContainer
 
-MainBlock -[#009900]-> FinDetalle
+AbrirInvitacionesContainer --> FinDetalle
 note on link
-    editarInvitacion()
+  editarInvitacion()
 end note
 
-MainBlock --> FinLista
-
-MainBlock --> FinSistema
+AbrirInvitacionesContainer --> FinLista
 note on link
-    completarGestion()
+  abrirInvitaciones()
+end note
+
+AbrirInvitacionesContainer --> FinSistema
+note on link
+  completarGestion()
 end note
 
 @enduml
