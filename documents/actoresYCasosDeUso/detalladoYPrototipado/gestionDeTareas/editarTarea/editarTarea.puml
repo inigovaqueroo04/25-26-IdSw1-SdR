@@ -1,48 +1,159 @@
-@startuml editarTarea
+@startuml
+' Configuración visual consistente
+skinparam monochrome false
+skinparam shadow false
+top to bottom direction
+
 skinparam state {
     BackgroundColor White
     BorderColor Black
-    ArrowColor #008000
+    ArrowColor #009900
+    StartColor Black
+    EndColor Black
 }
+
 skinparam note {
-    BackgroundColor #FEFECE
-    BorderColor #D7B75F
+    BackgroundColor #FFFFE0
+    BorderColor #B0B060
+    FontName Arial
 }
 
+' --- ESTADOS EXTERNOS DE ENTRADA ---
 state TAREAS_ABIERTO
-state "TAREA_ABIERTO" as TAREA_ABIERTO_IN
+state "TAREA_ABIERTO" as TareaInicio
 
-state "editarTarea()" as editarTarea {
-    state " " as Inicio <<start>>
-    state " " as Estado1
-    state " " as Estado2
-    state " " as Estado3
-    state " " as Fin <<end>>
+' Estado compuesto principal: editarTarea()
+state "editarTarea()" as EditarTareaContainer {
     
-    Inicio --> Estado1
+    ' Puntos de anclaje internos
+    state " " as PasoVisualizacion
+    state " " as PasoMenuOpciones
+    state " " as PasoDecisionFinal
+    
+    ' --- NUEVOS ESTADOS DE GUARDADO ---
+    state " " as PasoPreValidacion  
+    state " " as PasoValidacion     
+    
+    ' 1. Inicio
+    [*] --> PasoVisualizacion
     note on link
-        <b>Usuario</b> solicita introducir modificaciones
+        **Administrador** solicita editar tarea
+    end note
+
+    ' 2. Presentación
+    note left of PasoVisualizacion
+        **Sistema** presenta datos actuales:
+        * Nombre y descripción
+        * Usuarios asignados
+        * Recordatorios
+        * Localización
+        * Horario
+        * Estado de la tarea
+        * Relaciones de tareas
+    end note
+
+    ' 3. Menú
+    PasoVisualizacion --> PasoMenuOpciones
+    note on link
+        **Administrador** solicita:
+        * Modificar nombre y descripción
+        * Asignar tarea a usuario
+        * Establecer horario
+        * Definir localización
+        * Configurar recordatorio
+        * Relacionar tareas
+        * Marcar completada
+    end note
+
+    ' 4. Métodos
+    PasoMenuOpciones --> PasoDecisionFinal
+    note on link
+        Modificar nombre y descripción
     end note
     
-    Estado1 --> Estado2
+    PasoMenuOpciones --> PasoDecisionFinal
     note on link
-        <b>Sistema</b> permite introducir datos
+        asignarTareaAUsuario()
+    end note
+    
+    PasoMenuOpciones --> PasoDecisionFinal
+    note on link
+        establecerHorario()
+    end note
+    
+    PasoMenuOpciones --> PasoDecisionFinal
+    note on link
+        definirLocalizacion()
+    end note
+    
+    PasoMenuOpciones --> PasoDecisionFinal
+    note on link
+        configurarRecordatorio()
+    end note
+    
+    PasoMenuOpciones --> PasoDecisionFinal
+    note on link
+        relacionarTareas()
+    end note
+    
+    PasoMenuOpciones --> PasoDecisionFinal
+    note on link
+        marcarCompletada()
     end note
 
-    Estado2 --> Estado3
+    ' 5. Bucle de edición
+    PasoDecisionFinal -[#green]up-> PasoVisualizacion
     note on link
-        <b>Usuario</b> introduce datos
+        **Administrador** solicita más modificaciones
     end note
 
-    Estado3 --> Fin
+    ' --- FLUJO DE GUARDADO SEPARADO ---
+
+    ' 6. PASO 1: Solicitud del usuario (Llega al nuevo estado intermedio)
+    PasoDecisionFinal -[#green]down-> PasoPreValidacion
     note on link
-        <b>Sistema</b> muestra tarea actualizada
+        **Administrador** solicita guardar y salir
+    end note
+
+    ' 7. PASO 2: Acción del sistema (Sale del nuevo estado hacia validación)
+    PasoPreValidacion -[#green]down-> PasoValidacion
+    note on link
+        validarConflicto()
+    end note
+
+    ' 8A. Validación FALLIDA (Conflicto) -> Vuelve arriba (Rojo)
+    PasoValidacion -[#red]up-> PasoVisualizacion
+    note on link
+        **Sistema** detecta conflicto
+        Muestra campos afectados
+    end note
+
+    ' 8B. Validación EXITOSA (Sin Conflicto) -> Fin (Verde)
+    PasoValidacion -[#green]down-> [*]
+    note on link
+        **Sistema** confirma sin conflicto
+        Guarda cambios
+    end note
+
+    ' 9. Cancelación
+    PasoDecisionFinal -[#red]down-> [*]
+    note on link
+        **Administrador** solicita cancelar edición
     end note
 }
 
-state "TAREA_ABIERTO" as TAREA_ABIERTO_OUT
+' --- ESTADOS EXTERNOS DE SALIDA ---
+state "TAREA_ABIERTO" as TareaFin
 
-TAREAS_ABIERTO --> editarTarea
-TAREA_ABIERTO_IN --> editarTarea
-editarTarea --> TAREA_ABIERTO_OUT
+' --- TRANSICIONES EXTERNAS ---
+TAREAS_ABIERTO --> EditarTareaContainer
+TareaInicio --> EditarTareaContainer
+
+EditarTareaContainer -[#green]-> TareaFin : "              "
+
+EditarTareaContainer -[#red]-> TareaFin
+note on link
+    cancelar edición
+end note
+
 @enduml
