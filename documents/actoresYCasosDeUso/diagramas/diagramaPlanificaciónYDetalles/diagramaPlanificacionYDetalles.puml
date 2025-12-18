@@ -1,19 +1,19 @@
 @startuml DiagramaPlanificaciónYDetalles
 left to right direction
-actor "Administrador" as Admin
-
+actor "Administrador/ Miembro Administrador" as Admin
 
 package "Planificación y Detalles" {
-    usecase "establecerHorario()" as UC_D1
-    usecase "definirLocalizacion()" as UC_D2
-    usecase "configurarRecordatorio()" as UC_D3
-    usecase "asignarTareaAUsuario()" as UC_D4
-    
+    usecase "abrirPlanificacion()" as UC_D1
+    usecase "establecerHorario()" as UC_D2
+    usecase "definirLocalizacion()" as UC_D3
+    usecase "configurarRecordatorio()" as UC_D4
+    usecase "asignarTareaAUsuario()" as UC_D5
 }
 
 Admin --> UC_D1
 Admin --> UC_D2
 Admin --> UC_D3
 Admin --> UC_D4
+Admin --> UC_D5
 
 @enduml
