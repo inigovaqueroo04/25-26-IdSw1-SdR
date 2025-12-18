@@ -1,0 +1,28 @@
+@startuml DiagramaOrganizaciónYGrupos
+left to right direction
+actor "Miembro Administrador" as MiembroAdmin
+actor "Miembro" as Miembro
+
+
+package "Organización y Grupos" {
+    usecase "abrirGrupos()" as UC_G6
+    usecase "editarGrupo()" as UC_G3
+    usecase "invitarUsuario()" as UC_G2
+    usecase "editarMiembro()" as UC_G5
+    usecase "abrirInvitaciones()" as UC_G7
+    usecase "editarInvitacion()" as UC_G8
+
+}
+
+MiembroAdmin --> UC_G2
+MiembroAdmin --> UC_G3
+MiembroAdmin --> UC_G5
+MiembroAdmin --> UC_G6
+MiembroAdmin --> UC_G7
+MiembroAdmin --> UC_G8
+
+Miembro --> UC_G6
+Miembro --> UC_G7
+
+
+@enduml
