@@ -38,6 +38,12 @@
 |----------|---------------|
 | ![Diagrama de Estados Tarea](./diagramaEstados/diagramaEstadosTarea.svg)| [Ver código](./diagramaEstados/diagramaEstadosTarea.puml) |
 
+### Ciclo de Vida Invitación
+
+| Diagrama | Código Fuente |
+|----------|---------------|
+| ![Diagrama de Estados Invitación](./diagramaEstados/diagramaEstadosInvitacion.svg)| [Ver código](./diagramaEstados/diagramaEstadosInvitacion.puml) |
+
 ### Ciclo de Vida Recordatorio
 
 | Diagrama | Código Fuente |
