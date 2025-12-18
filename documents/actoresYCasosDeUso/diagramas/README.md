@@ -28,26 +28,4 @@
 |----------|---------------|
 | ![Diagrama de Automatización](./diagramaAutomatización/diagramaAutomatizacion.svg)| [Ver código](./diagramaAutomatización/diagramaAutomatizacion.puml) |
 
-# Diagramas de Contexto por Actor
-### [Documentación](../diagramaContexto/README.md)
-
-## Diagrama de Contexto - Administrador
-
-| Diagrama | Código Fuente |
-|----------|---------------|
-| ![Diagrama de Automatización](../diagramaContexto/diagramaContextoAdmin.svg)| [Ver código](../diagramaContexto/diagramaContextoAdmin.puml) |
-
-## Diagrama de Contexto - Miembro
-
-| Diagrama | Código Fuente |
-|----------|---------------|
-| ![Diagrama de Automatización](../diagramaContexto/diagramaContextoMiembro.svg)| [Ver código](../diagramaContexto/diagramaContextoMiembro.puml) |
-
-## Diagrama de Contexto - Tiempo
-
-| Diagrama | Código Fuente |
-|----------|---------------|
-| ![Diagrama de Automatización](../diagramaContexto/diagramaContextoTiempo.svg)| [Ver código](../diagramaContexto/diagramaContextoTiempo.puml) |
-
-
 [![Ver Documentacion](https://img.shields.io/badge/VER%20DOCUMENTACIóN-FFFFFF?style=for-the-badge&logo=readthedocs&logoColor=black)](../README.md)
