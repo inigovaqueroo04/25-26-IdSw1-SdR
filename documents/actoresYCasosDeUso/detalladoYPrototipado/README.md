@@ -1,4 +1,4 @@
-# Detallado Casos De USO
+# Detallado Y Prototipado Casos De USO
 
 [![Inicio](https://img.shields.io/badge/Inicio-FFFFFF?style=for-the-badge&logo=homeassistant&logoColor=black)](../../../README.md)
 [![Modelo de Dominio](https://img.shields.io/badge/Modelo%20de%20Dominio-FFFFFF?style=for-the-badge&logo=bookstack&logoColor=black)](../../modelosUML/modeloDeDominio/README.md)
@@ -7,61 +7,68 @@
 [![Detallar & Prototipar](https://img.shields.io/badge/Detallar%20&%20Prototipar-FFFFFF?style=for-the-badge&logo=figma&logoColor=black)](./README.md)
 
 ## [Gestión de sesión y navegación](./gestionDeSesionYNavegacion/README.md)
-### Diagrama de Iniciar Sesión
-| Diagrama | Código Fuente |
+### iniciarSesion()
+| Detallado | Prototipado |
 |----------|---------------|
 | ![Diagrama iniciar sesión](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/iniciarSesion/iniciarSesion.svg)| ![Prototipado](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/iniciarSesion/iniciarSesionPrototipado.svg) |
 [Ver PUML](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/iniciarSesion/iniciarSesion.puml) |
 
-### Diagrama de Completar Gestión
-| Diagrama | Código Fuente |
+### completarGestion()
+| Detallado | Prototipado |
 |----------|---------------|
 | ![Diagrama Completar Gestión](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/completarGestion/completarGestion.svg)| ![Prototipado](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/completarGestion/completarGestionPrototipado.svg) |
 [VER PUML](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/completarGestion/completarGestion.puml)
 
-### Diagrama de Cerrar Sesión
-| Diagrama | Código Fuente |
+### CerrarSesion()
+| Detallado | Prototipado |
 |----------|---------------|
-| ![Diagrama Cerrar Sesión](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/cerrarSesion/cerrarSesion.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/cerrarSesion/cerrarSesion.puml) |
+| ![Diagrama Cerrar Sesión](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/cerrarSesion/cerrarSesion.svg)| ![Prototipado](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/cerrarSesion/cerrarSesionPrototipado.svg) |
+[VER PUML](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/cerrarSesion/cerrarSesion.puml)
 
 
 ## [Gestión de grupos y usuarios](./gestionDeGruposYUsuarios/README.md)
 
-### Diagrama de Abrir Grupos
+### abrirGrupos()
 
-| Diagrama | Código Fuente |
+| Detallado | Prototipado |
 |----------|---------------|
-| ![Diagrama Abrir Grupos](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/abrirGrupos/abrirGrupos.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/abrirGrupos/abrirGrupos.puml) |
+| ![Diagrama Abrir Grupos](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/abrirGrupos/abrirGrupos.svg)| ![Prototipado](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/abrirGrupos/abrirGruposPrototipado.svg) |
+[VER PUML](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/abrirGrupos/abrirGrupos.puml)
 
-### Diagrama de Crear Grupo
+### crearGrupo()
 
-| Diagrama | Código Fuente |
+| Detallado | Prototipado |
 |----------|---------------|
-| ![Diagrama Crear Grupo](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/crearGrupo/crearGrupo.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/crearGrupo/crearGrupo.puml) |
+| ![Diagrama Crear Grupo](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/crearGrupo/crearGrupo.svg)| ![Prototipado](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/crearGrupo/crearGrupoPrototipado.svg) |
+[VER PUML](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/crearGrupo/crearGrupo.puml)
 
-### Diagrama de Editar Grupo
+### editarGrupo()
 
-| Diagrama | Código Fuente |
+| Detallado | Prototipado |
 |----------|---------------|
-| ![Diagrama Editar Grupo](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/editarGrupo/editarGrupo.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/editarGrupo/editarGrupo.puml) |
+| ![Diagrama Editar Grupo](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/editarGrupo/editarGrupo.svg)| ![Prototipado](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/editarGrupo/editarGrupoPrototipo.svg) |
+[VER PUML](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/editarGrupo/editarGrupo.puml)
 
-### Diagrama de Eliminar Grupo
+### eliminarGrupo()
 
-| Diagrama | Código Fuente |
+| Detallado | Prototipado |
 |----------|---------------|
-| ![Diagrama Eliminar Grupo](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/eliminarGrupo/eliminarGrupo.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/eliminarGrupo/eliminarGrupo.puml) |
+| ![Diagrama Eliminar Grupo](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/eliminarGrupo/eliminarGrupo.svg)| ![Prototipado](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/eliminarGrupo/eliminarGrupoPrototipado.svg) |
+[VER PUML](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/eliminarGrupo/eliminarGrupo.puml)
 
-### Diagrama de Invitar Usuario
+### invitarUsuario()
 
-| Diagrama | Código Fuente |
+| Detallado | Prototipado |
 |----------|---------------|
-| ![Diagrama Invitar Usuario](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/invitarUsuario/invitarUsuario.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/invitarUsuario/invitarUsuario.puml) |
+| ![Diagrama Invitar Usuario](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/invitarUsuario/invitarUsuario.svg)| ![Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/invitarUsuario/invitarUsuarioPrototipado.puml) |
+[VER PUML](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/invitarUsuario/invitarUsuario.puml)
 
 ### Diagrama de Editar Miembro
 
-| Diagrama | Código Fuente |
+| Detallado | Prototipado |
 |----------|---------------|
-| ![Diagrama Editar Miembro](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/editarMiembro/editarMiembro.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/editarMiembro/editarMiembro.puml) |
+| ![Diagrama Editar Miembro](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/editarMiembro/editarMiembro.svg)| ![Prototipado](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/editarMiembro/editarMiembroPrototipado.svg) |
+[VER PUML](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/editarMiembro/editarMiembro.puml)
 
 ## [Gestión de tareas](./gestionDeTareas/README.md)
 

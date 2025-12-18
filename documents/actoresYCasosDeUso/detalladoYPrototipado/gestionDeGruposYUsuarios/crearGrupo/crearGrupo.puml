@@ -11,6 +11,7 @@ skinparam state {
     EndColor Black
 }
 
+
 skinparam note {
     BackgroundColor #FFFFE0
     BorderColor #B0B060
