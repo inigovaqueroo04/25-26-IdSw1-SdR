@@ -1,4 +1,4 @@
-# Detallado Y Prototipado Casos De USO
+# Detallado Y Prototipado Casos De Uso
 
 [![Inicio](https://img.shields.io/badge/Inicio-FFFFFF?style=for-the-badge&logo=homeassistant&logoColor=black)](../../../README.md)
 [![Modelo de Dominio](https://img.shields.io/badge/Modelo%20de%20Dominio-FFFFFF?style=for-the-badge&logo=bookstack&logoColor=black)](../../modelosUML/modeloDeDominio/README.md)
@@ -162,5 +162,5 @@
 
 | Detallado | Prototipado |
 |----------|---------------|
-| ![Diagrama Asignar Tarea Usuario](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/asignarTareaAUsuario/asignarTareaAUsuario.svg)| ![Prototipado](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/asignarTareaAUsuario/asignarTareaAUsuarioPrototipado).svg |
+| ![Diagrama Asignar Tarea Usuario](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/asignarTareaAUsuario/asignarTareaAUsuario.svg)| ![Prototipado](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/asignarTareaAUsuario/asignarTareaAUsuarioPrototipado.svg) |
 [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/asignarTareaAUsuario/asignarTareaAUsuario.puml)
