@@ -9,7 +9,7 @@
 
 | Diagrama | Código Fuente |
 | :---: | :---: |
-| ![Diagrama abrirTareas](./abrirTareas/abrirTareas.png)| [Ver código](./abrirTareas/abrirTareas.puml) |
+| ![Diagrama abrirTareas](./abrirTareas/abrirTareas.svg)| [Ver código](./detallado/abrirTareas/abrirTareas.puml) |
 
 ---
 
@@ -17,7 +17,7 @@
 
 | Diagrama | Código Fuente |
 | :---: | :---: |
-| ![Diagrama crearTarea](./crearTarea/crearTarea.png)| [Ver código](./crearTarea/crearTarea.puml) |
+| ![Diagrama crearTarea](./crearTarea/crearTarea.svg)| [Ver código](./crearTarea/crearTarea.puml) |
 
 ---
 
@@ -25,7 +25,7 @@
 
 | Diagrama | Código Fuente |
 | :---: | :---: |
-| ![Diagrama editarTarea](./editarTarea/editarTarea.png)| [Ver código](./editarTarea/editarTarea.puml) |
+| ![Diagrama editarTarea](./editarTarea/editarTarea.svg)| [Ver código](./editarTarea/editarTarea.puml) |
 
 ---
 
@@ -33,7 +33,7 @@
 
 | Diagrama | Código Fuente |
 | :---: | :---: |
-| ![Diagrama eliminarTarea](./eliminarTarea/eliminarTarea.png)| [Ver código](./eliminarTarea/eliminarTarea.puml) |
+| ![Diagrama eliminarTarea](./eliminarTarea/eliminarTarea.svg)| [Ver código](./eliminarTarea/eliminarTarea.puml) |
 
 ---
 
@@ -41,7 +41,7 @@
 
 | Diagrama | Código Fuente |
 | :---: | :---: |
-| ![Diagrama marcarCompletada](./marcarCompletada/marcarCompletada.png)| [Ver código](./marcarCompletada/marcarCompletada.puml) |
+| ![Diagrama marcarCompletada](./marcarCompletada/marcarCompletada.svg)| [Ver código](./marcarCompletada/marcarCompletada.puml) |
 
 ---
 
@@ -49,4 +49,4 @@
 
 | Diagrama | Código Fuente |
 | :---: | :---: |
-| ![Diagrama relacionarTareas](./relacionarTareas/relacionarTareas.png)| [Ver código](./marcarCompletada/marcarCompletada.puml) |
+| ![Diagrama relacionarTareas](./relacionarTareas/relacionarTareas.svg)| [Ver código](./marcarCompletada/marcarCompletada.puml) |

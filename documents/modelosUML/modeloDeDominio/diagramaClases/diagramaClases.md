@@ -1,4 +1,5 @@
 # Modelo de Dominio – Organización de Usuarios, Grupos y Tareas
+
 [![Inicio](https://img.shields.io/badge/Inicio-FFFFFF?style=for-the-badge&logo=homeassistant&logoColor=black)](./README.md)
 [![Modelo de Dominio](https://img.shields.io/badge/Modelo%20de%20Dominio-FFFFFF?style=for-the-badge&logo=bookstack&logoColor=black)](./documents/modelosUML/modeloDeDominio/README.md)
 [![Actores Y CasosDeUso](https://img.shields.io/badge/Actores%20&%20Casos%20De%20Uso-FFFFFF?style=for-the-badge&logo=openstreetmap&logoColor=black)](./documents/actoresYCasosDeUso/README.md)
@@ -10,9 +11,11 @@ Este documento explica de forma clara y ordenada cada clase del modelo, su papel
 El diagrama se estructura en **niveles** porque cada elemento depende del anterior: primero las personas, luego los grupos, después las tareas y finalmente los detalles específicos de cada tarea.
 
 ---
+
 ## Nivel 1 — Tarea
 
 ### `Tarea`
+
 Es el elemento central del sistema. Representa una acción que debe planificarse.
 
 - Puede tener subtareas (relación *subtarea de*).
@@ -24,9 +27,11 @@ Es el elemento central del sistema. Representa una acción que debe planificarse
 Es el núcleo operativo del dominio: todo el sistema se organiza para gestionar y coordinar tareas.
 
 ---
+
 ## Nivel 2 — Usuario
 
 ### `Usuario`
+
 Representa a la persona que interactúa con el sistema.
 
 - Puede pertenecer a uno o varios grupos independientemente el uno del otro.  
@@ -35,6 +40,7 @@ Representa a la persona que interactúa con el sistema.
 - Funciona como la “entidad principal” que da sentido a los datos del sistema.
 
 ### `Rol`
+
 Define la función, permisos o responsabilidades que tiene un usuario dentro del sistema.
 
 - Un usuario “tiene” un rol específico (por ejemplo: Administrador, Miembro).
@@ -49,6 +55,7 @@ La planificación del sistema nace en los usuarios. Todo lo demás se organiza a
 ## Nivel 3 — Grupo
 
 ### `Grupo`
+
 Conjunto organizado de usuarios.
 
 - Un usuario “participa en” uno o varios grupos independientes entre ellos.
@@ -60,6 +67,7 @@ Conjunto organizado de usuarios.
 Los grupos existen para agrupar usuarios; sin personas, no habría grupos.
 
 ---
+
 ## Nivel 4 — Elementos de Soporte de las Tareas
 
 Este nivel contiene las clases que complementan y describen cada tarea.  
@@ -68,12 +76,14 @@ Ninguna tiene sentido por sí sola sin existir al menos una tarea.
 ---
 
 ### `Localizacion`
+
 Define el lugar donde se realiza la tarea.
 
 - La tarea “se realiza en” una localización (casa, tienda, universidad…).
 - Apoya la organización espacial.
 
 ### `Horario`
+
 Define cuándo ocurre la tarea.
 
 - Incluye fecha, hora de inicio, duración y posibles repeticiones.
@@ -81,18 +91,21 @@ Define cuándo ocurre la tarea.
 - Permite detectar solapamientos, por pequeños que sean.
 
 ### `Recordatorio`
+
 Configura avisos previos.
 
 - La tarea “notifica” mediante un recordatorio.
 - Mejora la gestión personal del usuario.
 
 ### `RelacionTareas`
+
 Representa vínculos lógicos entre tareas.
 
 - Permite dependencias (primero A, luego B), bloqueos o relaciones de apoyo.
 - Una tarea “se relaciona con” otra.
 
 ### `ConflictoHorario`
+
 Indica que dos tareas se solapan o no pueden realizarse simultáneamente.
 
 - Una tarea “afecta a” un conflicto si su horario colisiona con otra.
@@ -111,9 +124,3 @@ Son elementos descriptivos y dependientes. No tienen jerarquía propia ni existe
 4. **Localización, Horario, Recordatorio, RelacionTareas, ConflictoHorario**: completan y enriquecen la definición de cada tarea.
 
 ---
-
-
-
-
-
-
