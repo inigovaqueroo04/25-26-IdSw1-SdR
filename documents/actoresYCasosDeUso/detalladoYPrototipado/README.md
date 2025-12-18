@@ -113,29 +113,3 @@
 |----------|---------------|
 | ![Diagrama de Definir Localización](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/definirLocalizacion/definirLocalizacion.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/planificacionYConfiguracion/definirLocalizacion/definirLocalizacion.puml) |
 
-
-## [Automatización (Actor Tiempo)](./automatizacionActorTiempo/README.md)
-### Diagrama de Iniciar Automatización
-| Diagrama | Código Fuente |
-|----------|---------------|
-| ![Diagrama de Iniciar Automatización](/documents/actoresYCasosDeUso/detalladoYPrototipado/automatizacionActorTiempo/iniciarAutomatizacion/iniciarAutomatizacion.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/automatizacionActorTiempo/iniciarAutomatizacion/iniciarAutomatizacion.uml) |
-
-### Diagrama de Detectar Conflicto
-| Diagrama | Código Fuente |
-|----------|---------------|
-| ![Diagrama de Detectar Conflicto](/documents/actoresYCasosDeUso/detalladoYPrototipado/automatizacionActorTiempo/detectarConflictoHorario/detectarConflicto.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/automatizacionActorTiempo/detectarConflictoHorario/detectarConflicto.puml) |
-
-### Diagrama de Resolver Conflicto
-| Diagrama | Código Fuente |
-|----------|---------------|
-| ![Diagrama de Resolver Conflicto](/documents/actoresYCasosDeUso/detalladoYPrototipado/automatizacionActorTiempo/resolverConflicto/resolverConflicto.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/automatizacionActorTiempo/resolverConflicto/resolverConflicto.puml) |
-
-### Diagrama de Detectar Conflicto
-| Diagrama | Código Fuente |
-|----------|---------------|
-| ![Diagrama de Detectar Conflicto](/documents/actoresYCasosDeUso/detalladoYPrototipado/automatizacionActorTiempo/ignorarConflicto/ignorarConflicto.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/automatizacionActorTiempo/ignorarConflicto/ignorarConflicto.puml) |
-
-### Diagrama de Volver al Inicio
-| Diagrama | Código Fuente |
-|----------|---------------|
-| ![Diagrama Volver al Inicio](/documents/actoresYCasosDeUso/detalladoYPrototipado/automatizacionActorTiempo/volverAInicio/volverAInicio.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/automatizacionActorTiempo/volverAInicio/volverAInicio.puml) |
