@@ -45,3 +45,17 @@
 | Diagrama | Código Fuente |
 | :---: | :---: |
 | ![Diagrama editarMiembro](./editarMiembro/editarMiembro.svg)| [Ver código](./editarMiembro/editarMiembro.puml) |
+
+---
+
+## abrirInvitaciones()
+| Diagrama | Código Fuente |
+| :---: | :---: |
+| ![Diagrama abrirInvitaciones](./abrirInvitaciones/abrirInvitaciones.svg)| [Ver código](./abrirInvitaciones/abrirInvitaciones.puml) |
+
+---
+
+## editarInvitacion()
+| Diagrama | Código Fuente |
+| :---: | :---: |
+| ![Diagrama editarInvitacion](./editarInvitacion/editarInvitacion.svg)| [Ver código](./editarInvitacion/editarInvitacion.puml) |
