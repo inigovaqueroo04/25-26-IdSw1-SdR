@@ -5,19 +5,9 @@
 
 <div align=center>
 
-|![Diagrama de Actividad: abrirGruposAdmin()](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/abrirGrupos/abrirGruposAdmin.svg)|
+|![Diagrama de Actividad: abrirGrupos()](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/abrirGrupos/abrirGrupos.svg)|
 |-|
 |Código fuente: [abrirGruposAdmin.puml](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/abrirGrupos/abrirGruposAdmin.puml)|
-
-</div>
-
-### Miembro Administrador
-
-<div align=center>
-
-|![Diagrama de Actividad: abrirGruposMiembroAdmin()](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/abrirGrupos/abrirGruposMiembroAdmin.svg)|
-|-|
-|Código fuente: [abrirGruposMiembroAdmin.puml](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/abrirGrupos/abrirGruposMiembroAdmin.puml)|
 
 </div>
  
