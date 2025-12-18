@@ -60,7 +60,7 @@
 
 | Detallado | Prototipado |
 |----------|---------------|
-| ![Diagrama Invitar Usuario](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/invitarUsuario/invitarUsuario.svg)| ![Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/invitarUsuario/invitarUsuarioPrototipado.puml) |
+| ![Diagrama Invitar Usuario](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/invitarUsuario/invitarUsuario.svg)| ![Prototipado](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/invitarUsuario/invitarUsuarioPrototipado.svg) |
 [VER PUML](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/invitarUsuario/invitarUsuario.puml)
 
 ### editarMiembro()
