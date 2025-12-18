@@ -7,20 +7,23 @@
 
 
 ## [Gestión de sesión y navegación](./gestionDeSesionYNavegacion/README.md)
-### Diagrama de Iniciar Sesión
-| Diagrama | Código Fuente |
+### iniciarSesion()
+| Diagrama | Prototipado |
 |----------|---------------|
-| ![Diagrama iniciar sesión](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/iniciarSesion/iniciarSesion.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/iniciarSesion/iniciarSesion.puml) |
+| ![Diagrama iniciar sesión](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/iniciarSesion/iniciarSesion.svg)| ![Prototipado](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/iniciarSesion/iniciarSesionPrototipado.svg) |
+[Ver PUML](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/iniciarSesion/iniciarSesion.puml) |
 
 ### Diagrama de Completar Gestión
-| Diagrama | Código Fuente |
+| Diagrama | Prototipado |
 |----------|---------------|
-| ![Diagrama Completar Gestión](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/completarGestion/completarGestion.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/completarGestion/completarGestion.puml) |
+| ![Diagrama Completar Gestión](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/completarGestion/completarGestion.svg)| ![Prototipado](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/completarGestion/completarGestionPrototipado.svg) |
+[VER PUML](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/completarGestion/completarGestion.puml)
 
 ### Diagrama de Cerrar Sesión
-| Diagrama | Código Fuente |
+| Diagrama | Prototipado |
 |----------|---------------|
-| ![Diagrama Cerrar Sesión](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/cerrarSesion/cerrarSesion.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/cerrarSesion/cerrarSesion.puml) |
+| ![Diagrama Cerrar Sesión](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/cerrarSesion/cerrarSesion.svg)| ![Prototipado](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/cerrarSesion/cerrarSesionPrototipado.svg) |
+[VER PUML](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeSesionYNavegacion/cerrarSesion/cerrarSesion.puml)
 
 
 ## [Gestión de grupos y usuarios](./gestionDeGruposYUsuarios/README.md)
