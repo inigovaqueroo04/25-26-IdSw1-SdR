@@ -7,14 +7,23 @@ state "SISTEMA_DISPONIBLE" as Menu
 
 state "TAREAS_ABIERTO" as ListProgramas
 
+state "INVITACIONES_ABIERTO" as ListInvitaciones
+state "INVITACION_ABIERTO" as EditInvitacion
+
 [*] --> NoAuth
 
 NoAuth --> Menu : iniciarSesion()
 
 Menu --> NoAuth : cerrarSesion()
 Menu --> ListProgramas: abrirTareas()
+Menu --> ListInvitaciones: abrirInvitaciones()
 
 ListProgramas --> ListProgramas: marcarCompletada()
-
 ListProgramas --> Menu: completarGestion()
+
+ListInvitaciones --> EditInvitacion: editarInvitacion()
+ListInvitaciones --> Menu: completarGestion()
+
+EditInvitacion --> ListInvitaciones: abrirInvitaciones()
+EditInvitacion --> EditInvitacion: editarInvitacion()
 @enduml
