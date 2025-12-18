@@ -34,14 +34,14 @@
 
 ---
 
-## unirseAGrupo()
-| Diagrama | Código Fuente |
-| :---: | :---: |
-| ![Diagrama unirseAGrupo](./unirseAGrupo/unirseAGrupo.svg)| [Ver código](./unirseAGrupo/unirseAGrupo.puml) |
-
----
-
 ## invitarUsuario()
 | Diagrama | Código Fuente |
 | :---: | :---: |
 | ![Diagrama invitarUsuario](./invitarUsuario/invitarUsuario.svg)| [Ver código](./invitarUsuario/invitarUsuario.puml) |
+
+---
+
+## editarMiembro()
+| Diagrama | Código Fuente |
+| :---: | :---: |
+| ![Diagrama editarMiembro](./editarMiembro/editarMiembro.svg)| [Ver código](./editarMiembro/editarMiembro.puml) |

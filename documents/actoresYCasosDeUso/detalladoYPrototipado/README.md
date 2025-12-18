@@ -44,15 +44,15 @@
 |----------|---------------|
 | ![Diagrama Eliminar Grupo](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/eliminarGrupo/eliminarGrupo.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/eliminarGrupo/eliminarGrupo.puml) |
 
-### Diagrama de Unirse Grupo
-| Diagrama | Código Fuente |
-|----------|---------------|
-| ![Diagrama Unirse Grupo](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/unirseAGrupo/unirseAGrupo.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/unirseAGrupo/unirseAGrupo.puml) |
-
 ### Diagrama de Invitar Usuario
 | Diagrama | Código Fuente |
 |----------|---------------|
 | ![Diagrama Invitar Usuario](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/invitarUsuario/invitarUsuario.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/invitarUsuario/invitarUsuario.puml) |
+
+### Diagrama de Editar Miembro
+| Diagrama | Código Fuente |
+|----------|---------------|
+| ![Diagrama Editar Miembro](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/editarMiembro/editarMiembro.svg)| [Ver código](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/editarMiembro/editarMiembro.puml) |
 
 
 ## [Gestión de tareas](./gestionDeTareas/README.md)
