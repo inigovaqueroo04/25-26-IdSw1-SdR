@@ -1,4 +1,10 @@
+
+
 # 💻 Sistema de Gestión de Tareas - Ingeniería de Software I
+<div align="center">
+  <img src="./documents/imagenes/logo.png" alt="logo" width="300" />
+</div>
+<br>
 
 [![Inicio](https://img.shields.io/badge/Inicio-FFFFFF?style=for-the-badge&logo=homeassistant&logoColor=black)](./README.md)
 [![Modelo de Dominio](https://img.shields.io/badge/Modelo%20de%20Dominio-FFFFFF?style=for-the-badge&logo=bookstack&logoColor=black)](./documents/modelosUML/modeloDeDominio/README.md)
@@ -22,7 +28,6 @@ A continuación se presenta el **Modelo de Dominio**, base conceptual sobre la c
 A continuación se presentan los **actores** y **casos de uso**:
 ### [Actores y CasosDeUso](https://github.com/Sergiorl2/25-26-IdSw1-SdR/tree/develop/documents/actoresYCasosDeUso/README.md)
 
-### [Diagramas](https://github.com/Sergiorl2/25-26-IdSw1-SdR/tree/develop/documents/actoresYCasosDeUso/diagramas)
 
 ## ⏰ Reuniones
 En este apartado se puede encontrar los diferentes avances que hemos tenido durante las reuniones con nuestro cliente.
