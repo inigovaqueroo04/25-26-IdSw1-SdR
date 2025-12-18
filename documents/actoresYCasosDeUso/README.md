@@ -27,6 +27,11 @@
 |----------|---------------|
 | ![Diagrama de Planificación Y Detalles](./diagramas/diagramaPlanificaciónYDetalles/diagramaPlanificacionYDetalles.svg)| [Ver código](./diagramas/diagramaPlanificaciónYDetalles/diagramaPlanificacionYDetalles.puml) |
 
+## Diagrama de Gestión de Sesión y Navegación
+
+| Diagrama | Código Fuente |
+|----------|---------------|
+| ![Diagrama de Gestión de Sesión y Navegación](./diagramas/diagramaGestionSesionYNavegacion/diagramaGestionSesionYNavegacion.svg)| [Ver código](./diagramas/diagramaGestionSesionYNavegacion/diagramaGestionSesionYNavegacion.puml) |
 
 ## Actores
 
@@ -41,9 +46,6 @@ Persona que gestiona el grupo familiar y controla toda la configuración. Puede 
 ### Miembro
 
 Personas del grupo que consultan y realizan las tareas asignadas, marcan actividades completadas y visualizan la información general.
-
-
-
 
 ## Casos de uso
 
