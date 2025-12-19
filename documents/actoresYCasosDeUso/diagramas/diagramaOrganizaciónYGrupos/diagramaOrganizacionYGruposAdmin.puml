@@ -10,8 +10,6 @@ package "Organización y Grupos" {
     usecase "eliminarGrupo()" as UC_G4
     usecase "editarMiembro()" as UC_G5
     usecase "abrirGrupos()" as UC_G6
-    usecase "abrirInvitaciones()" as UC_G7
-    usecase "editarInvitacion()" as UC_G8
 
 }
 
@@ -21,7 +19,5 @@ Admin --> UC_G3
 Admin --> UC_G4
 Admin --> UC_G5
 Admin --> UC_G6
-Admin --> UC_G7
-Admin --> UC_G8
 
 @enduml

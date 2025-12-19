@@ -23,6 +23,7 @@ MiembroAdmin --> UC_G8
 
 Miembro --> UC_G6
 Miembro --> UC_G7
+Miembro --> UC_G8
 
 
 @enduml
