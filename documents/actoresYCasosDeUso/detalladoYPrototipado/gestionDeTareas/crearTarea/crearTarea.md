@@ -4,8 +4,8 @@
 
 <div align=center>
 
-|![Diagrama de Actividad: crearTarea()](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/detallado/crearTarea/crearTarea.svg)|
+|![Diagrama de Actividad: crearTarea()](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/crearTarea/crearTarea.svg)|
 |-|
-|Código fuente: [crearTarea.puml](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/detallado/crearTarea/crearTarea.puml)|
+|Código fuente: [crearTarea.puml](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/crearTarea/crearTarea.puml)|
 
 </div>

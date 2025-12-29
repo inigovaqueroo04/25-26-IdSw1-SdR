@@ -4,8 +4,8 @@
 
 <div align=center>
 
-|![Diagrama de Actividad: eliminarTarea()](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/detallado/eliminarTarea/eliminarTarea.svg)|
+|![Diagrama de Actividad: eliminarTarea()](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/eliminarTarea/eliminarTarea.svg)|
 |-|
-|Código fuente: [eliminarTarea.puml](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/detallado/eliminarTarea/eliminarTarea.puml)|
+|Código fuente: [eliminarTarea.puml](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeTareas/eliminarTarea/eliminarTarea.puml)|
 
 </div>
