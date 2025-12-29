@@ -1,6 +1,10 @@
-@startuml DiagramaPlanificaciónYDetalles
+@startuml DiagramaPlanificacionYDetalles
 left to right direction
-actor "Administrador/ Miembro Administrador" as Admin
+
+actor "Administrador" as Admin
+actor "Miembro Administrador" as MiemAdmin
+
+Admin -right-|> MiemAdmin
 
 package "Planificación y Detalles" {
     usecase "abrirPlanificacion()" as UC_D1
@@ -10,10 +14,10 @@ package "Planificación y Detalles" {
     usecase "asignarTareaAUsuario()" as UC_D5
 }
 
-Admin --> UC_D1
-Admin --> UC_D2
-Admin --> UC_D3
-Admin --> UC_D4
-Admin --> UC_D5
+MiemAdmin --> UC_D1
+MiemAdmin --> UC_D2
+MiemAdmin --> UC_D3
+MiemAdmin --> UC_D4
+MiemAdmin --> UC_D5
 
 @enduml

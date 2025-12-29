@@ -13,13 +13,10 @@
 | ![Diagrama de Gestión de Sesión y Navegación](./diagramas/diagramaGestionSesionYNavegacion/diagramaGestionSesionYNavegacion.svg)| [Ver código](./diagramas/diagramaGestionSesionYNavegacion/diagramaGestionSesionYNavegacion.puml) |
 
 ## Diagrama de Organizacion y Grupos 
-| Diagrama Administrador | Código Fuente |
+| Diagrama  | Código Fuente |
 |----------|---------------|
-| ![Diagrama de Organización y Grupos](./diagramas/diagramaOrganizaciónYGrupos/diagramaOrganizacionYGruposAdmin.svg)| [Ver código](./diagramas/diagramaOrganizaciónYGrupos/diagramaOrganizacionYGruposAdmin.puml) |
+| ![Diagrama de Organización y Grupos](./diagramas/diagramaOrganizacionYGrupos/diagramaOrganizacionYGrupos.svg)| [Ver código](./diagramas/diagramaOrganizacionYGrupos/diagramaOrganizacionYGrupos.puml) |
 
-| Diagrama Miembro Administrador y Miembro | Código Fuente |
-|----------|---------------|
-| ![Diagrama de Organización y Grupos](./diagramas/diagramaOrganizaciónYGrupos/diagramaOrganizacionYGruposMiembroAdmin.svg)| [Ver código](./diagramas/diagramaOrganizaciónYGrupos/diagramaOrganizacionYGruposMiembroAdmin.puml) |
 
 ## Diagrama de Gestión de Tareas 
 | Diagrama | Código Fuente |
@@ -74,7 +71,7 @@ Personas del grupo que consultan y realizan las tareas asignadas, marcan activid
 4. [relacionarTareas()](./detalladoYPrototipado/gestionDeTareas/relacionarTareas/relacionarTareas.md)
 5. [eliminarTarea()](./detalladoYPrototipado/gestionDeTareas/eliminarTarea/eliminarTarea.md)
 6. [marcarCompletada()](./detalladoYPrototipado/gestionDeTareas/marcarCompletada/marcarCompletada.md)
-6. [validarConflicto()](./detalladoYPrototipado/gestionDeTareas/validarConflicto/editarTarea.md)
+6. [validarConflicto()](./detalladoYPrototipado/gestionDeTareas/editarTarea/editarTarea.md)
 
 ### [Planificación y configuración](./detalladoYPrototipado/planificacionYConfiguracion/README.md)
 
