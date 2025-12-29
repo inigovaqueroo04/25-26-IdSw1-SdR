@@ -77,7 +77,7 @@
 | ![Diagrama Abrir Invitaciuones](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/abrirInvitaciones/abrirInvitaciones.svg)| ![Prototipado](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/abrirInvitaciones/abrirInvitacionesPrototipado.svg) |
 [VER PUML](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/abrirInvitaciones/abrirInvitaciones.puml)
 
-### abrirInvitaciones()
+### editarInvitacion()
 
 | Detallado | Prototipado |
 |----------|---------------|
