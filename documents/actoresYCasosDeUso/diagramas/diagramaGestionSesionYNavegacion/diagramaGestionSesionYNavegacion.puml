@@ -1,12 +1,12 @@
-@startuml DiagramaGestionSesionVertical
+@startuml DiagramaGestionSesion
 left to right direction
 
 actor "Administrador" as Admin
 actor "Miembro Administrador" as MiemAdmin
 actor "Miembro" as Miem
 
-Admin -down-|> MiemAdmin
-MiemAdmin -down-|> Miem
+Admin -right-|> MiemAdmin
+MiemAdmin -right-|> Miem
 
 package "Gestión de Sesión y Navegación" {
     usecase "iniciarSesion()" as UC_S1
