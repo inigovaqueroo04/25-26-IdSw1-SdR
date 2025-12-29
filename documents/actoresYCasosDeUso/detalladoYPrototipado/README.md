@@ -70,6 +70,13 @@
 | ![Diagrama Editar Miembro](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/editarMiembro/editarMiembro.svg)| ![Prototipado](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/editarMiembro/editarMiembroPrototipado.svg) |
 [VER PUML](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/editarMiembro/editarMiembro.puml)
 
+### eliminarMiembro()
+
+| Detallado | Prototipado |
+|----------|---------------|
+| ![Diagrama Eliminar Miembro](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/eliminarMiembro/eliminarMiembro.svg)| ![Prototipado](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/eliminarMiembro/eliminarMiembroPrototipado.svg) |
+[VER PUML](/documents/actoresYCasosDeUso/detalladoYPrototipado/gestionDeGruposYUsuarios/eliminarMiembro/eliminarMiembro.puml)
+
 ### abrirInvitaciones()
 
 | Detallado | Prototipado |

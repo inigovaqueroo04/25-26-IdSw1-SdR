@@ -48,6 +48,13 @@
 
 ---
 
+## eliminarMiembro()
+| Diagrama | Código Fuente |
+| :---: | :---: |
+| ![Diagrama eliminarMiembro](./eliminarMiembro/eliminarMiembro.svg)| [Ver código](./eliminarMiembro/eliminarMiembro.puml) |
+
+---
+
 ## abrirInvitaciones()
 | Diagrama | Código Fuente |
 | :---: | :---: |
