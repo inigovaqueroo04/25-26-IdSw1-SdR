@@ -52,6 +52,7 @@ EditGrupo --> EditMiembro: editarMiembro()
 
 EditMiembro --> EditGrupo: editarGrupo()
 EditMiembro --> EditMiembro: editarMiembro()
+EditMiembro --> EditMiembro: eliminarMiembro()
 
 ListProgramas --> Menu: completarGestion()
 ListGrupos --> Menu: completarGestion()

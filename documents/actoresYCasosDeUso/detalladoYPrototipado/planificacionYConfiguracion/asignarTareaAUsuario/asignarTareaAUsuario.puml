@@ -1,35 +1,67 @@
 @startuml asignarTareaAUsuario
+skinparam monochrome false
+skinparam shadow false
+top to bottom direction
 
-hide empty description
-skinparam linetype polyline
+skinparam state {
+    BackgroundColor White
+    BorderColor Black
+    ArrowColor #009900
+    StartColor Black
+    EndColor Black
+}
 
-state in1 as "PLANIFICACION_ABIERTO"
-in1 -[#green]-> asignarTareaAUsuario
+skinparam note {
+    BackgroundColor #FFFFE0
+    BorderColor #B0B060
+    FontName Arial
+}
 
-state asignarTareaAUsuario as "asignarTareaAUsuario()" {
+state "PLANIFICACION_ABIERTO" as Inicio
 
-    state IngresandoAsignacion as " "
-    state ValidandoAsignacion as " "
+state "asignarTareaAUsuario()" as AsignarTareaContainer {
+    top to bottom direction
 
-    [*] -[#green]-> IngresandoAsignacion
+    state " " as PasoInicial
+    state " " as PasoDatos
+
+    [*] --> PasoInicial
     note on link
-        <b>Usuario</b> introduce usuario destinatario
+        **Usuario** solicita asignar tarea a usuario
     end note
 
-    IngresandoAsignacion -[#green]-> ValidandoAsignacion
+    PasoInicial --> PasoDatos
     note on link
-        <b>Sistema</b> valida existencia del usuario
+        **Sistema** presenta formulario de asignación
+        **Sistema** permite solicitar:
+        • introducir usuario destinatario
+        • guardar asignación
+        • cancelar asignación
     end note
 
-    ValidandoAsignacion -[#green]-> [*]
+    PasoDatos -[#green]-> [*]
     note on link
-        <b>Sistema</b> registra asignación
+        **Usuario** introduce usuario y solicita guardar
+    end note
+
+    PasoDatos -[#red]-> [*]
+    note on link
+        **Usuario** solicita cancelar asignación
     end note
 }
 
-asignarTareaAUsuario -[#green]-> PLANIFICACION_ABIERTO
+state "PLANIFICACION_ABIERTO" as SalidaPlanificacion
+
+Inicio --> AsignarTareaContainer
+
+AsignarTareaContainer -[#green]-> SalidaPlanificacion
 note on link
-    Tarea asignada
+    guardar asignación
+end note
+
+AsignarTareaContainer -[#red]-> SalidaPlanificacion
+note on link
+    cancelar asignación
 end note
 
 @enduml

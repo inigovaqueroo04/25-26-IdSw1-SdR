@@ -1,4 +1,4 @@
-@startuml DiagramaContextoAdmin
+@startuml DiagramaContextoMiembroAdmin
 left to right direction
 skinparam linetype polyline
 
@@ -50,6 +50,7 @@ EditGrupo --> ListProgramas: abrirTareas(grupo)
 
 EditMiembro --> EditGrupo: editarGrupo()
 EditMiembro --> EditMiembro: editarMiembro()
+EditMiembro --> EditMiembro: eliminarMiembro()
 
 ListProgramas --> Menu: completarGestion()
 ListGrupos --> Menu: completarGestion()

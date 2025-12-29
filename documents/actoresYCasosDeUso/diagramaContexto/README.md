@@ -105,6 +105,7 @@ Este documento presenta los diagramas de contexto del sistema descompuestos por 
 | `eliminarGrupo()` | GRUPOS_ABIERTO → GRUPOS_ABIERTO | Eliminación de grupo |
 | `invitarUsuario()` | GRUPO_ABIERTO → GRUPO_ABIERTO | Gestión de miembros |
 | `editarMiembro()` | GRUPO_ABIERTO / MIEMBRO_ABIERTO → MIEMBRO_ABIERTO | Gestión de miembros |
+| `eliminarMiembro()` | MIEMBRO_ABIERTO → MIEMBRO_ABIERTO | Gestión de miembros |
 | `completarGestion()` | Cualquier Estado Secundario → SISTEMA_DISPONIBLE | Retorno al menú |
 
 ---
@@ -126,6 +127,7 @@ Este documento presenta los diagramas de contexto del sistema descompuestos por 
 | `editarGrupo()` | GRUPOS_ABIERTO / GRUPO_ABIERTO / TAREAS_ABIERTO / MIEMBRO_ABIERTO → GRUPO_ABIERTO | Gestión de grupos |
 | `invitarUsuario()` | GRUPO_ABIERTO → GRUPO_ABIERTO | Gestión de miembros |
 | `editarMiembro()` | GRUPO_ABIERTO / MIEMBRO_ABIERTO → MIEMBRO_ABIERTO | Gestión de miembros |
+| `eliminarMiembro()` | MIEMBRO_ABIERTO → MIEMBRO_ABIERTO | Gestión de miembros |
 | `completarGestion()` | Cualquier Estado Secundario → SISTEMA_DISPONIBLE | Retorno al menú |
 
 ---
