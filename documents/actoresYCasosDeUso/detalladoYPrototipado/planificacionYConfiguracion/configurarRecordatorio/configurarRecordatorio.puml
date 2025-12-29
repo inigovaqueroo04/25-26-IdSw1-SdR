@@ -1,35 +1,67 @@
-@startuml configurarRecordatorio
+@startuml definirLocalizacion
+skinparam monochrome false
+skinparam shadow false
+top to bottom direction
 
-hide empty description
-skinparam linetype polyline
+skinparam state {
+    BackgroundColor White
+    BorderColor Black
+    ArrowColor #009900
+    StartColor Black
+    EndColor Black
+}
 
-state in1 as "PLANIFICACION_ABIERTO"
-in1 -[#green]-> configurarRecordatorio
+skinparam note {
+    BackgroundColor #FFFFE0
+    BorderColor #B0B060
+    FontName Arial
+}
 
-state configurarRecordatorio as "configurarRecordatorio()" {
+state "PLANIFICACION_ABIERTO" as Inicio
 
-    state DefiniendoRecordatorio as " "
-    state ConfirmandoRecordatorio as " "
+state "definirLocalizacion()" as DefinirLocalizacionContainer {
+    top to bottom direction
 
-    [*] -[#green]-> DefiniendoRecordatorio
+    state " " as PasoInicial
+    state " " as PasoDatos
+
+    [*] --> PasoInicial
     note on link
-        <b>Usuario</b> introduce tipo y tiempo de recordatorio
+        **Usuario** solicita definir localización
     end note
 
-    DefiniendoRecordatorio -[#green]-> ConfirmandoRecordatorio
+    PasoInicial --> PasoDatos
     note on link
-        <b>Sistema</b> muestra resumen del recordatorio
+        **Sistema** presenta mapa y buscador
+        **Sistema** permite solicitar:
+        • introducir coordenadas o dirección
+        • guardar localización
+        • cancelar localización
     end note
 
-    ConfirmandoRecordatorio -[#green]-> [*]
+    PasoDatos -[#green]-> [*]
     note on link
-        <b>Sistema</b> guarda recordatorio
+        **Usuario** introduce los datos y solicita guardar
+    end note
+
+    PasoDatos -[#red]-> [*]
+    note on link
+        **Usuario** solicita cancelar localización
     end note
 }
 
-configurarRecordatorio -[#green]-> PLANIFICACION_ABIERTO
+state "PLANIFICACION_ABIERTO" as SalidaPlanificacion
+
+Inicio --> DefinirLocalizacionContainer
+
+DefinirLocalizacionContainer -[#green]-> SalidaPlanificacion
 note on link
-    Recordatorio creado
+    guardar localización
+end note
+
+DefinirLocalizacionContainer -[#red]-> SalidaPlanificacion
+note on link
+    cancelar localización
 end note
 
 @enduml

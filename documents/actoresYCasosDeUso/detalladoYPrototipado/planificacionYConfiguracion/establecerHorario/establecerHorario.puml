@@ -1,35 +1,67 @@
 @startuml establecerHorario
+skinparam monochrome false
+skinparam shadow false
+top to bottom direction
 
-hide empty description
-skinparam linetype polyline
+skinparam state {
+    BackgroundColor White
+    BorderColor Black
+    ArrowColor #009900
+    StartColor Black
+    EndColor Black
+}
 
-state in1 as "PLANIFICACION_ABIERTO"
-in1 -[#green]-> establecerHorario
+skinparam note {
+    BackgroundColor #FFFFE0
+    BorderColor #B0B060
+    FontName Arial
+}
 
-state establecerHorario as "establecerHorario()" {
+state "PLANIFICACION_ABIERTO" as Inicio
 
-    state IngresandoHorario as " "
-    state ValidandoHorario as " "
+state "establecerHorario()" as EstablecerHorarioContainer {
+    top to bottom direction
 
-    [*] -[#green]-> IngresandoHorario
+    state " " as PasoInicial
+    state " " as PasoDatos
+
+    [*] --> PasoInicial
     note on link
-        <b>Usuario</b> introduce fecha y hora
+        **Usuario** solicita establecer horario
     end note
 
-    IngresandoHorario -[#green]-> ValidandoHorario
+    PasoInicial --> PasoDatos
     note on link
-        <b>Sistema</b> valida disponibilidad
+        **Sistema** presenta calendario de disponibilidad
+        **Sistema** permite solicitar:
+        • introducir fecha y hora
+        • guardar horario
+        • cancelar horario
     end note
 
-    ValidandoHorario -[#green]-> [*]
+    PasoDatos -[#green]-> [*]
     note on link
-        <b>Sistema</b> guarda horario
+        **Usuario** introduce los datos y solicita guardar
+    end note
+
+    PasoDatos -[#red]-> [*]
+    note on link
+        **Usuario** solicita cancelar horario
     end note
 }
 
-establecerHorario -[#green]-> PLANIFICACION_ABIERTO
+state "PLANIFICACION_ABIERTO" as SalidaPlanificacion
+
+Inicio --> EstablecerHorarioContainer
+
+EstablecerHorarioContainer -[#green]-> SalidaPlanificacion
 note on link
-    Horario establecido
+    guardar horario
+end note
+
+EstablecerHorarioContainer -[#red]-> SalidaPlanificacion
+note on link
+    cancelar horario
 end note
 
 @enduml

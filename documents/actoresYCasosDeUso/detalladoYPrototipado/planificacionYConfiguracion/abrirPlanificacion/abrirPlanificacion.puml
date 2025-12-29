@@ -1,33 +1,77 @@
 @startuml abrirPlanificacion
+skinparam monochrome false
+skinparam shadow false
+top to bottom direction
 
-hide empty description
-skinparam linetype polyline
+skinparam state {
+    BackgroundColor White
+    BorderColor Black
+    ArrowColor #009900
+    StartColor Black
+    EndColor Black
+}
 
-state in1 as "SISTEMA_DISPONIBLE"
-in1 -[#green]-> abrirPlanificacion
+skinparam note {
+    BackgroundColor #FFFFE0
+    BorderColor #B0B060
+    FontName Arial
+}
 
-state abrirPlanificacion as "abrirPlanificacion()" {
+state "SISTEMA_DISPONIBLE" as Inicio
 
-    state MostrandoPlanificacion as " "
+state "abrirPlanificacion()" as AbrirPlanificacionContainer {
+    top to bottom direction
 
-    [*] -[#green]-> MostrandoPlanificacion
+    state " " as PasoInicial
+    state " " as PasoVisualizacion
+
+    [*] --> PasoInicial
     note on link
-        <b>Usuario</b> solicita abrir planificación
+        **Usuario** solicita abrir planificación
     end note
 
-    MostrandoPlanificacion -[#green]-> [*]
+    PasoInicial --> PasoVisualizacion
     note on link
-        <b>Sistema</b> muestra planificación actual
-        • Lista de tareas vinculables
-        • Horario configurado
-        • Recordatorios
-        • Localización
+        **Sistema** permite solicitar establecer horario
+        **Sistema** permite solicitar definir localización
+        **Sistema** permite solicitar configurar recordatorio
+        **Sistema** permite solicitar asignar tarea a usuario
+    end note
+
+    PasoVisualizacion --> [*]
+    note on link
+        **Usuario** solicita una de las opciones
     end note
 }
 
-abrirPlanificacion -[#green]-> PLANIFICACION_ABIERTO
+state "PLANIFICACION_ABIERTO" as SalidaPlanificacion
+state "SISTEMA_DISPONIBLE" as SalidaSistema
+
+Inicio --> AbrirPlanificacionContainer
+
+AbrirPlanificacionContainer --> SalidaPlanificacion
 note on link
-    Planificación disponible para edición
+  establecerHorario()
+end note
+
+AbrirPlanificacionContainer --> SalidaPlanificacion
+note on link
+  definirLocalizacion()
+end note
+
+AbrirPlanificacionContainer --> SalidaPlanificacion
+note on link
+  configurarRecordatorio()
+end note
+
+AbrirPlanificacionContainer --> SalidaPlanificacion
+note on link
+  asignarTareaAUsuario()
+end note
+
+AbrirPlanificacionContainer --> SalidaSistema
+note on link
+  completarGestion()
 end note
 
 @enduml
