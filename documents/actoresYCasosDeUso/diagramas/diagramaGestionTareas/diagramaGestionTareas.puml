@@ -38,7 +38,7 @@ UC2 <.. UC4 : <<extend>>
 UC2 <.. UC5 : <<extend>>
 UC2 <.. UC6 : <<extend>>
 UC2 <.. UC7 : <<extend>>
-UC2 <.. UC9 : <<extend>>
+UC2 <.. UC9 : <<include>>
 UC2 <.. UC10 : <<extend>>
 UC2 <.. UC11 : <<extend>>
 
