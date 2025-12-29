@@ -13,13 +13,10 @@
 | ![Diagrama de Gestión de Sesión y Navegación](./diagramas/diagramaGestionSesionYNavegacion/diagramaGestionSesionYNavegacion.svg)| [Ver código](./diagramas/diagramaGestionSesionYNavegacion/diagramaGestionSesionYNavegacion.puml) |
 
 ## Diagrama de Organizacion y Grupos 
-| Diagrama Administrador | Código Fuente |
+| Diagrama  | Código Fuente |
 |----------|---------------|
-| ![Diagrama de Organización y Grupos](./diagramas/diagramaOrganizaciónYGrupos/diagramaOrganizacionYGruposAdmin.svg)| [Ver código](./diagramas/diagramaOrganizaciónYGrupos/diagramaOrganizacionYGruposAdmin.puml) |
+| ![Diagrama de Organización y Grupos](./diagramas/diagramaOrganizacionYGrupos/diagramaOrganizacionYGrupos.svg)| [Ver código](./diagramas/diagramaOrganizacionYGrupos/diagramaOrganizacionYGrupos.puml) |
 
-| Diagrama Miembro Administrador y Miembro | Código Fuente |
-|----------|---------------|
-| ![Diagrama de Organización y Grupos](./diagramas/diagramaOrganizaciónYGrupos/diagramaOrganizacionYGruposMiembroAdmin.svg)| [Ver código](./diagramas/diagramaOrganizaciónYGrupos/diagramaOrganizacionYGruposMiembroAdmin.puml) |
 
 ## Diagrama de Gestión de Tareas 
 | Diagrama | Código Fuente |
