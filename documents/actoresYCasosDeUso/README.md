@@ -60,10 +60,11 @@ Personas del grupo que consultan y realizan las tareas asignadas, marcan activid
 2. [crearGrupo()](./detalladoYPrototipado/gestionDeGruposYUsuarios/crearGrupo/crearGrupo.md)
 3. [editarGrupo()](./detalladoYPrototipado/gestionDeGruposYUsuarios/editarGrupo/editarGrupo.md)
 4. [eliminarGrupo()](./detalladoYPrototipado/gestionDeGruposYUsuarios/eliminarGrupo/eliminarGrupo.md)
-6. [invitarUsuario()](./detalladoYPrototipado/gestionDeGruposYUsuarios/invitarUsuario/invitarUsuario.md)
-7. [editarMiembro()](./detalladoYPrototipado/gestionDeGruposYUsuarios/editarMiembro/editarMiembro.md)
-7. [abrirInvitaciones()](./detalladoYPrototipado/gestionDeGruposYUsuarios/abrirInvitaciones/abrirInvitaciones.md)
-7. [editarInvitacion()](./detalladoYPrototipado/gestionDeGruposYUsuarios/editarInvitacion/editarInvitacion.md)
+5. [invitarUsuario()](./detalladoYPrototipado/gestionDeGruposYUsuarios/invitarUsuario/invitarUsuario.md)
+6. [editarMiembro()](./detalladoYPrototipado/gestionDeGruposYUsuarios/editarMiembro/editarMiembro.md)
+7. [eliminarMiembro()](./detalladoYPrototipado/gestionDeGruposYUsuarios/eliminarMiembro/eliminarMiembro.md)
+8. [abrirInvitaciones()](./detalladoYPrototipado/gestionDeGruposYUsuarios/abrirInvitaciones/abrirInvitaciones.md)
+9. [editarInvitacion()](./detalladoYPrototipado/gestionDeGruposYUsuarios/editarInvitacion/editarInvitacion.md)
 
 ### [Gestión de tareas](./detalladoYPrototipado/gestionDeTareas/README.md)
 
