@@ -6,6 +6,8 @@
 [![Diagramas de Contexto](https://img.shields.io/badge/Diagramas%20de%20Contexto-FFFFFF?style=for-the-badge&logo=bookstack&logoColor=black)](../diagramaContexto/README.md)
 [![Detallar & Prototipar](https://img.shields.io/badge/Detallar%20&%20Prototipar-FFFFFF?style=for-the-badge&logo=figma&logoColor=black)](./README.md)
 
+> 💡 **Nota visual**: El uso de comillas en las transiciones es un recurso gráfico para facilitar la lectura. No poseen un significado operativo ni relevancia jerárquica.
+
 ## [Gestión de sesión y navegación](./gestionDeSesionYNavegacion/README.md)
 ### iniciarSesion()
 | Detallado | Prototipado |
