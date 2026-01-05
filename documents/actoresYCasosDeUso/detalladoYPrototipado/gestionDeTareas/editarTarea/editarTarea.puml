@@ -1,5 +1,5 @@
 @startuml
-' Configuración visual consistente
+' --- CONFIGURACIÓN VISUAL ---
 skinparam monochrome false
 skinparam shadow false
 top to bottom direction
@@ -18,30 +18,26 @@ skinparam note {
     FontName Arial
 }
 
-' --- ESTADOS EXTERNOS DE ENTRADA ---
+' --- 1. ENTRADAS (ARRIBA) ---
 state TAREAS_ABIERTO
 state "TAREA_ABIERTO" as TareaInicio
 
-' Estado compuesto principal: editarTarea()
+' --- 2. CONTENEDOR PRINCIPAL ---
 state "editarTarea()" as EditarTareaContainer {
     
-    ' Puntos de anclaje internos
-    state " " as PasoVisualizacion
-    state " " as PasoMenuOpciones
-    state " " as PasoDecisionFinal
-    
-    ' --- NUEVOS ESTADOS DE GUARDADO ---
-    state " " as PasoPreValidacion  
-    state " " as PasoValidacion     
-    
-    ' 1. Inicio
-    [*] --> PasoVisualizacion
-    note on link
-        **Administrador** solicita editar tarea
-    end note
+    ' Estados internos
+    state " "        as PasoRecepcion
+    state "  "       as PasoVisualizacion
+    state "   "      as PasoMenuOpciones
+    state "    "     as PasoPreValidacion
+    state "     "    as PasoValidacion
 
-    ' 2. Presentación
-    note left of PasoVisualizacion
+    ' Flujo interno normal
+    [*] --> PasoRecepcion
+    note on link: **Administrador** solicita editar tarea
+    
+    PasoRecepcion --> PasoVisualizacion
+    note on link
         **Sistema** presenta datos actuales:
         * Nombre y descripción
         * Usuarios asignados
@@ -51,109 +47,81 @@ state "editarTarea()" as EditarTareaContainer {
         * Estado de la tarea
         * Relaciones de tareas
     end note
-
-    ' 3. Menú
+    
     PasoVisualizacion --> PasoMenuOpciones
-    note on link
-        **Administrador** solicita:
-        * Modificar nombre y descripción
-        * Asignar tarea a usuario
-        * Establecer horario
-        * Definir localización
-        * Configurar recordatorio
-        * Relacionar tareas
-        * Marcar completada
-    end note
-
-    ' 4. Métodos
-    PasoMenuOpciones --> PasoDecisionFinal
-    note on link
-        Modificar nombre y descripción
-    end note
+    note on link: **Administrador** selecciona acción
     
-    PasoMenuOpciones --> PasoDecisionFinal
-    note on link
-        asignarTareaAUsuario()
-    end note
+    ' --- LÓGICA DE VALIDACIÓN (Esperando flecha de entrada) ---
     
-    PasoMenuOpciones --> PasoDecisionFinal
-    note on link
-        establecerHorario()
-    end note
-    
-    PasoMenuOpciones --> PasoDecisionFinal
-    note on link
-        definirLocalizacion()
-    end note
-    
-    PasoMenuOpciones --> PasoDecisionFinal
-    note on link
-        configurarRecordatorio()
-    end note
-    
-    PasoMenuOpciones --> PasoDecisionFinal
-    note on link
-        relacionarTareas()
-    end note
-    
-    PasoMenuOpciones --> PasoDecisionFinal
-    note on link
-        marcarCompletada()
-    end note
-
-    ' 5. Bucle de edición
-    PasoDecisionFinal -[#green]up-> PasoVisualizacion
-    note on link
-        **Administrador** solicita más modificaciones
-    end note
-
-    ' --- FLUJO DE GUARDADO SEPARADO ---
-
-    ' 6. PASO 1: Solicitud del usuario (Llega al nuevo estado intermedio)
-    PasoDecisionFinal -[#green]down-> PasoPreValidacion
-    note on link
-        **Administrador** solicita guardar y salir
-    end note
-
-    ' 7. PASO 2: Acción del sistema (Sale del nuevo estado hacia validación)
     PasoPreValidacion -[#green]down-> PasoValidacion
     note on link
         validarConflicto()
-    end note
-
-    ' 8A. Validación FALLIDA (Conflicto) -> Vuelve arriba (Rojo)
+    end note    
+    
     PasoValidacion -[#red]up-> PasoVisualizacion
-    note on link
-        **Sistema** detecta conflicto
-        Muestra campos afectados
+    note on link 
+      **Sistema** detecta conflicto
+      Muestra campos afectados
     end note
-
-    ' 8B. Validación EXITOSA (Sin Conflicto) -> Fin (Verde)
-    PasoValidacion -[#green]down-> [*]
+    
+    PasoValidacion -[#green]-> [*]
     note on link
         **Sistema** confirma sin conflicto
         Guarda cambios
     end note
-
-    ' 9. Cancelación
-    PasoDecisionFinal -[#red]down-> [*]
+    
+    EstadoMetodos -[#red]down-> [*]
     note on link
         **Administrador** solicita cancelar edición
     end note
 }
 
-' --- ESTADOS EXTERNOS DE SALIDA ---
+' --- 3. ESTADOS EXTERNOS (ABAJO) ---
 state "TAREA_ABIERTO" as TareaFin
+state "      " as EstadoMetodos
 
-' --- TRANSICIONES EXTERNAS ---
+' --- 4. CONEXIONES Y ANCLAJES ---
+
+' Entradas
 TAREAS_ABIERTO --> EditarTareaContainer
 TareaInicio --> EditarTareaContainer
 
-EditarTareaContainer -[#green]-> TareaFin : "              "
-
-EditarTareaContainer -[#red]-> TareaFin
+' Salida al Distribuidor (Menú -> Estado Externo)
+PasoMenuOpciones --> EstadoMetodos
 note on link
-    cancelar edición
+    * Modificar nombre/descripción
+    * asignarTareaAUsuario()
+    * establecerHorario()
+    * definirLocalizacion()
+    * configurarRecordatorio()
+    * relacionarTareas()
+    * marcarCompletada()
 end note
+
+' --- 5. TRANSICIONES DESDE EL ESTADO INTERMEDIO ---
+
+
+
+' B. SOLICITA GUARDAR Y SALIR (Lo que pediste)
+EstadoMetodos -[#green]up-> PasoPreValidacion
+note on link
+    **Administrador** solicita guardar y salir
+end note
+
+' C. RETORNO DE MÉTODOS (Hacia arriba)
+EstadoMetodos -[#009900]up-> TareaInicio
+
+' --- 6. SALIDAS FINALES ---
+EditarTareaContainer -[#green]down-> TareaFin
+EditarTareaContainer -[#red]down-> TareaFin : cancelar edición
+
+
+' --- 7. ESTRUCTURA DE ANCLAJE (ANTIDESASTRE) ---
+
+' Alineación vertical estricta (Validación -> Fin)
+PasoValidacion -[hidden]down-> TareaFin
+
+' Separación lateral para que EstadoMetodos se quede a la derecha y abajo
+TareaFin -[hidden]right-> EstadoMetodos
 
 @enduml
