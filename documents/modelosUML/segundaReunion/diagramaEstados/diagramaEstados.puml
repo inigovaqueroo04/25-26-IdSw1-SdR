@@ -10,7 +10,7 @@ state "Finalizada" as Finalizada
 state "Cancelada" as Cancelada
 
 [*] --> Creada
-Creada --> Programada : Asignar horario/localización
+Creada --> Programada : Asignar horarios/localizaciónes
 
 Programada --> Recordada : Programar recordatorio
 

@@ -1,4 +1,4 @@
-@startuml Diagrama de Clases - Primera Reunión
+@startuml Diagrama de Clases - Actualizado
 top to bottom direction
 hide methods
 hide attributes
@@ -9,14 +9,16 @@ package "Nivel 1" {
   class Tarea
 }
 
-' Nivel 2: Usuario
+' Nivel 2: Usuario y Rol
 package "Nivel 2" {
   class Usuario
+  class Rol
 }
 
 ' Nivel 3: Grupo
 package "Nivel 3" {
   class Grupo
+  class Invitacion
 }
 
 ' Nivel 4: Resto de clases
@@ -34,12 +36,19 @@ Usuario o-- Tarea : participa en >
 Usuario o-- Grupo : pertenece a >
 Tarea *-- Tarea : subtarea de >
 
+' NUEVA RELACIÓN: Usuario tiene un Rol
+Usuario -right-> Rol : tiene >
+
+' NUEVA RELACIÓN: Usuario envia una Invitacion
+Usuario --> Invitacion : envia >
+
 ' Relaciones con el resto
 Tarea <-- ConflictoHorario : afecta a <
 Usuario <-- ConflictoHorario : notifica a <
 Tarea --> Localizacion : se realiza en >
-Tarea --> Horario : se programa en >
-Tarea --> Recordatorio : notifica >
+Tarea --> Horario : se programa en > 
+Tarea *-- Recordatorio : notifica sobre < 
 Tarea --> RelacionTareas : se relaciona con >
+Invitacion -left-* Grupo : para unirse a >
 
 @enduml

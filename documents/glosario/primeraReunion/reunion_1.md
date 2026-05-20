@@ -14,12 +14,6 @@ El cliente busca una herramienta que permita *organizar, asignar y optimizar tar
 
 ---
 
-## 💡 Evidencias
-Evidencias tomadas a partir de los requisitos de nuestro cliente :
-
-[ Ver Evidencia de la Reunión](https://github.com/Sergiorl2/25-26-IdSw1-SdR/tree/reunion_1/evidencias/primeraReunion)
----
-
 ## 🎯 Objetivo del Sistema
 Desarrollar una aplicación web que permita gestionar las tareas del hogar mediante:
 - Creación y organización de tareas y subtareas (con recursividad infinita).
